@@ -38,7 +38,7 @@ def run(string, ttsexec="tts"):
     if (path.getConfig()["is_updown"] == True):  # 连续对话被定义
         file = path.getConfig()["updown_funcname"]  # 获取连续对话重定向函数名
         package = importlib.import_module(".main", package=path1 + "." + file)
-        returncon = package.main(string, path.getConfig()["is_updown"])
+        returncon = package.main(string, True)# 传入true，因为if语句判定为true
         run_tts(returncon['string'], ttsexec)
         moduleLogger.info("Package running" + json.dumps(returncon))
         if (returncon['return'] == 1):  # 继续连续对话
@@ -74,7 +74,7 @@ def run(string, ttsexec="tts"):
                     package = importlib.import_module(".main", package=path1 + "." + file)
                     if package.check(string) == True:  # 技能包觉得我可以
                         moduleLogger.info("Found package:" + file)
-                        returncon = package.main(string, path.getConfig()["is_updown"])
+                        returncon = package.main(string, False) #传入false，因为如果true了话早在前面true了
                         moduleLogger.info("Package running" + json.dumps(returncon))
                         if (returncon['return'] == 1):  # 连续对话启用
                             origin_con = path.getConfig()

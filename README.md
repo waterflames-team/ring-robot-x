@@ -21,10 +21,6 @@ RingRobotX 是lingkongteam成员“zhetengtiao”自行重构，并不在lingkon
 
 请期待lingkongrobot 2.0！
 
-RingRobot Core核心是默认使用pyttsx3进行语音合成的，中文发音比较生硬
-
-您可以自定义tts.py进行修改
-
 # 安装
 
 ## 方案1：自动安装脚本
@@ -44,6 +40,7 @@ wget -O install.sh https://gitee.com/lkteam/ring-robot-x/raw/master/install.sh &
 
 ```shell
 sudo apt install python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio make alsa-utils
+pip3 install pydub playsound
 git clone https://gitee.com/lkteam/ring-robot-x
 ```
 
@@ -77,6 +74,42 @@ python3 ring.py
 ```
 
 # 框架接口
+# 技能包创建
+
+创建一个技能包十分简单，你只需要在func_packages新建一个文件夹，名字随意
+
+新建一个main.py和config.json，config.json需要包含"enable":true,这样系统才会认为技能包可使用
+
+随后，main.py需要有最基本的两个函数：check和main
+
+check有一个参数：string（用户说给ringrobot的话），你可以在check函数里鉴定这句话是不是需要你回答
+
+比如，询问天气：
+```python
+def check(string):
+    if "天气" in string:
+        return True
+    return False
+```
+
+如果我们说了包含“天气”的话，那么这个技能包就会为你服务。
+
+那么怎么让技能包为我们服务呢？
+
+main函数包括两个参数：string（用户说给ringrobot的话）和bool（是否在连续对话模式）。
+
+然后你的技能包在处理完之后，将返回的句子+是否启用连续对话打包为字典return回去
+
+比如，我们要传回text为我们的答复：
+
+```python
+return {"string": text, "return": 0} # 0（False）代表不启用，1（True）代表启用
+```
+
+至此，技能包开发完成，和你的小伙伴一起分享吧！
+
+示例：见仓库func_packages文件夹自带技能包
+
 ## hook 钩子接口
 
 为了方便用户自定义功能，我们开放了hook接口。

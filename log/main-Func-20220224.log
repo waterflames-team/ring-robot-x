@@ -1,4 +1,0 @@
-2022-02-24 13:03:03,616 INFO func.py 29 Function load... String:你好
-2022-02-24 13:03:05,593 INFO func.py 70 Found package:A_Turing_RobotChat
-2022-02-24 13:03:06,154 INFO func.py 72 Package running{"string": "\u770b\u5230\u4f60\u8fc7\u5f97\u5f88\u597d\uff0c\u6211\u5c31\u653e\u5fc3\u4e86", "return": 0}
-2022-02-24 13:03:06,155 INFO func.py 83 Function end.

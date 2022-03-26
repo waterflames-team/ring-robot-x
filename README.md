@@ -33,7 +33,7 @@ RingRobot Core核心是默认使用pyttsx3进行语音合成的，中文发音�
 
 运行：
 ```shell
-
+wget -O install.sh https://gitee.com/lkteam/ring-robot-x/raw/master/install.sh && sudo bash install.sh
 ```
 
 当然，如果你是其他发行版，可以试着第二种方案：手动安装。
@@ -43,7 +43,7 @@ RingRobot Core核心是默认使用pyttsx3进行语音合成的，中文发音�
 ### 1.安装RingRobotX
 
 ```shell
-sudo apt install python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio
+sudo apt install python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio make alsa-utils
 git clone https://gitee.com/lkteam/ring-robot-x
 ```
 
@@ -64,9 +64,10 @@ git clone https://github.com/Kitt-AI/snowboy.git
 cd snowboy/swig/Python3
 make
 cd ../../../
-cp snowboy/swig/Python3/_snowboydetect.so ringrobotx/model
-cp snowboy/examples/Python3/snowboydecoder.py ringrobotx/model
-cp snowboy/examples/Python3/snowboydetect.py ringrobotx/model
+cp snowboy/swig/Python3/_snowboydetect.so ring-robot-x/model
+cp snowboy/examples/Python3/snowboydecoder.py ring-robot-x/model
+cp snowboy/examples/Python3/snowboydetect.py ring-robot-x/model
+cp -a snowboy/resources/ ring-robot-x/model/resources
 ```
 
 # 运行
@@ -107,8 +108,8 @@ testhook=model.hook.HookerRegister("Hello.World.Hook")
 
 def tesdef(a):
     print("Hello World Form hook!")
-testhook=model.hook.HookClient
-testhook.hookEverything(testhook,"Hello.World.Hook",tesdef)
+testhooka=model.hook.HookClient
+testhooka.hookEverything(testhooka,"Hello.World.Hook",tesdef)
 
 testhook.run_Hook(testhook,"Hello.World.Hook")
 ```

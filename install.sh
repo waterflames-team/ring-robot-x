@@ -50,17 +50,17 @@ function install_snowboy(){
 function install_ringrobotx(){
   echo -e "\033[32;40m[INFO] Installing RingRobotX......\033[0m"
   git clone https://github.com/lkteam/ring-robot-x.git || error_dump "install_ringrobotx - git clone error"
-  cp snowboy/swig/Python3/_snowboydetect.so ringrobotx/model || error_dump "install_ringrobotx - copy error"
-  cp snowboy/examples/Python3/snowboydecoder.py ringrobotx/model || error_dump "install_ringrobotx - copy error"
-  cp snowboy/examples/Python3/snowboydetect.py ringrobotx/model || error_dump "install_ringrobotx - copy error"
+  cp snowboy/swig/Python3/_snowboydetect.so ring-robot-x/model || error_dump "install_ringrobotx - copy error"
+  cp snowboy/examples/Python3/snowboydecoder.py ring-robot-x/model || error_dump "install_ringrobotx - copy error"
+  cp snowboy/examples/Python3/snowboydetect.py ring-robot-x/model || error_dump "install_ringrobotx - copy error"
 }
 
 function install_before_require(){
-  require=(python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio)
+  require=(python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio make alsa-utils)
   echo -e "\033[32;40m[INFO] Installing requires......\033[0m"
   for i in ${require[*]}
   do
-    sudo apt install ${i} || error_dump "install_before_require - Cannot install package:${i}"
+    sudo apt install ${i} -y || error_dump "install_before_require - Cannot install package:${i}"
   done
   echo -e "\033[32;40m[INFO] apt install Success! \033[0m"
   require=(pydub)

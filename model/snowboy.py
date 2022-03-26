@@ -1,6 +1,6 @@
 import signal
 import model.asr
-import snowboydecoder
+import model.snowboydecoder as snowboydecoder
 
 
 interrupted = False
@@ -21,9 +21,9 @@ def signal_handler(signal, frame):
 # 这样了话，系统虽然也会导入snowboy库，但是snowboy库不会自动运行，而是你的自定义会代替snowboy运行。
 # 自定义asr修改audio_recorder_callback
 
-model = "assets/snowboy/model.umdl"#自己改唤醒模型路径
+modelaa = "assets/snowboy/model.umdl"#自己改唤醒模型路径
 signal.signal(signal.SIGINT, signal_handler)
-detector = snowboydecoder.HotwordDetector(model, sensitivity=0.7)
+detector = snowboydecoder.HotwordDetector(modelaa, sensitivity=0.7)
 detector.start(detected_callback=detectedCallback,
                audio_recorder_callback=model.asr.audioRecorderCallback,
                interrupt_check=interrupt_callback,

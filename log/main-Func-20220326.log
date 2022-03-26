@@ -1,8 +1,0 @@
-2022-03-26 10:34:21,121 INFO func.py 35 Function load... String:你好
-2022-03-26 10:34:22,039 INFO func.py 76 Found package:A_Turing_RobotChat
-2022-03-26 10:34:22,450 INFO func.py 78 Package running{"string": "\u4f60\u597d\uff0c\u4ee5\u540e\u8bf7\u591a\u6307\u6559", "return": 0}
-2022-03-26 10:34:22,479 INFO func.py 89 Function end.
-2022-03-26 10:34:40,266 INFO func.py 35 Function load... String:你好
-2022-03-26 10:34:40,524 INFO func.py 76 Found package:A_Turing_RobotChat
-2022-03-26 10:34:40,771 INFO func.py 78 Package running{"string": "\u5566\u5566\u5566\uff0c\u6bcf\u5929\u90fd\u662f\u597d\u5fc3\u60c5", "return": 0}
-2022-03-26 10:34:40,799 INFO func.py 89 Function end.

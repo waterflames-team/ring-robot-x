@@ -1,0 +1,3 @@
+2022-02-23 20:57:15,259 INFO func.py 29 Function load... String:你好
+2022-02-23 20:57:16,874 INFO func.py 37 Package running{"string": "\u4f60\u597d\uff0c\u4ee5\u540e\u8bf7\u591a\u6307\u6559", "return": 0}
+2022-02-23 20:57:16,875 INFO func.py 48 Function end.

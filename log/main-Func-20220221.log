@@ -1,0 +1,42 @@
+2022-02-21 18:56:20,162 INFO func.py 36 Function load... String:aa
+2022-02-21 18:58:54,138 INFO func.py 36 Function load... String:aa
+2022-02-21 18:59:48,738 INFO func.py 36 Function load... String:aa
+2022-02-21 19:00:31,545 INFO func.py 36 Function load... String:aa
+2022-02-21 19:02:17,760 INFO func.py 36 Function load... String:aaa
+2022-02-21 19:02:17,913 INFO func.py 63 Found package:A_Turing_RobotChat
+2022-02-21 19:02:52,414 INFO func.py 36 Function load... String:aa
+2022-02-21 19:02:52,570 INFO func.py 62 Found package:A_Turing_RobotChat
+2022-02-21 19:05:00,739 INFO func.py 37 Function load... String:aaa
+2022-02-21 19:05:00,893 INFO func.py 63 Found package:A_Turing_RobotChat
+2022-02-21 19:06:19,478 INFO func.py 37 Function load... String:aaa
+2022-02-21 19:06:19,634 INFO func.py 63 Found package:A_Turing_RobotChat
+2022-02-21 19:07:44,119 INFO func.py 37 Function load... String:aaa
+2022-02-21 19:07:44,266 INFO func.py 64 Found package:A_Turing_RobotChat
+2022-02-21 19:09:23,526 INFO func.py 37 Function load... String:aa
+2022-02-21 19:09:23,688 INFO func.py 64 Found package:A_Turing_RobotChat
+2022-02-21 19:09:24,041 INFO func.py 66 Package running{"string": "aa", "return": 0}
+2022-02-21 19:09:24,044 INFO func.py 77 Function end.
+2022-02-21 19:10:31,990 INFO func.py 37 Function load... String:你好
+2022-02-21 19:10:31,991 INFO func.py 64 Found package:A_Turing_RobotChat
+2022-02-21 19:10:34,433 INFO func.py 66 Package running{"string": "\u4f60\u597d\u8036\uff5e", "return": 0}
+2022-02-21 19:10:34,437 INFO func.py 77 Function end.
+2022-02-21 19:23:06,861 INFO func.py 37 Function load... String:你叫什么名字
+2022-02-21 19:23:07,080 INFO func.py 64 Found package:A_Turing_RobotChat
+2022-02-21 19:23:11,816 INFO func.py 66 Package running{"string": "\u6211\u5c31\u662f\u90a3\u4e2a\u8fdc\u8fd1\u95fb\u540d\u3001\u65e0\u4eba\u4e0d\u77e5\u65e0\u4eba\u4e0d\u6653\u7684\u7075\u7a7a\u56db\u53f7\u554a\u3002", "return": 0}
+2022-02-21 19:23:11,821 INFO func.py 77 Function end.
+2022-02-21 19:25:10,559 INFO func.py 37 Function load... String:你叫什么名字
+2022-02-21 19:25:10,717 INFO func.py 64 Found package:A_Turing_RobotChat
+2022-02-21 19:25:11,207 INFO func.py 66 Package running{"string": "\u5728\u4e0b\u7075\u7a7a\u4e00\u53f7\uff0c\u8bf7\u591a\u591a\u6307\u6559\u3002", "return": 0}
+2022-02-21 19:25:11,210 INFO func.py 77 Function end.
+2022-02-21 19:27:29,039 INFO func.py 37 Function load... String:你叫什么名字
+2022-02-21 19:27:29,198 INFO func.py 64 Found package:A_Turing_RobotChat
+2022-02-21 19:27:31,159 INFO func.py 66 Package running{"string": "\u6211\u5c31\u662f\u989c\u503c\u7206\u8868\u7684\u7075\u7a7a\u4e94\u53f7\u3002", "return": 0}
+2022-02-21 19:27:31,163 INFO func.py 77 Function end.
+2022-02-21 19:30:30,899 INFO func.py 37 Function load... String:hello
+2022-02-21 19:30:31,058 INFO func.py 64 Found package:A_Turing_RobotChat
+2022-02-21 19:30:31,390 INFO func.py 66 Package running{"string": "\u4f60\u597d", "return": 0}
+2022-02-21 19:30:31,392 INFO func.py 77 Function end.
+2022-02-21 20:05:51,632 INFO func.py 37 Function load... String:hello
+2022-02-21 20:05:51,855 INFO func.py 64 Found package:A_Turing_RobotChat
+2022-02-21 20:05:52,165 INFO func.py 66 Package running{"string": "\u4f60\u597d", "return": 0}
+2022-02-21 20:05:52,168 INFO func.py 77 Function end.

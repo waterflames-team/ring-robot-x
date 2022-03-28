@@ -1,5 +1,4 @@
-
-# RingRobotX - 好用易开发的语音对话机器人框架
+# RingRobotX - 灵活易开发的语音对话机器人框架
 
 这是一个python语音对话机器人框架，根据LingkongRobot修改而来
 特色功能：
@@ -12,6 +11,8 @@
 6. 从根部开始重构 - 摆脱LingkongRobotV1的600行文件！
 7. 开放，简洁的API接口，您可以迅速入手框架并自定义自己的使用方式！
 8. 对于Geek，开放Hook钩子！在任何地方Hook你的函数！
+9. 没有复杂死板的封装，所有功能都使用巧妙的注册函数调用，这种方式甚至可以比wukong-robot更加“灵活”
+10. 因为架构的灵活性，tts、asr、唤醒等等功能都具有高度的模块化，高度可自定义
 
 好了，准备好体验激动人心的RingRobot了吗？现在开始！
 
@@ -73,12 +74,16 @@ cp -a snowboy/resources/ ring-robot-x/model/resources
 python3 ring.py
 ```
 
+哦对了，内置的模型唤醒词是“灵空灵空”
+
+你可以替换掉，它在assets/snowboy/model.umdl
+
 # 框架接口
 # 技能包创建
 
 创建一个技能包十分简单，你只需要在func_packages新建一个文件夹，名字随意
 
-新建一个main.py和config.json，config.json需要包含"enable":true,这样系统才会认为技能包可使用
+新建一个main.py和config.json，config.json需要包含"enable":true,和"funcType":"Func"这样系统才会认为技能包可使用
 
 随后，main.py需要有最基本的两个函数：check和main
 
@@ -93,6 +98,8 @@ def check(string):
 ```
 
 如果我们说了包含“天气”的话，那么这个技能包就会为你服务。
+
+(注：如果你觉得这种不够【智能】，那么你可以使用语义理解等方式判断，一切在于你，而不是ringrobot)
 
 那么怎么让技能包为我们服务呢？
 
@@ -110,6 +117,61 @@ return {"string": text, "return": 0} # 0（False）代表不启用，1（True）
 
 示例：见仓库func_packages文件夹自带技能包
 
+## 特殊技能包创建
+
+特殊技能包指可实现tts、asr、唤醒等等的技能包。
+
+和普通技能包一样，你同样需要config.json和main.py。
+
+比如TTS功能：
+
+config.json:
+```json
+{
+  "enable": true,
+  "funcType": "TTS"
+}
+```
+
+此外，main.py无需check和main,但必须需要一个函数，用于实现tts功能
+
+以“TTS_BAIDU_API”插件为例：
+
+```python
+import model.player
+import model.mod_manager
+
+def tts(tts_string):
+    # <do something>
+    model.player.playsound_from_file('result.mp3')
+
+model.mod_manager.setFunc(tts, "TTS")
+```
+
+我们可以看到，最后运行了一个model.mod_manager.setFunc(tts, "TTS")，用于声明“tts”函数为TTS功能
+
+我们定制了两个接口，分别是：
+
+### TTS插件
+
+TTS插件同样有一个参数：text，是要生成的句子
+
+### ASR插件
+
+ASR插件的函数需要有一个参数：path
+
+path是录音文件的路径
+
+不过，有一个插件比较特殊——
+
+### HuanXing唤醒插件
+
+它是不需要注册的，你可以直接将代码放进main，不需要任何函数。
+
+当然，编写唤醒插件有些特殊，所以你需要遵守我们的 唤醒插件编写标准 才可以被收录至ringrobot的插件库
+
+（详见wiki）
+
 ## hook 钩子接口
 
 为了方便用户自定义功能，我们开放了hook接口。
@@ -121,10 +183,11 @@ return {"string": text, "return": 0} # 0（False）代表不启用，1（True）
 ### HookClient 钩子客户端
 
 ```python
+from model.hook import *
+
 def tesdef(a):
     print("Hello World Form hook!")
-testhook=model.hook.HookClient
-testhook.hookEverything(testhook,"RRCore.Main.Before.Running",tesdef)
+add_hook_fast("RRCore.Main.Before.Running",tesdef)
 ```
 
 当这个钩子客户端创建 在钩子”RRCore.Main.Before.Running“运行之前时
@@ -136,15 +199,15 @@ testhook.hookEverything(testhook,"RRCore.Main.Before.Running",tesdef)
 ### HookerRegister 钩子创建
 
 ```python
-testhook=model.hook.HookerRegister("Hello.World.Hook")
+from model.hook import *
+
+register_hook_fast("Hello.World.Hook")
 # 创建钩子
 
 def tesdef(a):
     print("Hello World Form hook!")
-testhooka=model.hook.HookClient
-testhooka.hookEverything(testhooka,"Hello.World.Hook",tesdef)
-
-testhook.run_Hook(testhook,"Hello.World.Hook")
+add_hook_fast("RRCore.Main.Before.Running",tesdef)
+runhook_fast("Hello.World.Hook",0)
 ```
 
 当以上代码运行时，您将会在控制台里看到"Hello World Form hook!"
@@ -164,6 +227,8 @@ run(string, ttsexec="tts")
 它可以保存插件生成的设置到config目录。
 
 ```python
+import model.config
+
 test=model.config.APPConfig()
 test.setModelName(test,"MYTEST")
 test.setConfig(test,"MYTEST","txt")
@@ -171,3 +236,24 @@ print(test.getConfig(test,"txt"))
 ```
 
 执行完成后，会在config目录生成MYTEST.txt文件，并在控制台输出MYTEST
+
+# 其他
+
+此项目并不是只针对树莓派等arm linux开发板，任何架构都可运行
+
+如果你的开发板在此项目中报错，那么我将会尽最大努力帮你解决问题
+
+（并不意味着我会帮你解决一切问题，所有与ringrobot无关的问题将不受支持）
+
+这个项目花费了我很多的精力和时间，如果这个项目帮助了你，请考虑向我们”赞赏“一下
+
+如果你喜欢这个点子，可以向本项目发起者 折腾调 买一袋白象
+
+[微信捐赠码](https://www.shushi.tech/assets/avatars/wx.png "微信捐赠码")
+
+[支付宝捐赠码](https://www.shushi.tech/assets/avatars/zfb.png "支付宝捐赠码")
+
+当然，你也可以向 Lingkong-robot 和 Lingkong-team 的创始人 Epeiuss 和整个团队买一杯咖啡
+
+> 如果您觉得我们的开源软件对你有所帮助，请进入爱发电赞赏我们，给予一些帮助与鼓励，谢谢！！！
+戳这里 -> http://afdian.net/@epeiuss

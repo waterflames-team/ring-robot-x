@@ -6,11 +6,6 @@ import time
 import model.config
 import model.tts
 import model.logger
-from model.hook import HookerRegister
-
-beforehook = HookerRegister("RRCore.Model.Before.FuncRunning")
-afterhook = HookerRegister("RRCore.Model.After.FuncRunning")
-
 
 def run_tts(string, ttsexec):
     # TODO 这里的todo是为了引起你的注意。
@@ -70,7 +65,7 @@ def run(string, ttsexec="tts"):
             with open(os.path.join(path1, file) + '/config.json') as file_obj:
                 contents = file_obj.read()
                 contents = json.loads(contents)
-                if (contents['enable'] == True):  # 技能包启用
+                if (contents['enable'] == True and contents['funcType'] == "Func" ):  # 技能包启用
                     package = importlib.import_module(".main", package=path1 + "." + file)
                     if package.check(string) == True:  # 技能包觉得我可以
                         moduleLogger.info("Found package:" + file)

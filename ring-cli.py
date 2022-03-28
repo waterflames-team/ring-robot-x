@@ -23,4 +23,4 @@ model.hook.runhook_fast("RRCore.Main.Before.Running",0)
 model.hook.runhook_fast("RRCore.Main.Before.Running.CLI",0)
 while True:
     chat=input()
-    model.func.run(chat,"print")
+    model.func.run(chat,"tts")

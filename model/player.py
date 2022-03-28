@@ -1,4 +1,5 @@
-from playsound import playsound
+from pydub import AudioSegment
+from pydub.playback import play
 import os
 
 def dele(fpath):
@@ -6,4 +7,5 @@ def dele(fpath):
         os.remove(fpath)
 
 def playsound_from_file(file):
-    playsound(file)
+    song = AudioSegment.from_wav(file)
+    play(song)

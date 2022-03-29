@@ -4,23 +4,33 @@
 特色功能：
 
 1. 模块化管理（技能扩展包，功能扩展包）
-2. 技能模块化 - 开发更简单！
-3. 我们都喜欢的命令行！你可以通过命令行直接对话！
-4. 配置简单化，配置可以在config目录修改，避免直接修改源代码！
-5. 实现了连续对话 - 终于可以和机器人玩成语接龙了！
-6. 从根部开始重构 - 摆脱LingkongRobotV1的600行文件！
-7. 开放，简洁的API接口，您可以迅速入手框架并自定义自己的使用方式！
-8. 对于Geek，开放Hook钩子！在任何地方Hook你的函数！
-9. 没有复杂死板的封装，所有功能都使用巧妙的注册函数调用，这种方式甚至可以比wukong-robot更加“灵活”
-10. 因为架构的灵活性，tts、asr、唤醒等等功能都具有高度的模块化，高度可自定义
+2. 我们都喜欢的命令行！你可以通过命令行直接对话
+3. 配置简单化，配置可以在config目录修改，避免直接修改源代码
+4. 实现了连续对话 - 终于可以和机器人玩成语接龙了
+5. 从根部开始重构 - 摆脱LingkongRobot旧版本的600行文件
+6. 开放，简洁的接口，您可以迅速入手框架并自定义自己的使用方式
+7. 没有复杂死板的封装，所有功能都使用巧妙的注册函数调用
+8. 因为架构的灵活性，tts、asr、唤醒等等功能都具有高度的模块化，高度可自定义
 
 好了，准备好体验激动人心的RingRobot了吗？现在开始！
 
 # 须知
 
-RingRobotX 是lingkongteam成员“zhetengtiao”自行重构，并不在lingkongrobot 2.0重构计划范围内。
+RingRobotX 是lingkongteam成员“zhetengtiao”自行重构，（可能）并不在lingkongrobot 重构计划范围内。
 
-请期待lingkongrobot 2.0！
+请期待lingkongrobot 重构版！
+
+RingRobotX默认（git仓库版本）内置图灵、百度ASR&TTS、snowboy唤醒插件
+
+即使你不会python，申请了图灵、百度apikey后仍然可以玩转它
+
+后期将会着重开发插件，注重功能的扩展加强
+
+（是的即使snowboy死了但是还能耍
+
+在线模型训练：https://snowboy.hahack.com/
+
+感谢wzpan老师的搭建）
 
 # 安装
 
@@ -53,7 +63,11 @@ git clone https://gitee.com/lkteam/ring-robot-x
 
 ### 2.安装语音唤醒功能
 
-唤醒功能依赖包：https://github.com/Kitt-AI/snowboy.git
+唤醒功能依赖[snowboy](https://github.com/Kitt-AI/snowboy.git)
+
+为了避免某些问题，snowboy暂时不会集成到ringrobotx
+
+所以，我们需要手动安装snowboy
 
 请执行以下命令：
 
@@ -78,8 +92,12 @@ python3 ring.py
 
 你可以替换掉，它在assets/snowboy/model.umdl
 
+# 设置
+
+详见config目录下的各种json文件
+
 # 框架接口
-# 技能包创建
+## 技能包创建
 
 创建一个技能包十分简单，你只需要在func_packages新建一个文件夹，名字随意
 
@@ -212,6 +230,14 @@ runhook_fast("Hello.World.Hook",0)
 
 当以上代码运行时，您将会在控制台里看到"Hello World Form hook!"
 
+## ASR 语言转文字
+
+model.asr.audioRecorderCallback(语言路径)
+
+## TTS 文字转语音
+
+model.tts.tts(文字)
+
 ## Func 语言处理
 
 func是ringrobot最为核心的部分，它完成了从根据字符串选择技能包到执行tts等一系列操作
@@ -237,23 +263,41 @@ print(test.getConfig(test,"txt"))
 
 执行完成后，会在config目录生成MYTEST.txt文件，并在控制台输出MYTEST
 
-# 其他
+# 支持
 
-此项目并不是只针对树莓派等arm linux开发板，任何架构都可运行
+由于折腾调是个还处于九年义务教育的学生党 ~~还是个鸽子~~ ，本项目可能活跃时间不长，也没有精力、时间、金钱支撑ringrobotx持续开发
+
+欢迎有开发者向这个项目发起pr，这样不仅是对我的鼓励，也是对ringrobotx莫大的支持
+
+此项目并不是只针对树莓派linux开发板，任何架构都可运行
 
 如果你的开发板在此项目中报错，那么我将会尽最大努力帮你解决问题
 
-（并不意味着我会帮你解决一切问题，所有与ringrobot无关的问题将不受支持）
+（并不意味着我会帮你解决一切问题，所有与ringrobotx无关的问题将不受支持）
 
 这个项目花费了我很多的精力和时间，如果这个项目帮助了你，请考虑向我们”赞赏“一下
 
-如果你喜欢这个点子，可以向本项目发起者 折腾调 买一袋白象
+如果你喜欢这个点子，可以向本项目发起者 折腾调 整一袋白象
 
 [微信捐赠码](https://www.shushi.tech/assets/avatars/wx.png "微信捐赠码")
 
-[支付宝捐赠码](https://www.shushi.tech/assets/avatars/zfb.png "支付宝捐赠码")
+[支付宝捐赠码](https://www.shushi.tech/assets/avatars/zfb.jpg "支付宝捐赠码")
 
 当然，你也可以向 Lingkong-robot 和 Lingkong-team 的创始人 Epeiuss 和整个团队买一杯咖啡
 
 > 如果您觉得我们的开源软件对你有所帮助，请进入爱发电赞赏我们，给予一些帮助与鼓励，谢谢！！！
 戳这里 -> http://afdian.net/@epeiuss
+
+# 未来工作
+
+1. 插件扩展
+* 增加各种TTSASR支持
+* 实现后台管理
+* 实现 HTTP API 接口以及 WebHook 等扩展功能
+* 命令行模式增强：禁启用插件、Debug调试某模块功能等等
+2. 文档完善
+* 使用wiki
+* 完善接口等等使用说明
+* 完善技能包创建新手教程
+3. 生态完善
+* 增加各种花里胡哨的插件（功能），可能会作为 fork 版本发布

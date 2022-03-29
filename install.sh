@@ -63,7 +63,7 @@ function install_before_require(){
     sudo apt install ${i} -y || error_dump "install_before_require - Cannot install package:${i}"
   done
   echo -e "\033[32;40m[INFO] apt install Success! \033[0m"
-  require=(pydub playsound)
+  require=(pydub)
   for i in ${require[*]}
   do
     sudo pip3 install ${i} -i https://pypi.tuna.tsinghua.edu.cn/simple some-package || error_dump "install_before_require - Cannot install package:${i}"

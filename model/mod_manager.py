@@ -11,7 +11,6 @@ def setFunc(func, name):
     if functions[name] is None:
         functions[name] = []
     functions[name].append(func)
-    print("[本地] 技能扩展包新增：" + name)
 
 
 def getFunc(name):

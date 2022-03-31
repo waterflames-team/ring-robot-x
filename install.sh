@@ -83,7 +83,6 @@ function main(){
   install_snowboy
   install_ringrobotx
   echo -e "\033[32;40m[INFO] RingRobotX Ready! \033[0m"
-  echo -e "\033[32;40m[INFO] Next, you need to copy the snowboy model to ~/ringrobotx/assets/snowboy/model.pmdl , see RingRoxotX Wiki \033[0m"
   exit
 }
 

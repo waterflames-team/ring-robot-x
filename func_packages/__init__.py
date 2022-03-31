@@ -30,7 +30,6 @@ for i in os.listdir(r''+path):
             file_obj = open(path+"/"+i+"/config.json")
             if json.loads(file_obj.read())["enable"]:
                 import_func(name + '.' + i + ".main")
-                print("[本地] 成功加载技能包：" + i)
             else:
                 print("[本地] 技能包禁用，忽略：" + i)
         except:

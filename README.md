@@ -16,9 +16,7 @@
 
 # 须知
 
-RingRobotX 是lingkongteam成员“zhetengtiao”自行重构，（可能）并不在lingkongrobot 重构计划范围内。
-
-请期待lingkongrobot 重构版！
+RingRobotX 是 lingkongrobot 的新版本，目前 lingkongrobot 和本版本数据暂不互通
 
 RingRobotX默认（git仓库版本）内置图灵、百度ASR&TTS、snowboy唤醒插件
 
@@ -30,7 +28,7 @@ RingRobotX默认（git仓库版本）内置图灵、百度ASR&TTS、snowboy唤�
 
 在线模型训练：https://snowboy.hahack.com/
 
-感谢wzpan老师的搭建）
+感谢wzpan老师的网站）
 
 # 安装
 
@@ -96,173 +94,6 @@ python3 ring.py
 
 详见config目录下的各种json文件
 
-# 框架接口
-## 技能包创建
-
-创建一个技能包十分简单，你只需要在func_packages新建一个文件夹，名字随意
-
-新建一个main.py和config.json，config.json需要包含"enable":true,和"funcType":"Func"这样系统才会认为技能包可使用
-
-随后，main.py需要有最基本的两个函数：check和main
-
-check有一个参数：string（用户说给ringrobot的话），你可以在check函数里鉴定这句话是不是需要你回答
-
-比如，询问天气：
-```python
-def check(string):
-    if "天气" in string:
-        return True
-    return False
-```
-
-如果我们说了包含“天气”的话，那么这个技能包就会为你服务。
-
-(注：如果你觉得这种不够【智能】，那么你可以使用语义理解等方式判断，一切在于你，而不是ringrobot)
-
-那么怎么让技能包为我们服务呢？
-
-main函数包括两个参数：string（用户说给ringrobot的话）和bool（是否在连续对话模式）。
-
-然后你的技能包在处理完之后，将返回的句子+是否启用连续对话打包为字典return回去
-
-比如，我们要传回text为我们的答复：
-
-```python
-return {"string": text, "return": 0} # 0（False）代表不启用，1（True）代表启用
-```
-
-至此，技能包开发完成，和你的小伙伴一起分享吧！
-
-示例：见仓库func_packages文件夹自带技能包
-
-## 特殊技能包创建
-
-特殊技能包指可实现tts、asr、唤醒等等的技能包。
-
-和普通技能包一样，你同样需要config.json和main.py。
-
-比如TTS功能：
-
-config.json:
-```json
-{
-  "enable": true,
-  "funcType": "TTS"
-}
-```
-
-此外，main.py无需check和main,但必须需要一个函数，用于实现tts功能
-
-以“TTS_BAIDU_API”插件为例：
-
-```python
-import model.player
-import model.mod_manager
-
-def tts(tts_string):
-    # <do something>
-    model.player.playsound_from_file('result.mp3')
-
-model.mod_manager.setFunc(tts, "TTS")
-```
-
-我们可以看到，最后运行了一个model.mod_manager.setFunc(tts, "TTS")，用于声明“tts”函数为TTS功能
-
-我们定制了两个接口，分别是：
-
-### TTS插件
-
-TTS插件同样有一个参数：text，是要生成的句子
-
-### ASR插件
-
-ASR插件的函数需要有一个参数：path
-
-path是录音文件的路径
-
-不过，有一个插件比较特殊——
-
-### HuanXing唤醒插件
-
-它是不需要注册的，你可以直接将代码放进main，不需要任何函数。
-
-当然，编写唤醒插件有些特殊，所以你需要遵守我们的 唤醒插件编写标准 才可以被收录至ringrobot的插件库
-
-（详见wiki）
-
-## hook 钩子接口
-
-为了方便用户自定义功能，我们开放了hook接口。
-
-您可以使用hook来实现”当说话时，LED灯泡亮“等操作。
-
-下面，就让我们看看hook是怎么使用的：
-
-### HookClient 钩子客户端
-
-```python
-from model.hook import *
-
-def tesdef(a):
-    print("Hello World Form hook!")
-add_hook_fast("RRCore.Main.Before.Running",tesdef)
-```
-
-当这个钩子客户端创建 在钩子”RRCore.Main.Before.Running“运行之前时
-
-（也就是当ring启动时），你将会在控制台内看到一条"Hello World Form hook!"的信息。
-
-钩子命名规则详见wiki。
-
-### HookerRegister 钩子创建
-
-```python
-from model.hook import *
-
-register_hook_fast("Hello.World.Hook")
-# 创建钩子
-
-def tesdef(a):
-    print("Hello World Form hook!")
-add_hook_fast("RRCore.Main.Before.Running",tesdef)
-runhook_fast("Hello.World.Hook",0)
-```
-
-当以上代码运行时，您将会在控制台里看到"Hello World Form hook!"
-
-## ASR 语言转文字
-
-model.asr.audioRecorderCallback(语言路径)
-
-## TTS 文字转语音
-
-model.tts.tts(文字)
-
-## Func 语言处理
-
-func是ringrobot最为核心的部分，它完成了从根据字符串选择技能包到执行tts等一系列操作
-
-### run 执行
-
-run(string, ttsexec="tts")
-
-它会遍历一遍所有可以使用的技能包，直到有一个技能包可以管这个字符串
-
-## Config 保持插件设置
-
-它可以保存插件生成的设置到config目录。
-
-```python
-import model.config
-
-test=model.config.APPConfig()
-test.setModelName(test,"MYTEST")
-test.setConfig(test,"MYTEST","txt")
-print(test.getConfig(test,"txt"))
-```
-
-执行完成后，会在config目录生成MYTEST.txt文件，并在控制台输出MYTEST
-
 # 支持
 
 由于折腾调是个还处于九年义务教育的学生党 ~~还是个鸽子~~ ，本项目可能活跃时间不长，也没有精力、时间、金钱支撑ringrobotx持续开发
@@ -272,8 +103,6 @@ print(test.getConfig(test,"txt"))
 此项目并不是只针对树莓派linux开发板，任何架构都可运行
 
 如果你的开发板在此项目中报错，那么我将会尽最大努力帮你解决问题
-
-（并不意味着我会帮你解决一切问题，所有与ringrobotx无关的问题将不受支持）
 
 这个项目花费了我很多的精力和时间，如果这个项目帮助了你，请考虑向我们”赞赏“一下
 
@@ -293,7 +122,7 @@ print(test.getConfig(test,"txt"))
 1. 插件扩展
 * 增加各种TTSASR支持
 * 实现后台管理
-* 实现 HTTP API 接口以及 WebHook 等扩展功能
+* 实现 HTTP API 接口等扩展功能
 * 命令行模式增强：禁启用插件、Debug调试某模块功能等等
 2. 文档完善
 * 使用wiki

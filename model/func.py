@@ -6,6 +6,7 @@ import time
 import model.config
 import model.tts
 import model.logger
+import model.hook
 
 def run_tts(string, ttsexec):
     # TODO 这里的todo是为了引起你的注意。
@@ -21,6 +22,9 @@ def run_tts(string, ttsexec):
 
 
 def run(string, ttsexec="tts"):
+
+    model.hook.runhook_fast("RRCore.Model.Before.FuncRunning", {"string":string,"ttsexec":ttsexec})
+
     path = model.config.APPConfig()
     path.setModelName("func")
     path1 = path.getConfig()
@@ -41,12 +45,15 @@ def run(string, ttsexec="tts"):
             origin_con['is_updown'] = True
             origin_con['updown_funcname'] = file
             path.setConfig(json.dumps(origin_con))
+            model.hook.runhook_fast("RRCore.Model.After.ContinueEnable", {"string": string, "ttsexec": ttsexec})
         else:  # 取消连续对话模式
             origin_con = path.getConfig()
             origin_con['is_updown'] = False
             origin_con['updown_funcname'] = ""
             path.setConfig(json.dumps(origin_con))
+            model.hook.runhook_fast("RRCore.Model.After.ContinueDisable", {"string": string, "ttsexec": ttsexec})
         moduleLogger.info("Function end.")
+        model.hook.runhook_fast("RRCore.Model.After.FuncRunning", {"string": string, "ttsexec": ttsexec})
         return run_tts(returncon['string'], ttsexec)
 
     if os.path.exists(path1) == False:
@@ -76,10 +83,20 @@ def run(string, ttsexec="tts"):
                             origin_con['is_updown'] = True
                             origin_con['updown_funcname'] = file
                             path.setConfig(json.dumps(origin_con))
+
+                            model.hook.runhook_fast("RRCore.Model.After.ContinueEnable",
+                                                    {"string": string, "ttsexec": ttsexec})
+
                         else:  # 无连续对话
                             origin_con = path.getConfig()
                             origin_con['is_updown'] = False
                             origin_con['updown_funcname'] = ""
                             path.setConfig(json.dumps(origin_con))
+
+                            model.hook.runhook_fast("RRCore.Model.After.ContinueDisable",
+                                                    {"string": string, "ttsexec": ttsexec})
+
                         moduleLogger.info("Function end.")
+                        model.hook.runhook_fast("RRCore.Model.After.FuncRunning",
+                                                {"string": string, "ttsexec": ttsexec})
                         return run_tts(returncon['string'], ttsexec)

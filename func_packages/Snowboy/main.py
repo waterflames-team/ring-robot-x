@@ -4,11 +4,13 @@ import sys
 
 import model.asr
 import model.snowboydecoder as snowboydecoder
+import model.hook
 
 
 interrupted = False
 
 def detectedCallback():
+    model.hook.runhook_fast("RRCore.FuncPack.Before.WakeUPRunning",0)
     model.player.playsound_from_file(os.path.split( os.path.realpath( sys.argv[0] ) )[0]+"/"+'assets/music/ding.wav')
 
 def interrupt_callback():

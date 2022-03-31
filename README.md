@@ -1,6 +1,6 @@
 # RingRobotX - 灵活易开发的语音对话机器人
 
-这是一个python语音对话机器人框架，根据LingKong-Robot修改而来
+这是一个python语音对话机器人框架，根据Lingkong-Robot修改而来
 特色功能：
 
 1. 模块化管理（技能扩展包，功能扩展包）

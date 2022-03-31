@@ -1,6 +1,6 @@
-# RingRobotX - 灵活易开发的语音对话机器人框架
+# RingRobotX - 灵活易开发的语音对话机器人
 
-这是一个python语音对话机器人框架，根据LingkongRobot修改而来
+这是一个python语音对话机器人框架，根据LingKong-Robot修改而来
 特色功能：
 
 1. 模块化管理（技能扩展包，功能扩展包）
@@ -55,7 +55,7 @@ git clone https://gitee.com/lkteam/ring-robot-x
 
 运行此命令后，ring将会下载到命令执行的目录
 
-当然，如果你追求稳定，可以从我们的项目主页下载发行版
+当然，如果你追求稳定，可以从我们的项目仓库下载发行版
 
 如果你追求新功能，请下载develop版本
 
@@ -112,7 +112,7 @@ python3 ring.py
 
 [支付宝捐赠码](https://www.shushi.tech/assets/avatars/zfb.jpg "支付宝捐赠码")
 
-当然，你也可以向 Lingkong-robot 和 Lingkong-team 的创始人 Epeiuss 和整个团队买一杯咖啡
+当然，你也可以向 LingKongTeam 的创始人 Epeiuss 和整个团队买一杯咖啡
 
 > 如果您觉得我们的开源软件对你有所帮助，请进入爱发电赞赏我们，给予一些帮助与鼓励，谢谢！！！
 戳这里 -> http://afdian.net/@epeiuss

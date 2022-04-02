@@ -38,10 +38,10 @@ RingRobotX默认（git仓库版本）内置图灵、百度ASR&TTS、snowboy唤�
 
 运行：
 ```shell
-wget -O install.sh https://gitee.com/lkteam/ring-robot-x/raw/master/install.sh && sudo bash install.sh
+wget -O install.sh https://gitee.com/lkteam/ring-robot-x/raw/develop/install.sh && sudo bash install.sh
 ```
 
-当然，如果你是其他发行版，可以试着第二种方案：手动安装。
+当然，如果你是其他发行版（或者一键安装脚本有错误），可以试着第二种方案：手动安装。
 
 ## 方案2：手动安装
 
@@ -94,6 +94,14 @@ python3 ring.py
 
 详见config目录下的各种json文件
 
+# Wiki
+
+[戳我](https://gitee.com/lkteam/ring-robot-x/wikis "Wiki")
+
+# 遇到问题
+
+[戳我](https://gitee.com/lkteam/ring-robot-x/issues "Issues")创建一个issue
+
 # 支持
 
 由于折腾调是个还处于九年义务教育的学生党 ~~还是个鸽子~~ ，本项目可能活跃时间不长，也没有精力、时间、金钱支撑ringrobotx持续开发
@@ -124,9 +132,9 @@ python3 ring.py
 * 实现后台管理
 * 实现 HTTP API 接口等扩展功能
 * 命令行模式增强：禁启用插件、Debug调试某模块功能等等
-2. 文档完善
-* 使用wiki
-* 完善接口等等使用说明
-* 完善技能包创建新手教程
+2. ~~文档完善~~
+* ~~使用wiki~~
+* ~~完善接口等等使用说明~~
+* ~~完善技能包创建新手教程~~
 3. 生态完善
 * 增加各种花里胡哨的插件（功能），可能会作为 fork 版本发布

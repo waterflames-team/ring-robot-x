@@ -6,3 +6,4 @@ venv/
 /config/HTTP_API.json
 /func_packages/AA_HTTP_API/main.py
 /func_packages/AA_HTTP_BACK/main.py
+/func_packages/Q&A_datafunc/*

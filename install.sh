@@ -35,6 +35,7 @@ function install_ringrobotx(){
   cp snowboy/swig/Python3/_snowboydetect.so ring-robot-x/model || error_dump "install_ringrobotx - copy error"
   cp snowboy/examples/Python3/snowboydecoder.py ring-robot-x/model || error_dump "install_ringrobotx - copy error"
   cp snowboy/examples/Python3/snowboydetect.py ring-robot-x/model || error_dump "install_ringrobotx - copy error"
+  cp -a snowboy/resources/ ring-robot-x/model/resources || error_dump "install_ringrobotx - copy error"
 }
 
 function install_before_require(){

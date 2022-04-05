@@ -5,12 +5,12 @@ import sys
 import json
 import model.player
 import model.func
-import model.mod_manager
+import model.hook
 import model.config
 
 
 # asr model from LingkongRobot
-def audioRecorderCallback(fname):  # snowboy to asr
+def main(fname):  # snowboy to asr
     model.player.playsound_from_file(os.path.split( os.path.realpath( sys.argv[0] ) )[0]+"/"+'assets/music/dong.wav')
 
     # asr
@@ -167,4 +167,4 @@ def audioRecorderCallback(fname):  # snowboy to asr
 
     model.func.run(cg)  # 调用技能
 
-model.mod_manager.setFunc(audioRecorderCallback,"ASR")
+model.hook.add_hook_fast("RRCore.Func.ASR",main)

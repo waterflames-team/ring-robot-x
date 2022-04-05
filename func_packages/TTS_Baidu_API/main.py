@@ -1,10 +1,10 @@
 import json
 import sys
 import model.player
-import model.mod_manager
+import model.hook
 import model.config
 
-def tts(tts_string):
+def main(tts_string):
     # tts
     IS_PY3 = sys.version_info.major == 3
     from urllib.request import urlopen
@@ -116,4 +116,4 @@ def tts(tts_string):
 
     model.player.playsound_from_file('result.mp3')
 
-model.mod_manager.setFunc(tts, "TTS")
+model.hook.add_hook_fast("RRCore.Func.TTS",main)

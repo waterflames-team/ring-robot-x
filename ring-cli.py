@@ -6,8 +6,6 @@
 '''
 import model
 import time
-import model.func
-
 
 module_logfile = "./log/main-CLI-" + time.strftime("%Y%m%d") + '.log'
 moduleLogger = model.logger.AppLogger("RingRobotX-Core-Main-CLI", module_logfile)
@@ -23,4 +21,4 @@ model.hook.runhook_fast("RRCore.Main.Before.Running",0)
 model.hook.runhook_fast("RRCore.Main.Before.Running.CLI",0)
 while True:
     chat=input()
-    model.func.run(chat,"tts")
+    model.func.run(chat,"print")

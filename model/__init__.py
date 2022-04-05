@@ -4,8 +4,6 @@ import os
 import pkgutil
 import traceback
 
-import func_packages
-
 #模块化自动引入
 
 print("[本地] 正在加载模块")

@@ -7,7 +7,6 @@
 # 当然 func_packages也是如此，不过它在func.py导入。
 import model
 import time
-import model.player
 
 module_logfile = "./log/main-" + time.strftime("%Y%m%d") + '.log'
 moduleLogger = model.logger.AppLogger("RingRobotX-Core-Main", module_logfile)

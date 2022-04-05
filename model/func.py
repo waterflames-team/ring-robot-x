@@ -7,6 +7,8 @@ import model.config
 import model.tts
 import model.logger
 import model.hook
+from func_packages import func_packages_class
+
 
 def run_tts(string, ttsexec):
     # TODO 这里的todo是为了引起你的注意。
@@ -28,7 +30,8 @@ def run(string, ttsexec="tts"):
     path = model.config.APPConfig()
     path.setModelName("func")
     path1 = path.getConfig()
-    path1 = path1["funcpack_path"]
+    path1 = "func_packages"
+    model_class= func_packages_class
 
     module_logfile = "./log/main-Func-" + time.strftime("%Y%m%d") + '.log'
     moduleLogger = model.logger.AppLogger("RingRobotX-Core-Func", module_logfile)
@@ -36,7 +39,7 @@ def run(string, ttsexec="tts"):
 
     if (path.getConfig()["is_updown"] == True):  # 连续对话被定义
         file = path.getConfig()["updown_funcname"]  # 获取连续对话重定向函数名
-        package = importlib.import_module(".main", package=path1 + "." + file)
+        package = model_class[file]
         returncon = package.main(string, True)# 传入true，因为if语句判定为true
         run_tts(returncon['string'], ttsexec)
         moduleLogger.info("Package running" + json.dumps(returncon))
@@ -52,6 +55,7 @@ def run(string, ttsexec="tts"):
             origin_con['updown_funcname'] = ""
             path.setConfig(json.dumps(origin_con))
             model.hook.runhook_fast("RRCore.Model.After.ContinueDisable", {"string": string, "ttsexec": ttsexec})
+        func_packages_class[file]=package
         moduleLogger.info("Function end.")
         model.hook.runhook_fast("RRCore.Model.After.FuncRunning", {"string": string, "ttsexec": ttsexec})
         return run_tts(returncon['string'], ttsexec)
@@ -73,7 +77,7 @@ def run(string, ttsexec="tts"):
                 contents = file_obj.read()
                 contents = json.loads(contents)
                 if (contents['enable'] == True and contents['funcType'] == "Func" ):  # 技能包启用
-                    package = importlib.import_module(".main", package=path1 + "." + file)
+                    package = model_class[file]
                     if package.check(string) == True:  # 技能包觉得我可以
                         moduleLogger.info("Found package:" + file)
                         returncon = package.main(string, False) #传入false，因为如果true了话早在前面true了
@@ -95,7 +99,7 @@ def run(string, ttsexec="tts"):
 
                             model.hook.runhook_fast("RRCore.Model.After.ContinueDisable",
                                                     {"string": string, "ttsexec": ttsexec})
-
+                        func_packages_class[file] = package
                         moduleLogger.info("Function end.")
                         model.hook.runhook_fast("RRCore.Model.After.FuncRunning",
                                                 {"string": string, "ttsexec": ttsexec})

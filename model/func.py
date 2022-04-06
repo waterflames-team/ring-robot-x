@@ -73,11 +73,11 @@ def run(string, ttsexec="tts"):
                     os.path.join(path1, file) + '/main.py') == False:
                 continue  # 技能包文件夹内无config和main
 
-            with open(os.path.join(path1, file) + '/config.json') as file_obj:
+            with open(os.path.join(path1, file) + '/config.json') as file_obj: # 打开config
                 contents = file_obj.read()
                 contents = json.loads(contents)
                 if (contents['enable'] == True and contents['funcType'] == "Func" ):  # 技能包启用
-                    package = model_class[file]
+                    package = model_class[file] # 获取技能包class
                     if package.check(string) == True:  # 技能包觉得我可以
                         moduleLogger.info("Found package:" + file)
                         returncon = package.main(string, False) #传入false，因为如果true了话早在前面true了
@@ -99,7 +99,7 @@ def run(string, ttsexec="tts"):
 
                             model.hook.runhook_fast("RRCore.Model.After.ContinueDisable",
                                                     {"string": string, "ttsexec": ttsexec})
-                        func_packages_class[file] = package
+                        func_packages_class[file] = package # 用完的class放回去，不然会玄学
                         moduleLogger.info("Function end.")
                         model.hook.runhook_fast("RRCore.Model.After.FuncRunning",
                                                 {"string": string, "ttsexec": ttsexec})

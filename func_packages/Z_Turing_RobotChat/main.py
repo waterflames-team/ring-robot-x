@@ -10,7 +10,7 @@ class Main:
 
     def main(self, string, bool):
         path = model.config.APPConfig()
-        path.setModelName("ASR_BAIDU_API")
+        path.setModelName("Turing_RobotChat")
         path1 = path.getConfig()
 
         url = 'http://openapi.tuling123.com/openapi/api/v2'

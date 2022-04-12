@@ -22,10 +22,6 @@ def signal_handler(signal, frame):
     global interrupted
     interrupted = True
 
-# TODO 这里的todo是为了引起你的注意。
-# 如果你需要使用自定义唤醒引擎，那么你可以直接将config.json的enable变为false，然后下载其他引擎，导入到func_packages
-# 这样了话，系统不会导入snowboy库，而是你的自定义会代替snowboy运行。
-
 def run():
     modelaa = "assets/snowboy/model.umdl"#自己改唤醒模型路径
     signal.signal(signal.SIGINT, signal_handler)

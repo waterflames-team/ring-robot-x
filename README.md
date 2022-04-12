@@ -107,6 +107,8 @@ python3 ~/ringrobotx/ring-robot-x/ring.py
 
 [戳我](https://gitee.com/lkteam/ring-robot-x/issues "Issues")创建一个issue
 
+
+
 # 支持
 
 由于折腾调是个还处于九年义务教育的学生党 ~~还是个鸽子~~ ，本项目可能活跃时间不长，也没有精力、时间、金钱支撑ringrobotx持续开发

@@ -1,7 +1,4 @@
 import traceback
-from datetime import time
-
-import model
 
 HookList = {
     "RRCore.Main.Before.Running":[],
@@ -33,5 +30,5 @@ def runhook_fast(HookName,returnValue):
         try:
             i(returnValue)
         except:
-            ring.moduleLogger.error("【hook】报告！hook"+HookName+" 无法正确加载"+str(i))
+            print("【hook】报告！hook"+HookName+" 无法正确加载"+str(i))
             traceback.print_exc()

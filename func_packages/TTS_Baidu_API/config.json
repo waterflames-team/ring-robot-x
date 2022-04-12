@@ -1,4 +1,6 @@
 {
   "enable": true,
-  "funcType": "TTS"
+  "funcType": "TTS",
+  "version": "1",
+  "apiVersion": "Beta.3"
 }

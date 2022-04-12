@@ -1,6 +1,14 @@
 import os
 import json
 
+def fastGetConfig(modelName,fileType="json",encode='utf-8'):
+    with open('./config/' + modelName + '.' + fileType, encoding=encode) as file_obj:
+        contents = file_obj.read()
+        if (fileType == "json"):
+            return json.loads(contents)
+        else:
+            return contents
+
 class APPConfig(object):
 
     modelName=""

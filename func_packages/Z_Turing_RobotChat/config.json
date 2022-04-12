@@ -1,4 +1,6 @@
 {
   "enable": true,
-  "funcType": "Func"
+  "funcType": "Func",
+  "version": "1",
+  "apiVersion": "Beta.3"
 }

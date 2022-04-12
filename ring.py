@@ -12,11 +12,11 @@ module_logfile = "./log/main-" + time.strftime("%Y%m%d") + '.log'
 moduleLogger = model.logger.AppLogger("RingRobotX-Core-Main", module_logfile)
 moduleLogger.info("logger service started")
 
-moduleLogger.info('''
+moduleLogger.info(str('''
     RingRobotX
     by LingkongTeam
-    Ver.1.0 模块加载中，正在初始化
-''')
+    {} 加载完毕！
+''').format(model.config.fastGetConfig("api-version")["RingRobotX"]))
 
 # 以下为服务运行区域
 

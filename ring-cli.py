@@ -11,12 +11,12 @@ module_logfile = "./log/main-CLI-" + time.strftime("%Y%m%d") + '.log'
 moduleLogger = model.logger.AppLogger("RingRobotX-Core-Main-CLI", module_logfile)
 moduleLogger.info("logger service started")
 
-moduleLogger.info('''
+moduleLogger.info(str('''
     RingRobotX
-    Powered by LingkongTeam
-    您正在运行命令行对话模式
-    Ver.1.0 模块加载中，正在初始化
-''')
+    by LingkongTeam
+    {} CLI 加载完毕！
+''').format(model.config.fastGetConfig("api-version")["RingRobotX"]))
+
 model.hook.runhook_fast("RRCore.Main.Before.Running",0)
 model.hook.runhook_fast("RRCore.Main.Before.Running.CLI",0)
 while True:

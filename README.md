@@ -1,28 +1,29 @@
-# RingRobotX - 灵活易开发的语音对话机器人
+# RingRobotX - 灵活易开发的对话机器人框架
 
-这是一个python语音对话机器人框架，根据Lingkong-Robot修改而来
+这是一个python语音对话机器人框架，根据Lingkong-Robot重构而来
+
+可用于智能音箱，语言遥控，甚至智能客服、家庭管家、微信机器人等等
+
+目的是让中国的 Maker 们也能够「一小时」入门，无需过多以及不必要的配置
+
 特色功能：
 
-1. 模块化管理（技能扩展包，功能扩展包）
-2. 我们都喜欢的命令行！你可以通过命令行直接对话
+1. 技能包具有较强的灵活性，可随意支配技能
+2. 命令窗口直接对话
 3. 配置简单化，配置可以在config目录修改，避免直接修改源代码
 4. 实现了连续对话 - 终于可以和机器人玩成语接龙了
-5. 从根部开始重构 - 摆脱LingkongRobot旧版本的600行文件
-6. 开放，简洁的接口，您可以迅速入手框架并自定义自己的使用方式
-7. 没有复杂死板的封装，所有功能都使用巧妙地注册函数调用
-8. 因为架构的灵活性，tts、asr、唤醒等等功能都具有高度的模块化，高度可自定义
+5. 开放，简洁的接口，接入简单
+6. 没有复杂死板的封装
+7. 高度可自定义
+8. （TODO）开放的HTTP接口，让你的应用程序快速接入RingRobotX框架！
 
-好了，准备好体验激动人心的RingRobot了吗？现在开始！
+好了，准备好体验 RingRobotX 了吗？现在开始！
 
 # 须知
 
-RingRobotX 是 lingkongrobot 的新版本，目前 lingkongrobot 和本版本数据暂不互通
+RingRobotX 是 LingKongRobot 的重构版本
 
 RingRobotX默认（git仓库版本）内置图灵、百度ASR&TTS、snowboy唤醒插件
-
-即使你不会python，申请了图灵、百度apikey后仍然可以玩转它
-
-后期将会着重开发插件，注重功能的扩展加强
 
 （是的即使snowboy死了但是还能耍
 
@@ -34,7 +35,7 @@ RingRobotX默认（git仓库版本）内置图灵、百度ASR&TTS、snowboy唤�
 
 ## 方案1：自动安装脚本
 
-自动安装脚本只支持使用apt的linux发行版。
+自动安装脚本只支持使用apt的linux发行版（如debian，ubuntu等等），建议你使用清华软件源
 
 运行：
 ```shell
@@ -83,7 +84,7 @@ cp -a snowboy/resources/ ring-robot-x/model/resources
 # 运行
 
 ```shell
-python3 ring.py
+python3 ~/ringrobotx/ring-robot-x/ring.py
 ```
 
 哦对了，内置的模型唤醒词是“灵空灵空”
@@ -93,6 +94,10 @@ python3 ring.py
 # 设置
 
 详见config目录下的各种json文件
+
+你需要：百度语音apikey，图灵apikey
+
+如果你需要禁用某一插件，那么到func_packages/插件名/config.json的enable改为false即可
 
 # Wiki
 
@@ -133,5 +138,20 @@ python3 ring.py
 * 实现 HTTP API 接口等扩展功能
 * 命令行模式增强：禁启用插件、Debug调试某模块功能等等
 
+# 二次开发
 
-Copyright RingRobotX LingKongTeam
+你可以下载代码后自由修改/查看代码。
+
+当然，如果你准备将其闭源并商业使用，那么请遵守：
+1. 请确认你知晓 LingKongTeam 不为任何使用了二次分发软件的 安全性，可用性，完整性 以及其可能带来的 其它风险及损失 承担责任。
+2. 如果你修改了 RingRobotX ，那么请在被修改的文件中注明——即使没人会去看它。
+3. 你 **必须** 在你的程序内注明代码来源，比如 “使用了开源免费的 RingRobotX ”
+
+其余或有冲突之处以 Apache License 2.0 开源协议为准
+
+另外，本项目不受 LingKongRobot 的 GPL 协议影响。
+
+# 感谢
+
+* wzpan 本项目借鉴了 wukong-robot 项目的一部分基本框架设计 & snowboy训练网站（wukong-robot是个好项目！
+* 本项目的前身 lingkong-robot

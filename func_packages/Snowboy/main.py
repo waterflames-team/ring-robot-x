@@ -1,7 +1,4 @@
-from multiprocessing import Process
+import model.hook
+import func_packages.Snowboy.snowboymain
 
-def main():
-    import func_packages.Snowboy.snowboymain
-
-p=Process(target=main,args=())
-p.start()
+model.hook.add_hook_fast("RRCore.Main.Before.Running",func_packages.Snowboy.snowboymain.run())

@@ -11,9 +11,6 @@ from func_packages import func_packages_class
 
 
 def run_tts(string, ttsexec):
-    # TODO 这里的todo是为了引起你的注意。
-    # 这里可以添加你自定义的tts服务
-    # 如果你希望系统默认使用某一种tts服务，请修改run函数的参数之一”ttsexec“修改为你想使用的tts服务
     if ttsexec == "tts":
         model.tts.tts(string)
     elif ttsexec == "print":
@@ -40,9 +37,25 @@ def run(string, ttsexec="tts"):
     if (path.getConfig()["is_updown"] == True):  # 连续对话被定义
         file = path.getConfig()["updown_funcname"]  # 获取连续对话重定向函数名
         package = model_class[file]
-        returncon = package.main(string, True)# 传入true，因为if语句判定为true
+        try:
+            returncon = package.main(string, True)# 传入true，因为if语句判定为true
+        except:
+            moduleLogger.error('连续对话被开启，但是因为某些原因无法完成。可能是因为连续对话开启时技能被移除。请尝试编辑config/func.json，将is_updown值改为false')
+            run_tts("哎呀，连续对话失败了呢。", ttsexec)
+
+            # TODO 这里的todo是为了引起你的注意。
+            # 如果你在调试连续对话时，可以将下面的注释掉
+
+            origin_con = path.getConfig()
+            origin_con['is_updown'] = False
+            origin_con['updown_funcname'] = ""
+            path.setConfig(json.dumps(origin_con))
+
+            return
+
+        moduleLogger.info("连续对话技能包：" + file)
         run_tts(returncon['string'], ttsexec)
-        moduleLogger.info("Package running" + json.dumps(returncon))
+        moduleLogger.info("获得答复：：" + json.dumps(returncon))
         if (returncon['return'] == 1):  # 继续连续对话
             origin_con = path.getConfig()
             origin_con['is_updown'] = True
@@ -56,13 +69,13 @@ def run(string, ttsexec="tts"):
             path.setConfig(json.dumps(origin_con))
             model.hook.runhook_fast("RRCore.Model.After.ContinueDisable", {"string": string, "ttsexec": ttsexec})
         func_packages_class[file]=package
-        moduleLogger.info("Function end.")
+        moduleLogger.info("运行完毕")
         model.hook.runhook_fast("RRCore.Model.After.FuncRunning", {"string": string, "ttsexec": ttsexec})
         return run_tts(returncon['string'], ttsexec)
 
     if os.path.exists(path1) == False:
-        moduleLogger.error('this path not exist')
-        moduleLogger.info("Function end.")
+        moduleLogger.error('报告：但是没有找到相应的技能文件夹，请检查')
+        moduleLogger.info("运行完毕")
         return
     files = os.listdir(path1)
 
@@ -79,9 +92,9 @@ def run(string, ttsexec="tts"):
                 if (contents['enable'] == True and contents['funcType'] == "Func" ):  # 技能包启用
                     package = model_class[file] # 获取技能包class
                     if package.check(string) == True:  # 技能包觉得我可以
-                        moduleLogger.info("Found package:" + file)
+                        moduleLogger.info("技能运行：" + file)
                         returncon = package.main(string, False) #传入false，因为如果true了话早在前面true了
-                        moduleLogger.info("Package running" + json.dumps(returncon))
+                        moduleLogger.info("获得答复：" + json.dumps(returncon))
                         if (returncon['return'] == 1):  # 连续对话启用
                             origin_con = path.getConfig()
                             origin_con['is_updown'] = True
@@ -100,7 +113,7 @@ def run(string, ttsexec="tts"):
                             model.hook.runhook_fast("RRCore.Model.After.ContinueDisable",
                                                     {"string": string, "ttsexec": ttsexec})
                         func_packages_class[file] = package # 用完的class放回去，不然会玄学
-                        moduleLogger.info("Function end.")
+                        moduleLogger.info("技能运行完毕！")
                         model.hook.runhook_fast("RRCore.Model.After.FuncRunning",
                                                 {"string": string, "ttsexec": ttsexec})
                         return run_tts(returncon['string'], ttsexec)

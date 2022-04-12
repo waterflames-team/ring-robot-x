@@ -1,3 +1,4 @@
+import traceback
 from datetime import time
 
 import model
@@ -29,4 +30,8 @@ def register_hook_fast(HookName):
 def runhook_fast(HookName,returnValue):
     global HookList
     for i in HookList[HookName]:
-        i(returnValue)
+        try:
+            i(returnValue)
+        except:
+            ring.moduleLogger.error("【hook】报告！hook"+HookName+" 无法正确加载"+str(i))
+            traceback.print_exc()

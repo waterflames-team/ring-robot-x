@@ -1,7 +1,7 @@
 #!/bin/bash
 echo ----------------------------------
-echo        RingRobotX Installer
-echo      Powered by Lingkong Team
+echo RingRobotX Installer
+echo Powered by Lingkong Team
 echo ----------------------------------
 
 function check_apt(){
@@ -32,21 +32,23 @@ function install_snowboy(){
 function install_ringrobotx(){
   echo -e "\033[32;40m[INFO] Installing RingRobotX......\033[0m"
   git clone https://gitee.com/lkteam/ring-robot-x.git || error_dump "install_ringrobotx - git clone error"
-  cp snowboy/swig/Python3/_snowboydetect.so ring-robot-x/model || error_dump "install_ringrobotx - copy error"
-  cp snowboy/examples/Python3/snowboydecoder.py ring-robot-x/model || error_dump "install_ringrobotx - copy error"
-  cp snowboy/examples/Python3/snowboydetect.py ring-robot-x/model || error_dump "install_ringrobotx - copy error"
-  cp -a snowboy/resources/ ring-robot-x/model/resources || error_dump "install_ringrobotx - copy error"
+  cp snowboy/swig/Python3/_snowboydetect.so ring-robot-x/model || error_dump "install_ringrobotx - copy so error"
+  cp snowboy/examples/Python3/snowboydecoder.py ring-robot-x/model || error_dump "install_ringrobotx - copy decoder error"
+  cp snowboy/examples/Python3/snowboydetect.py ring-robot-x/model || error_dump "install_ringrobotx - copy detect error"
+  cp -a snowboy/resources/ ring-robot-x/model/resources || error_dump "install_ringrobotx - copy res error"
+  chmod +x ~/ringrobotx/* || error_dump "install_ringrobotx - chmod error"
+  chmod +x ~/ringrobotx || error_dump "install_ringrobotx - chmod error"
 }
 
 function install_before_require(){
-  require=(python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio make alsa-utils)
+  require=(python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio make alsa-utils sox)
   echo -e "\033[32;40m[INFO] Installing requires......\033[0m"
   for i in ${require[*]}
   do
     sudo apt install ${i} -y || error_dump "install_before_require - Cannot install package:${i}"
   done
   echo -e "\033[32;40m[INFO] apt install Success! \033[0m"
-  require=(pydub)
+  require=(pydub requests)
   for i in ${require[*]}
   do
     sudo pip3 install ${i} -i https://pypi.tuna.tsinghua.edu.cn/simple some-package || error_dump "install_before_require - Cannot install package:${i}"

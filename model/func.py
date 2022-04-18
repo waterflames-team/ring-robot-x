@@ -54,7 +54,7 @@ def run_funcpack(package, string, ttsexec, path, file):
 def run(string, ttsexec="tts"):
     model.hook.runhook_fast("RRCore.Model.Before.FuncRunning", {"string": string, "ttsexec": ttsexec})
 
-    moduleLogger.info("Function load... String:" + string)
+    moduleLogger.info("技能运行，输入：" + string)
 
     path = model.config.APPConfig()
     path.setModelName("func")

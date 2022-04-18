@@ -1,6 +1,6 @@
-# RingRobotX - 灵活易开发的对话机器人框架
+# RingRobotX - 灵活易开发的对话机器人
 
-这是一个python语音对话机器人框架，根据Lingkong-Robot重构而来
+这是一个python语音对话机器人，根据Lingkong-Robot重构而来
 
 可用于智能音箱，语言遥控，甚至智能客服、家庭管家、微信机器人等等
 
@@ -25,7 +25,7 @@ RingRobotX 是 LingKongRobot 的重构版本
 
 RingRobotX默认（git仓库版本）内置图灵、百度ASR&TTS、snowboy唤醒插件
 
-（是的即使snowboy死了但是还能耍
+（是的即使snowboy停止维护了但是还能耍
 
 在线模型训练：https://snowboy.hahack.com/
 
@@ -106,8 +106,6 @@ python3 ~/ringrobotx/ring-robot-x/ring.py
 
 [戳我](https://gitee.com/lkteam/ring-robot-x/issues "Issues")创建一个issue
 
-
-
 # 支持
 
 由于折腾调是个还处于九年义务教育的学生党 ~~还是个鸽子~~ ，本项目可能活跃时间不长，也没有精力、时间、金钱支撑ringrobotx持续开发
@@ -131,21 +129,13 @@ python3 ~/ringrobotx/ring-robot-x/ring.py
 > 如果您觉得我们的开源软件对你有所帮助，请进入爱发电赞赏我们，给予一些帮助与鼓励，谢谢！！！
 戳这里 -> http://afdian.net/@epeiuss
 
-# 未来工作
-
-1. 插件扩展
-* 增加各种TTSASR支持
-* 实现后台管理
-* 实现 HTTP API 接口等扩展功能
-* 命令行模式增强：禁启用插件、Debug调试某模块功能等等
-
 # 二次开发
 
 你可以下载代码后自由修改/查看代码。
 
 当然，如果你准备将其闭源并商业使用，那么请遵守：
 1. 请确认你知晓 LingKongTeam 不为任何使用了二次分发软件的 安全性，可用性，完整性 以及其可能带来的 其它风险及损失 承担责任。
-2. 如果你修改了 RingRobotX ，那么请在被修改的文件中注明——即使没人会去看它。
+2. 如果你修改了 RingRobotX ，那么请在被修改的文件中注明 —— 即使没人会去看它。
 3. 你 **必须** 在你的程序内注明代码来源，比如 “使用了开源免费的 RingRobotX ”
 
 其余或有冲突之处以 Apache License 2.0 开源协议为准

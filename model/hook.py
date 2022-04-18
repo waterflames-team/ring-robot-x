@@ -13,7 +13,8 @@ HookList = {
     "RRCore.Model.After.ASRRunning":[],
     "RRCore.FuncPack.Before.WakeUPRunning":[],
     "RRCore.Func.TTS":[],
-    "RRCore.Func.ASR":[]
+    "RRCore.Func.ASR":[],
+    "RRCore.Model.FuncAction":[]
 }
 
 def add_hook_fast(HookName,HookFunc):

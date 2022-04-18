@@ -23,6 +23,10 @@ def run_tts(string, ttsexec):
 module_logfile = "./log/main-Func-" + time.strftime("%Y%m%d") + '.log'
 moduleLogger = model.logger.AppLogger("RingRobotX-Core-Func", module_logfile)
 
+pathn = model.config.APPConfig()
+pathn.setModelName("func")
+pathn=path.getConfig()
+
 
 def set_updown(status, path, file):
     origin_con = path.getConfig()
@@ -50,22 +54,23 @@ def run_funcpack(package, string, ttsexec, path, file):
                             {"string": string, "ttsexec": ttsexec})
     return run_tts(returncon['string'], ttsexec)
 
-
 def run(string, ttsexec="tts"):
     model.hook.runhook_fast("RRCore.Model.Before.FuncRunning", {"string": string, "ttsexec": ttsexec})
 
     moduleLogger.info("技能运行，输入：" + string)
 
+    '''
     path = model.config.APPConfig()
     path.setModelName("func")
+    '''
     path1 = "func_packages"
     model_class = func_packages_class
 
-    if path.getConfig()["is_updown"]:  # 连续对话被定义
-        file = path.getConfig()["updown_funcname"]  # 获取连续对话重定向函数名
+    if pathn.getConfig()["is_updown"]:  # 连续对话被定义
+        file = pathn.getConfig()["updown_funcname"]  # 获取连续对话重定向函数名
         package = model_class[file]
         try:
-            run_funcpack(package, string, ttsexec, path, file)  # 运行
+            run_funcpack(package, string, ttsexec, pathn, file)  # 运行
         except:
             moduleLogger.error('连续对话被开启，但是因为某些原因无法完成。可能是因为连续对话开启时技能被移除。请尝试编辑config/func.json，将is_updown值改为false')
             run_tts("哎呀，连续对话失败了呢。", ttsexec)
@@ -95,4 +100,7 @@ def run(string, ttsexec="tts"):
 
             package = model_class[file]  # 获取技能包class
             if package.check(string):  # 技能包觉得我可以
-                run_funcpack(package, string, ttsexec, path, file)
+                run_funcpack(package, string, ttsexec, pathn, file)
+
+if pathn["funcEnable"]:
+    model.hook.add_hook_fast("RRCore.Model.FuncAction", run)

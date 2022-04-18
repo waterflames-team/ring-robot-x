@@ -165,6 +165,6 @@ def main(fname):  # snowboy to asr
 
     cg = cg['result'][0]
 
-    model.func.run(cg)  # 调用技能
+    model.hook.runhook_fast("RRCore.Model.FuncAction",cg)  # 调用技能
 
 model.hook.add_hook_fast("RRCore.Func.ASR",main)

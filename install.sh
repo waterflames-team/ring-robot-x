@@ -33,7 +33,7 @@ function install_ringrobotx(){
   echo -e "\033[32;40m[INFO] Installing RingRobotX......\033[0m"
   git clone https://gitee.com/lkteam/ring-robot-x.git || error_dump "install_ringrobotx - git clone error"
   cp snowboy/swig/Python3/_snowboydetect.so ring-robot-x/func_packages/Snowboy || error_dump "install_ringrobotx - copy so error"
-  cp snowboy/examples/Python3/snowboydecoder.py ring-robot-x/func_packages/Snowboy || error_dump "install_ringrobotx - copy decoder error"
+  # cp snowboy/examples/Python3/snowboydecoder.py ring-robot-x/func_packages/Snowboy || error_dump "install_ringrobotx - copy decoder error"
   cp snowboy/examples/Python3/snowboydetect.py ring-robot-x/func_packages/Snowboy || error_dump "install_ringrobotx - copy detect error"
   cp -a snowboy/resources/ ring-robot-x/func_packages/Snowboy/resources || error_dump "install_ringrobotx - copy res error"
   chmod +x ~/ringrobotx/* || error_dump "install_ringrobotx - chmod error"

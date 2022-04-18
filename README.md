@@ -76,7 +76,6 @@ cd snowboy/swig/Python3
 make
 cd ../../../
 cp snowboy/swig/Python3/_snowboydetect.so ring-robot-x/func_packages/Snowboy
-cp snowboy/examples/Python3/snowboydecoder.py ring-robot-x/func_packages/Snowboy
 cp snowboy/examples/Python3/snowboydetect.py ring-robot-x/func_packages/Snowboy
 cp -a snowboy/resources/ ring-robot-x/func_packages/Snowboy/resources
 ```

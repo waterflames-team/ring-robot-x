@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-'''
-    RingRobotX - Main
-    Author: zhetengtiao(lkteam)
-'''
+
 # 这里import model有作用，因为它会使init.py运行，进而初始化所有库文件
 # 当然 func_packages也是如此，不过它在func.py导入。
 import model

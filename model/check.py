@@ -13,7 +13,13 @@ moduleLogger = model.logger.AppLogger("RingRobotX-Core-Func", module_logfile)
 
 
 def check_FuncFilePath(path1, file, opt="Func"):
-    # path1:技能包导入路径，file：技能包文件夹名
+    '''
+    检查技能包是否可以导入。
+    :param path1: 技能包导入路径
+    :param file: 技能包文件夹名
+    :param opt: 允许的FuncType（一个！）
+    :return: bool
+    '''
     try:
         if os.path.exists(os.path.join(path1, file) + '/config.json') == False | os.path.exists(
                 os.path.join(path1, file) + '/main.py') == False:

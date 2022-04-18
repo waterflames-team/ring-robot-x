@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
 
-'''
-    RingRobotX - CLIMain
-    Author: zhetengtiao(lkteam)
-'''
 import model
 import time
 

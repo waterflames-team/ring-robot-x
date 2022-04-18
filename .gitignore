@@ -8,3 +8,4 @@ venv/
 /func_packages/AA_HTTP_BACK/main.py
 /func_packages/Q&A_datafunc/*
 *__pycache__*
+error.txt

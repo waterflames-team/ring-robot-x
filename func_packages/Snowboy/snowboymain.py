@@ -3,7 +3,7 @@ import signal
 import sys
 
 import model.asr
-import model.snowboydecoder as snowboydecoder
+import func_packages.Snowboy.snowboydecoder as snowboydecoder
 import model.hook
 import model.player
 

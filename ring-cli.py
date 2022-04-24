@@ -13,7 +13,7 @@ moduleLogger.info(str('''
     {} CLI 加载完毕！
 ''').format(model.config.fastGetConfig("api-version")["RingRobotX"]))
 
-model.hook.runhook_fast("RRCore.Main.Before.Running",0)
+#model.hook.runhook_fast("RRCore.Main.Before.Running",0)
 model.hook.runhook_fast("RRCore.Main.Before.Running.CLI",0)
 while True:
     chat=input()

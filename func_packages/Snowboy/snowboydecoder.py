@@ -4,7 +4,7 @@ import collections
 import pyaudio
 
 import model.asr
-from . import snowboydetect
+from model import snowboydetect
 import time
 import wave
 import os

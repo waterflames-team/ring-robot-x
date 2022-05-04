@@ -32,7 +32,7 @@ def check_FuncFilePath(path1, file, opt="Func"):
                 if contents['apiVersion'] == api_version_CHECK[contents["funcType"]]:
                     return True
                 '''
-                return False
+                return True
     except:
         moduleLogger.error('检查技能错误：' + file + "，将忽略")
         traceback.print_exc()

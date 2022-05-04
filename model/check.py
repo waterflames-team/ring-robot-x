@@ -28,8 +28,10 @@ def check_FuncFilePath(path1, file, opt="Func"):
             contents = file_obj.read()
             contents = json.loads(contents)
             if (contents['enable'] == True and contents['funcType'] == opt):  # 技能包启用
+                '''
                 if contents['apiVersion'] == api_version_CHECK[contents["funcType"]]:
                     return True
+                '''
                 return False
     except:
         moduleLogger.error('检查技能错误：' + file + "，将忽略")

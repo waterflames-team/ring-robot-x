@@ -2,5 +2,7 @@
   "enable": true,
   "funcType": "WakeUP",
   "version": "1",
-  "apiVersion": "Beta.3"
+  "apiVersion": "Beta.3",
+  "Author": "LingkongTeam",
+  "description": "A WakeUP engine of Snowboy"
 }

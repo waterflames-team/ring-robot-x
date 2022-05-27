@@ -22,7 +22,7 @@ function error_dump(){
 
 function install_snowboy(){
   echo -e "\033[32;40m[INFO] Installing snowboy requires......\033[0m"
-  git clone https://hub.fastgit.xyz/Kitt-AI/snowboy.git || error_dump "install_snowboy - git clone error"
+  git clone https://gitee.com/zhetengtiao/snowboy.git || error_dump "install_snowboy - git clone error"
   cd snowboy/swig/Python3 || error_dump "install_snowboy - cd error"
   make || error_dump "install_snowboy - snowboy making error"
   echo -e "\033[32;40m[INFO] Success! \033[0m"

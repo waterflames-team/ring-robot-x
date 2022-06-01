@@ -2,6 +2,7 @@
 
 # 这里import model有作用，因为它会使init.py运行，进而初始化所有库文件
 # 当然 func_packages也是如此，不过它在func.py导入。
+import schedule
 import model
 import time
 
@@ -22,4 +23,5 @@ model.hook.runhook_fast("RRCore.Main.Before.Running",0)
 # Sleep forever
 from time import sleep
 while True:
-    sleep(10)
+    schedule.run_pending()
+    sleep(1)

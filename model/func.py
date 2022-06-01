@@ -31,7 +31,7 @@ moduleLogger = model.logger.AppLogger("RingRobotX-Core-Func", module_logfile)
 
 pathn = model.config.APPConfig()
 pathn.setModelName("func")
-pathn=path.getConfig()
+pathn=pathn.getConfig()
 
 
 def set_updown(status, path, file):

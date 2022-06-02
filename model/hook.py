@@ -36,7 +36,7 @@ def register_hook_fast(HookName):
     global HookList
     HookList[HookName] = []
 
-def runhook_fast(HookName,returnValue):
+def runhook_fast(HookName,*param):
     '''
     运行钩子。
     :param HookName: 钩子名
@@ -46,7 +46,7 @@ def runhook_fast(HookName,returnValue):
     global HookList
     for i in HookList[HookName]:
         try:
-            i(returnValue)
+            i(*param)
         except:
             print("【hook】报告！hook"+HookName+" 无法正确加载"+str(i))
             traceback.print_exc()

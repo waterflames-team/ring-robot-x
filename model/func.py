@@ -1,7 +1,7 @@
 import json
 import os
 import time
-
+import traceback
 import model.config
 import model.tts
 import model.logger
@@ -31,7 +31,6 @@ moduleLogger = model.logger.AppLogger("RingRobotX-Core-Func", module_logfile)
 
 pathn = model.config.APPConfig()
 pathn.setModelName("func")
-pathn=pathn.getConfig()
 
 
 def set_updown(status, path, file):
@@ -48,7 +47,7 @@ def set_updown(status, path, file):
     path.setConfig(json.dumps(origin_con))
 
 
-def run_funcpack(package, string, ttsexec, path, file):
+def run_funcpack(package, string, ttsexec, path, file,boolvalue):
     '''
     运行技能。
     :param package: 欲运行的技能包class
@@ -56,10 +55,11 @@ def run_funcpack(package, string, ttsexec, path, file):
     :param ttsexec: tts功能
     :param path: 配置文件
     :param file: 技能包的文件夹
+    :param boolvalue: 传入布尔值
     :return: run_tts
     '''
     moduleLogger.info("技能运行：" + file)
-    returncon = package.main(string, False)  # 传入false，因为如果true了话早在前面true了
+    returncon = package.main(string, boolvalue)  # 传入false，因为如果true了话早在前面true了
     moduleLogger.info("获得答复：" + json.dumps(returncon))
     if returncon["return"] == 1:
         set_updown(True, path, file)
@@ -98,7 +98,8 @@ def run(string, ttsexec="tts"):
         file = pathn.getConfig()["updown_funcname"]  # 获取连续对话重定向函数名
         package = model_class[file]
         try:
-            run_funcpack(package, string, ttsexec, pathn, file)  # 运行
+            moduleLogger.info("检测到连续对话：" + file)
+            run_funcpack(package, string, ttsexec, pathn, file,True)  # 运行
         except:
             moduleLogger.error('连续对话被开启，但是因为某些原因无法完成。可能是因为连续对话开启时技能被移除。请尝试编辑config/func.json，将is_updown值改为false')
             run_tts("哎呀，连续对话失败了呢。", ttsexec)
@@ -110,7 +111,7 @@ def run(string, ttsexec="tts"):
 
             set_updown(False, path, file)  # 更改连续对话状态
 
-            return
+        return
 
     if not os.path.exists(path1):
         moduleLogger.error('报告：没有找到相应的技能文件夹，请检查')
@@ -128,7 +129,8 @@ def run(string, ttsexec="tts"):
 
             package = model_class[file]  # 获取技能包class
             if package.check(string):  # 技能包觉得我可以
-                run_funcpack(package, string, ttsexec, pathn, file)
+                run_funcpack(package, string, ttsexec, pathn, file,False)
+                return
 
-if pathn["funcEnable"]:
+if pathn.getConfig()["funcEnable"]:
     model.hook.add_hook_fast("RRCore.Model.FuncAction", run)

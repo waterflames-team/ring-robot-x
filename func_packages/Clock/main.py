@@ -26,12 +26,17 @@ from playsound import playsound # 导包
 import model.config
 
 class Main:
-    path = model.config.APPConfig()
-    path.setModelName("Clock")
-    path1 = path.getConfig()
 
-    FUNC_Clock_playPath=path1["playPath"]
+    FUNC_Clock_playPath=""
     music_play_thread=""
+
+    def __init__(self):
+        self.path = model.config.APPConfig()
+        self.path.setModelName("Clock")
+        self.path1 = self.path.getConfig()
+        self.FUNC_Clock_playPath=self.path1["playPath"]
+        if not self.path1["set_time"] == "114514" and not self.path1["set_time"] == 0:
+            schedule.every().day.at(self.path1["set_time"]).do(self.do_wizz)
 
     def check(self, string):
         if "闹钟" in string:
@@ -49,6 +54,3 @@ class Main:
     def main(self,string, boola):
         stop_thread(self.music_play_thread)
         return {"string": '好的。', "return": 0}
-
-    if not path1["set_time"] == "114514" and not path1["set_time"] == 0:
-        schedule.every().day.at(path1["set_time"]).do(do_wizz)

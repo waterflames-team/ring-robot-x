@@ -42,6 +42,8 @@ RingRobotX默认（git仓库版本）内置图灵、百度ASR&TTS、snowboy唤�
 wget -O install.sh https://gitee.com/lkteam/ring-robot-x/raw/develop/install.sh && sudo bash install.sh
 ```
 
+>**安装程序会安装到/root/ringrobotx目录，您可以去掉sudo，以安装到~/ringrobotx目录，但是请留意密码输入。**
+
 当然，如果你是其他发行版（或者一键安装脚本有错误），可以试着第二种方案：手动安装。
 
 ## 方案2：手动安装
@@ -61,6 +63,8 @@ git clone https://gitee.com/lkteam/ring-robot-x
 如果你追求新功能，请下载develop版本
 
 ### 2.安装语音唤醒功能
+
+>**PS：若您不准备使用snowboy功能，那么可以跳过此步，并将下载的项目目录/func_packages/Snowboy/config.json中“"enable": ”后面的true改为false**
 
 唤醒功能依赖[snowboy](https://github.com/Kitt-AI/snowboy.git)
 

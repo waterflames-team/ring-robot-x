@@ -36,6 +36,8 @@ def help_com(y):
     print("func [string] | 输入你想对RingRobotX说的话。")
     print("tts [string] | 运行tts ===== asr [path] | 运行asr")
     print("reload [model/func/all] | 重新加载模块")
+    print("check-update | 检查更新")
+    print("update | 更新程序")
     print("其他模块详细使用方法请参见模块文档")
     return "success"
 
@@ -51,9 +53,13 @@ def check_update():
     else:
         return "No"
 
-def update_robotx():
-    os.system('cp ./config/ ../config && git pull && mv ../config/ /config')# 摆烂型更新
-    return "success"
+def update_robotx(yesorno='mita'):
+    if yesorno == "mita":
+        logger.moduleLoggerMain.info("[CLI] 更新前，程序会将config目录备份。更新后，除了config目录，您对于程序源代码所做出的改动会被覆盖！开发人员不为您数据的损失负责！确认继续请输入 update y")
+        return "[CLI] 更新前，程序会将config目录备份。更新后，除了config目录，您对于程序源代码所做出的改动会被覆盖！开发人员不为您数据的损失负责！确认继续请输入 update y"
+    else:
+        os.system('cp ./config/ ../config && git fetch --all && git reset --hard origin/'+model.config.fastGetConfig("api-version")["branch"]+' && git pull && mv -f ../config/ ./config')# 摆烂型更新
+        return "success"
     # cp ./config/ ../config && git pull && mv ../config/ /config
 
 commands={

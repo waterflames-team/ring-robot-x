@@ -235,7 +235,7 @@ class HotwordDetector(object):
                 elif status == 0: #voice found
                     silentCount = 0
 
-                if stopRecording == True:
+                if stopRecording:
                     fname = self.saveMessage()
                     model.asr.audioRecorderCallback(fname)
                     state = "PASSIVE"

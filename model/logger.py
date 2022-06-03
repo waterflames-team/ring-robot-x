@@ -4,11 +4,11 @@ import time
 
 class AppLogger:
     def __init__(self, moduleName, logfile):
-        '''
+        """
         初始化
         :param moduleName: 模块名
         :param logfile: log的文件名
-        '''
+        """
         self._logger = logging.getLogger(moduleName)
 
         self._logger.handlers.clear() #清除已有logger，避免重复记录

@@ -8,7 +8,7 @@ class Main:
         # 检查字符串是否可以归于该扩展管辖
         return True
 
-    def main(self, string, bool):
+    def main(self, string, yesorno):
         path = model.config.APPConfig()
         path.setModelName("Turing_RobotChat")
         path1 = path.getConfig()

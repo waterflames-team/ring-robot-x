@@ -55,7 +55,7 @@ def main(tts_string):
                   'client_id': API_KEY,
                   'client_secret': SECRET_KEY}
         post_data = urlencode(params)
-        if (IS_PY3):
+        if IS_PY3:
             post_data = post_data.encode('utf-8')
         req = Request(TOKEN_URL, post_data)
         try:
@@ -64,13 +64,13 @@ def main(tts_string):
         except URLError as err:
             # print('token http response http code : ' + str(err.code))
             result_str = err.read()
-        if (IS_PY3):
+        if IS_PY3:
             result_str = result_str.decode()
 
         # print(result_str)
         result = json.loads(result_str)
         # print(result)
-        if ('access_token' in result.keys() and 'scope' in result.keys()):
+        if 'access_token' in result.keys() and 'scope' in result.keys():
             if not SCOPE in result['scope'].split(' '):
                 raise DemoError('scope is not correct')
             # print('SUCCESS WITH TOKEN: %s ; EXPIRES IN SECONDS: %s' % (result['access_token'], result['expires_in']))
@@ -107,7 +107,7 @@ def main(tts_string):
         of.write(result_str)
 
     if has_error:
-        if (IS_PY3):
+        if IS_PY3:
             result_str = str(result_str, 'utf-8')
             # print("tts api  error:" + result_str)
 

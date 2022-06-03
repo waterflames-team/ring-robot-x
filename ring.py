@@ -59,7 +59,7 @@ worker = threading.Thread(target=worker_2, args=())
 worker.start()  # 开始循环
 
 if __name__ == "__main__":
-    if args.cli==True:
+    if args.cli:
         worker1 = threading.Thread(target=worker_cli, args=())
         worker1.start()  # 开始循环
     # 以下为服务运行区域

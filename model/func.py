@@ -11,12 +11,12 @@ from func_packages import func_packages_class
 
 
 def run_tts(string, ttsexec):
-    '''
+    """
     运行指定tts选项的服务
     :param string: 文字字符串
     :param ttsexec: tts选项
     :return:
-    '''
+    """
     if ttsexec == "tts":
         model.tts.tts(string)
     elif ttsexec == "print":
@@ -33,13 +33,13 @@ pathn.setModelName("func")
 
 
 def set_updown(status, path, file):
-    '''
+    """
     设置连续对话模式。
     :param status: 模式：True或False
     :param path: 配置文件AppConfig
     :param file: 技能包文件夹
     :return:
-    '''
+    """
     origin_con = path.getConfig()
     origin_con['is_updown'] = status
     origin_con['updown_funcname'] = file
@@ -47,7 +47,7 @@ def set_updown(status, path, file):
 
 
 def run_funcpack(package, string, ttsexec, path, file,boolvalue):
-    '''
+    """
     运行技能。
     :param package: 欲运行的技能包class
     :param string: 输入文字
@@ -56,7 +56,7 @@ def run_funcpack(package, string, ttsexec, path, file,boolvalue):
     :param file: 技能包的文件夹
     :param boolvalue: 传入布尔值
     :return: run_tts
-    '''
+    """
     moduleLogger.info("技能运行：" + file)
     returncon = package.main(string, boolvalue)  # 传入false，因为如果true了话早在前面true了
     moduleLogger.info("获得答复：" + json.dumps(returncon))
@@ -80,12 +80,12 @@ def reload():
     return
 
 def run(string, ttsexec="tts"):
-    '''
+    """
     运行技能。
     :param string: 输入文字
     :param ttsexec: tts选项（可选）
     :return:
-    '''
+    """
     model.hook.runhook_fast("RRCore.Model.Before.FuncRunning", {"string": string, "ttsexec": ttsexec})
 
     moduleLogger.info("技能运行，输入：" + string)

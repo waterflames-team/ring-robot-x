@@ -27,7 +27,7 @@ def asr_com(string):
     model.asr.asr(string)
     return "success"
 
-def help_com(y):
+def help_com():
     print("已加载命令：")
     for key, value in commands.items():
         print(key,end=" ")

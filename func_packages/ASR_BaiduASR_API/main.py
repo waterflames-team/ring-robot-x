@@ -72,7 +72,7 @@ def main(fname):  # snowboy to asr
                   'client_id': API_KEY,
                   'client_secret': SECRET_KEY}
         post_data = urlencode(params)
-        if (IS_PY3):
+        if IS_PY3:
             post_data = post_data.encode('utf-8')
         req = Request(TOKEN_URL, post_data)
         try:
@@ -81,13 +81,13 @@ def main(fname):  # snowboy to asr
         except URLError as err:
             # print('token http response http code : ' + str(err.code))
             result_str = err.read()
-        if (IS_PY3):
+        if IS_PY3:
             result_str = result_str.decode()
 
         # print(result_str)
         result = json.loads(result_str)
         # print(result)
-        if ('access_token' in result.keys() and 'scope' in result.keys()):
+        if 'access_token' in result.keys() and 'scope' in result.keys():
             # print(SCOPE)
             if SCOPE and (not SCOPE in result['scope'].split(' ')):  # SCOPE = False 忽略检查
                 raise DemoError('scope is not correct')
@@ -111,7 +111,7 @@ def main(fname):  # snowboy to asr
         if length == 0:
             raise DemoError('file %s length read 0 bytes' % AUDIO_FILE)
         speech = base64.b64encode(speech_data)
-        if (IS_PY3):
+        if IS_PY3:
             speech = str(speech, 'utf-8')
         global FORMAT
         params = {'dev_pid': DEV_PID,
@@ -137,7 +137,7 @@ def main(fname):  # snowboy to asr
             # print('asr http response http code : ' + str(err.code))
             result_str = err.read()
 
-        if (IS_PY3):
+        if IS_PY3:
             # global cg
             # cg = result_str['result'][0]
             # cg = result_str.json['result']

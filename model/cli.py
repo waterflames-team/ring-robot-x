@@ -123,7 +123,7 @@ class console(object):
         try:
             logger.moduleLoggerMain.info("[CLI] 运行指令：" + command + " 参数"+str(*param))
             ret=commands[command](*param)
-            logger.moduleLoggerMain.info("[CLI] 指令返回：" + ret)
+            logger.moduleLoggerMain.info("[CLI] 指令返回：" + str(ret))
             return ret
         except:
             logger.moduleLoggerMain.info("[CLI] 报告！指令" + command + " 无法正确加载")

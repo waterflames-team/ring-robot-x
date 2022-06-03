@@ -1,8 +1,8 @@
 {
-  "enable": false,
+  "enable": true,
   "funcType": "Other",
   "version": "1",
   "apiVersion": "Beta.3",
   "Author": "LingkongTeam",
-  "description": "A Bridge for RingRobotX CLI Mode."
+  "description": "History manager for chat."
 }

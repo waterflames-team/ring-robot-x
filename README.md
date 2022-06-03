@@ -50,8 +50,8 @@ wget -O install.sh https://gitee.com/lkteam/ring-robot-x/raw/develop/install.sh 
 ### 1.安装RingRobotX
 
 ```shell
-sudo apt install python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio make alsa-utils
-pip3 install pydub playsound
+sudo apt install python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio make alsa-utils sox
+pip3 install pydub requests schedule playsound
 mkdir ringrobotx && cd ringrobotx
 git clone https://gitee.com/lkteam/ring-robot-x
 ```
@@ -91,7 +91,7 @@ cd ../
 python3 ./ringrobotx/ring-robot-x/ring.py
 ```
 
-哦对了，内置的模型唤醒词是“灵空灵空”
+内置的模型唤醒词是“灵空灵空”，不同设备上录音会有不同效果，建议在自己设备上训练效果更好
 
 你可以替换掉，模型文件在assets/snowboy/model.umdl
 

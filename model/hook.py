@@ -41,7 +41,7 @@ def runhook_fast(HookName,*param):
     """
     运行钩子。
     :param HookName: 钩子名
-    :param returnValue: 钩子的参数
+    :param param: 钩子的参数
     :return: 无
     """
     global HookList

@@ -72,7 +72,7 @@ def run_funcpack(package, string, ttsexec, path, file,boolvalue):
     func_packages_class[file] = package  # 用完的class放回去，不然会玄学
     moduleLogger.info("技能运行完毕！")
     model.hook.runhook_fast("RRCore.Model.After.FuncRunning",
-                            {"string": string, "ttsexec": ttsexec})
+                            {"string": string, "ttsexec": ttsexec,"return":returncon['string']})
     return run_tts(returncon['string'], ttsexec)
 
 def reload():

@@ -4,7 +4,7 @@ import importlib
 import traceback
 
 parser = argparse.ArgumentParser(description='RingRobotX - By LingkongTeam')
-parser.add_argument('--cli', dest='cli', type=bool, help='是否需要CLI模式 | Need CLI',default=True)
+parser.add_argument('--no-cli', dest='cli', help='不需要CLI模式 | No CLI',action="store_true",default=False)
 args = parser.parse_args()
 
 # 这里import model有作用，因为它会使init.py运行，进而初始化所有库文件
@@ -60,7 +60,7 @@ worker = threading.Thread(target=worker_2, args=())
 worker.start()  # 开始循环
 
 if __name__ == "__main__":
-    if args.cli:
+    if not args.cli:
         worker1 = threading.Thread(target=worker_cli, args=())
         worker1.start()  # 开始循环
     # 以下为服务运行区域

@@ -1,6 +1,6 @@
 import json
 import os
-import time
+import importlib
 import traceback
 import model.config
 import model.tts
@@ -26,8 +26,7 @@ def run_tts(string, ttsexec):
     return
 
 
-module_logfile = "./log/main-Func-" + time.strftime("%Y%m%d") + '.log'
-moduleLogger = model.logger.AppLogger("RingRobotX-Core-Func", module_logfile)
+moduleLogger = model.logger.moduleLoggerMain
 
 pathn = model.config.APPConfig()
 pathn.setModelName("func")
@@ -75,6 +74,10 @@ def run_funcpack(package, string, ttsexec, path, file,boolvalue):
     model.hook.runhook_fast("RRCore.Model.After.FuncRunning",
                             {"string": string, "ttsexec": ttsexec})
     return run_tts(returncon['string'], ttsexec)
+
+def reload():
+    importlib.reload(func_packages)
+    return
 
 def run(string, ttsexec="tts"):
     '''

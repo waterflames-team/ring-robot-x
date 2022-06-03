@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import logging
+import time
 
 class AppLogger:
     def __init__(self, moduleName, logfile):
@@ -33,3 +34,7 @@ class AppLogger:
 
 
 # del moduleLogger
+
+module_logfileMain = "./log/" + time.strftime("%Y%m%d") + '.log'
+moduleLoggerMain = AppLogger("RingRobotX-Core-Main", module_logfileMain)
+moduleLoggerMain.info("logger service started")

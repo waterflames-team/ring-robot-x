@@ -1,4 +1,5 @@
 import traceback
+import model.logger as logger
 
 HookList = {
     "RRCore.Main.Before.Running":[],
@@ -48,5 +49,5 @@ def runhook_fast(HookName,*param):
         try:
             i(*param)
         except:
-            print("【hook】报告！hook"+HookName+" 无法正确加载"+str(i))
-            traceback.print_exc()
+            logger.moduleLoggerMain.info("[Hook] 报告！Hook " + HookName + " 无法正确加载" + str(i))
+            logger.moduleLoggerMain.info(traceback.format_exc())

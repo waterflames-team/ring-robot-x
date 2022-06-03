@@ -38,6 +38,11 @@ def help_com(string="all"):
                 print(key+" : "+helps[key])
             except:
                 print(key+" : 没有找到文档。")
+    elif string=="list":
+        los=[]
+        for key, value in commands.items():
+            los.append(key)
+        return json.dumps(los)
     else:
         try:
             return string + " : " + helps[string]
@@ -119,6 +124,8 @@ class console(object):
             logger.moduleLoggerMain.info("[CLI] 运行指令：" + command + " 参数"+str(*param))
             ret=commands[command](*param)
             logger.moduleLoggerMain.info("[CLI] 指令返回：" + ret)
+            return ret
         except:
             logger.moduleLoggerMain.info("[CLI] 报告！指令" + command + " 无法正确加载")
             logger.moduleLoggerMain.info(traceback.format_exc())
+            return "Error,dumped"

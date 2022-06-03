@@ -42,7 +42,7 @@ RingRobotX默认（git仓库版本）内置图灵、百度ASR&TTS、snowboy唤�
 wget -O install.sh https://gitee.com/lkteam/ring-robot-x/raw/develop/install.sh && sudo bash install.sh
 ```
 
->**安装程序会安装到/root/ringrobotx目录，您可以去掉sudo，以安装到~/ringrobotx目录，但是请留意密码输入。**
+>**安装程序会安装到脚本执行目录/ringrobotx/ring-robot-x**
 
 当然，如果你是其他发行版（或者一键安装脚本有错误），可以试着第二种方案：手动安装。
 
@@ -92,13 +92,11 @@ python3 ~/ringrobotx/ring-robot-x/ring.py
 
 哦对了，内置的模型唤醒词是“灵空灵空”
 
-你可以替换掉，它在assets/snowboy/model.umdl
+你可以替换掉，模型文件在assets/snowboy/model.umdl
 
 # 设置
 
 详见config目录下的各种json文件
-
-你需要：百度语音apikey，图灵apikey
 
 如果你需要禁用某一插件，那么到func_packages/插件名/config.json的enable改为false即可
 
@@ -135,12 +133,7 @@ python3 ~/ringrobotx/ring-robot-x/ring.py
 
 # 二次开发
 
-你可以下载代码后自由修改/查看代码。
-
-当然，如果你准备将其闭源并商业使用，那么请遵守：
-1. 请确认你知晓 LingKongTeam 不为任何使用了二次分发软件的 安全性，可用性，完整性 以及其可能带来的 其它风险及损失 承担责任。
-2. 如果你修改了 RingRobotX ，那么请在被修改的文件中注明 —— 即使没人会去看它。
-3. 你 **必须** 在你的程序内注明代码来源，比如 “使用了开源免费的 RingRobotX ”
+如果你准备将其闭源并商业使用，那么请确认你知晓 LingKongTeam 不为任何使用了二次分发软件的 安全性，可用性，完整性 以及其可能带来的 其它风险及损失 承担责任。
 
 其余或有冲突之处以 Apache License 2.0 开源协议为准
 

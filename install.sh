@@ -36,7 +36,7 @@ function install_ringrobotx(){
   # cp snowboy/examples/Python3/snowboydecoder.py ring-robot-x/func_packages/Snowboy || error_dump "install_ringrobotx - copy decoder error"
   cp snowboy/examples/Python3/snowboydetect.py ring-robot-x/func_packages/Snowboy || error_dump "install_ringrobotx - copy detect error"
   cp -a snowboy/resources/ ring-robot-x/func_packages/Snowboy/resources || error_dump "install_ringrobotx - copy res error"
-  chmod 777 ~/ringrobotx/ -R || error_dump "install_ringrobotx - chmod error"
+  chmod 777 ../ringrobotx/ -R || error_dump "install_ringrobotx - chmod error"
 }
 
 function install_before_require(){
@@ -56,8 +56,8 @@ function install_before_require(){
 }
 
 function before_install(){
-  mkdir ~/ringrobotx
-  cd ~/ringrobotx || error_dump "before_install - cd error"
+  mkdir ringrobotx
+  cd ringrobotx || error_dump "before_install - cd error"
 }
 
 function main(){

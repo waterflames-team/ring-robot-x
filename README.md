@@ -13,9 +13,8 @@
 3. 配置简单化，配置可以在config目录修改，避免直接修改源代码
 4. 实现了连续对话 - 终于可以和机器人玩成语接龙了
 5. 开放，简洁的接口，接入简单
-6. 没有复杂死板的封装
-7. 高度可自定义
-8. （TODO）开放的HTTP接口，让你的应用程序快速接入RingRobotX框架！
+6. 高度可自定义
+7. （TODO）开放的HTTP接口，让你的应用程序快速接入RingRobotX框架！
 
 好了，准备好体验 RingRobotX 了吗？现在开始！
 
@@ -53,6 +52,7 @@ wget -O install.sh https://gitee.com/lkteam/ring-robot-x/raw/develop/install.sh 
 ```shell
 sudo apt install python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio make alsa-utils
 pip3 install pydub playsound
+mkdir ringrobotx && cd ringrobotx
 git clone https://gitee.com/lkteam/ring-robot-x
 ```
 
@@ -82,12 +82,13 @@ cd ../../../
 cp snowboy/swig/Python3/_snowboydetect.so ring-robot-x/func_packages/Snowboy
 cp snowboy/examples/Python3/snowboydetect.py ring-robot-x/func_packages/Snowboy
 cp -a snowboy/resources/ ring-robot-x/func_packages/Snowboy/resources
+cd ../
 ```
 
 # 运行
 
 ```shell
-python3 ~/ringrobotx/ring-robot-x/ring.py
+python3 ./ringrobotx/ring-robot-x/ring.py
 ```
 
 哦对了，内置的模型唤醒词是“灵空灵空”

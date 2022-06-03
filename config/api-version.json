@@ -4,6 +4,7 @@
   "WakeUP": "Beta.3",
   "Func": "Beta.3",
   "AnotherFunc": "Beta.3",
-  "RingRobotX": "Beta.git.3.01",
-  "ForPythonVersion": "3"
+  "RingRobotX": "2.1",
+  "ForPythonVersion": "3",
+  "branch": "develop"
 }

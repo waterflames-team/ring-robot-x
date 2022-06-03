@@ -1,6 +1,9 @@
 import traceback
 import model.hook
 import model.logger as logger
+import requests
+import model.config
+import json
 
 def hook_com(runMode,hookName):
     if runMode=="reg":
@@ -37,8 +40,21 @@ def help_com(y):
     return "success"
 
 def hello_ringrobotx():
-    print("Hello RingRobotX")
+    print("Now playing: Rick Astley - Never Gonna Give You Up")
     return "Hello RingRobotX"
+
+def check_update():
+    now=model.config.fastGetConfig("api-version")
+    response = requests.get('https://gitee.com/lkteam/ring-robot-x/raw/'+now["branch"]+'/config/api-version.json')
+    if float(json.loads(response.text)["RingRobotX"]) > float(now["RingRobotX"]):
+        return "Yes"
+    else:
+        return "No"
+
+def update_robotx():
+    os.system('cp ./config/ ../config && git pull && mv ../config/ /config')# 摆烂型更新
+    return "success"
+    # cp ./config/ ../config && git pull && mv ../config/ /config
 
 commands={
     "hook":hook_com,
@@ -46,7 +62,9 @@ commands={
     "tts":tts_com,
     "asr":asr_com,
     "help":help_com,
-    "hello":hello_ringrobotx
+    "hello":hello_ringrobotx,
+    "check-update":check_update,
+    "update":update_robotx
 }
 
 def command_registry(command,func):

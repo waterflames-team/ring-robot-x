@@ -27,18 +27,22 @@ def asr_com(string):
     model.asr.asr(string)
     return "success"
 
-def help_com():
-    print("已加载命令：")
-    for key, value in commands.items():
-        print(key,end=" ")
-    print()
-    print("hook [runmode] [hookname] | runmode可输入reg或run，分别代表初始化hook列表和运行hook")
-    print("func [string] | 输入你想对RingRobotX说的话。")
-    print("tts [string] | 运行tts ===== asr [path] | 运行asr")
-    print("reload [model/func/all] | 重新加载模块")
-    print("check-update | 检查更新")
-    print("update | 更新程序")
-    print("其他模块详细使用方法请参见模块文档")
+def help_com(string="all"):
+    if string=="all":
+        print("已加载命令：")
+        for key, value in commands.items():
+            print(key,end=" ")
+        print()
+        for key, value in commands.items():
+            try:
+                print(key+" : "+helps[key])
+            except:
+                print(key+" : 没有找到文档。")
+    else:
+        try:
+            return string + " : " + helps[string]
+        except:
+            return string + " : 没有找到文档。"
     return "success"
 
 def hello_ringrobotx():
@@ -49,7 +53,7 @@ def check_update():
     now=model.config.fastGetConfig("api-version")
     response = requests.get('https://gitee.com/lkteam/ring-robot-x/raw/'+now["branch"]+'/config/api-version.json')
     if float(json.loads(response.text)["RingRobotX"]) > float(now["RingRobotX"]):
-        return "Yes"
+        return "OK"
     else:
         return "No"
 
@@ -63,8 +67,31 @@ def update_robotx(yesorno='mita'):
         os.system('git reset --hard origin/'+model.config.fastGetConfig("api-version")["branch"])
         os.system("git pull")
         os.system("mv -f ../config/ ./config")
-        return "success"
+        return "OK"
     # cp ./config/ ../config && git pull && mv ../config/ /config
+
+def config_com(mode,key="all",fileType="json",encode='utf-8',value="000"):
+    if mode=="list":# list
+        return os.listdir("./config")
+    elif mode=="get":# get Turing_RobotChat
+        return json.dumps(model.config.fastGetConfig(key,fileType,encode))
+    elif mode=="set":# set Turing_RobotChat json utf-8 {"......"}
+        pathn = model.config.APPConfig()
+        pathn.setModelName(key)
+        pathn.setConfig(value,fileType,encode)
+        return "OK"
+
+helps={
+    "hook":"hook [runmode] [hookname] | runmode可输入reg或run，分别代表初始化hook列表和运行hook",
+    "func":"func [string] | 输入你想对RingRobotX说的话。",
+    "tts":"tts [string] | 运行tts ===== asr [path] | 运行asr",
+    "asr":"tts [string] | 运行tts ===== asr [path] | 运行asr",
+    "help":"help (command) 获取（某一指令的）帮助",
+    "hello":"彩蛋。",
+    "check-update":"check-update | 检查更新",
+    "update":"update | 更新程序",
+    "config":"config [list/get/set] 配置名 扩展名 解码 值(仅当set时可用) | 列出、获取、设置配置文件。\n 例如：config list（列出） \n config get Turing_RobotChat（获取） \n config set Turing_RobotChat json utf-8 {}（设置）"
+}
 
 commands={
     "hook":hook_com,
@@ -74,12 +101,17 @@ commands={
     "help":help_com,
     "hello":hello_ringrobotx,
     "check-update":check_update,
-    "update":update_robotx
+    "update":update_robotx,
+    "config":config_com
 }
 
 def command_registry(command,func):
     global commands
     commands[command]=func
+
+def help_registry(command,string):
+    global helps
+    helps[command]=string
 
 class console(object):
     def commandRun(self,command,param):

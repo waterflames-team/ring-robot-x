@@ -21,6 +21,8 @@ model.logger.moduleLoggerMain.info(str('''
     {} 加载完毕！
 ''').format(model.config.fastGetConfig("api-version")["RingRobotX"]))
 
+#============================ 重加载指令注册 ============================
+
 def reload_com(string):
     if string=="func":
         model.func.reload()
@@ -34,6 +36,9 @@ def reload_com(string):
     return "success"
 
 model.cli.command_registry("reload",reload_com)
+model.cli.help_registry("reload","reload [model/func/all] | 重新加载模块")
+
+#============================ 重加载指令注册 ============================
 
 def worker_cli():
     cli=model.cli.console()

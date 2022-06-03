@@ -1,0 +1,8 @@
+{
+  "enable": false,
+  "funcType": "Func",
+  "version": "1",
+  "apiVersion": "Beta.3",
+  "Author": "LingkongTeam",
+  "description": "A Bridge for RingRobotX CLI Mode. Uses Websocket."
+}

@@ -4,6 +4,7 @@ import model.logger as logger
 import requests
 import model.config
 import json
+import os
 
 def hook_com(runMode,hookName):
     if runMode=="reg":
@@ -16,8 +17,7 @@ def hook_com(runMode,hookName):
         return "runMode is missing"
 
 def func_com(string,tts="tts"):
-    model.func.run(string,tts)
-    return "success"
+    return model.func.run(string,tts)
 
 def tts_com(string):
     model.tts.tts(string)
@@ -58,7 +58,11 @@ def update_robotx(yesorno='mita'):
         logger.moduleLoggerMain.info("[CLI] 更新前，程序会将config目录备份。更新后，除了config目录，您对于程序源代码所做出的改动会被覆盖！开发人员不为您数据的损失负责！确认继续请输入 update y")
         return "[CLI] 更新前，程序会将config目录备份。更新后，除了config目录，您对于程序源代码所做出的改动会被覆盖！开发人员不为您数据的损失负责！确认继续请输入 update y"
     else:
-        os.system('cp ./config/ ../config && git fetch --all && git reset --hard origin/'+model.config.fastGetConfig("api-version")["branch"]+' && git pull && mv -f ../config/ ./config')# 摆烂型更新
+        os.system('cp ./config/ ../config')# 摆烂型更新
+        os.system('git fetch --all')
+        os.system('git reset --hard origin/'+model.config.fastGetConfig("api-version")["branch"])
+        os.system("git pull")
+        os.system("mv -f ../config/ ./config")
         return "success"
     # cp ./config/ ../config && git pull && mv ../config/ /config
 

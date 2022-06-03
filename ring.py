@@ -47,6 +47,7 @@ def worker_cli():
         except:
             model.logger.moduleLoggerMain.info("[CLI] 报告！您的命令无法解析。")
             model.logger.moduleLoggerMain.info(traceback.format_exc())
+            continue
         cli.commandRun(command,tuple(clist))
 
 def worker_2():

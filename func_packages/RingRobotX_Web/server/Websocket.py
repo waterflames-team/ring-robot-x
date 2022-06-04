@@ -37,7 +37,7 @@ async def hello(websocket, path):
         await websocket.send(back)
 
 def run():
-    start_server = websockets.serve(hello, 'localhost', model.config.fastGetConfig("RingRobotX_Web")["websocket_port"])
+    start_server = websockets.serve(hello, '', model.config.fastGetConfig("RingRobotX_Web")["websocket_port"])
     asyncio.get_event_loop().run_until_complete(start_server)
     threading.Thread(target=asyncio.get_event_loop().run_forever).start()
     model.logger.moduleLoggerMain.info("[CLI-Server] CLI-Server启动。")

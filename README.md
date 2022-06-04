@@ -95,6 +95,14 @@ python3 ./ringrobotx/ring-robot-x/ring.py
 
 你可以替换掉，模型文件在assets/snowboy/model.umdl
 
+# web后台
+
+运行后，程序默认会在本地的8901端口开启一个后台
+
+用户名随意，密码在第一次启动会随机设置，请留意控制台输出
+
+你可以修改密码、端口号在/config/RingRobotX_Web.json中
+
 # 设置
 
 详见config目录下的各种json文件

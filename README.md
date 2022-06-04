@@ -55,7 +55,7 @@ wget -O install.sh https://gitee.com/lkteam/ring-robot-x/raw/develop/install.sh 
 
 ```shell
 sudo apt install python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio make alsa-utils sox
-pip3 install pydub requests schedule playsound tornado asyncio bcrypt websockets
+pip3 install pydub requests schedule playsound tornado asyncio bcrypt websockets baidu-aip
 mkdir ringrobotx && cd ringrobotx
 git clone https://gitee.com/lkteam/ring-robot-x
 ```

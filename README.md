@@ -30,6 +30,10 @@ RingRobotX默认（git仓库版本）内置图灵、百度ASR&TTS、snowboy唤�
 
 感谢wzpan老师的网站）
 
+# 入门 （第一次尝试RingRobotX）
+
+[戳我](https://gitee.com/lkteam/ring-robot-x/wikis/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8 "Wiki")
+
 # 安装
 
 ## 方案1：自动安装脚本
@@ -51,7 +55,7 @@ wget -O install.sh https://gitee.com/lkteam/ring-robot-x/raw/develop/install.sh 
 
 ```shell
 sudo apt install python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio make alsa-utils sox
-pip3 install pydub requests schedule playsound
+pip3 install pydub requests schedule playsound tornado asyncio bcrypt websockets
 mkdir ringrobotx && cd ringrobotx
 git clone https://gitee.com/lkteam/ring-robot-x
 ```

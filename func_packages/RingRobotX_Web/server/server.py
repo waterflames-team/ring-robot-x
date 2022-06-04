@@ -40,7 +40,7 @@ class CLIHandler(BaseHandler):
             return
         salt = bcrypt.gensalt(rounds=10)
         hashed = bcrypt.hashpw(model.config.fastGetConfig("RingRobotX_Web")["password"].encode(), salt)
-        self.render('cli.html',token=hashed.decode(),url=str("ws://localhost:{}").format(model.config.fastGetConfig("RingRobotX_Web")["websocket_port"]))
+        self.render('cli.html',token=hashed.decode(),port=str("{}").format(model.config.fastGetConfig("RingRobotX_Web")["websocket_port"]))
 
 
 class DhHandler(BaseHandler):

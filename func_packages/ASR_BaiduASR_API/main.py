@@ -96,55 +96,52 @@ def main(fname):  # snowboy to asr
         else:
             raise DemoError(
                 'MAYBE API_KEY or SECRET_KEY not correct: access_token or scope not found in token response')
+    token = fetch_token()
 
-    """  TOKEN end """
+    speech_data = []
+    global AUDIO_FILE
+    with open(AUDIO_FILE, 'rb') as speech_file:
+        speech_data = speech_file.read()
 
-    if __name__ == '__main__':
-        token = fetch_token()
+    length = len(speech_data)
 
-        speech_data = []
-        global AUDIO_FILE
-        with open(AUDIO_FILE, 'rb') as speech_file:
-            speech_data = speech_file.read()
+    if length == 0:
+        raise DemoError('file %s length read 0 bytes' % AUDIO_FILE)
+    speech = base64.b64encode(speech_data)
+    if IS_PY3:
+        speech = str(speech, 'utf-8')
+    global FORMAT
+    params = {'dev_pid': DEV_PID,
+                # "lm_id" : LM_ID,    #测试自训练平台开启此项
+                'format': FORMAT,
+                'rate': RATE,
+                'token': token,
+                'cuid': CUID,
+                'channel': 1,
+                'speech': speech,
+                'len': length
+                }
+    post_data = json.dumps(params, sort_keys=False)
 
-        length = len(speech_data)
-        if length == 0:
-            raise DemoError('file %s length read 0 bytes' % AUDIO_FILE)
-        speech = base64.b64encode(speech_data)
-        if IS_PY3:
-            speech = str(speech, 'utf-8')
-        global FORMAT
-        params = {'dev_pid': DEV_PID,
-                  # "lm_id" : LM_ID,    #测试自训练平台开启此项
-                  'format': FORMAT,
-                  'rate': RATE,
-                  'token': token,
-                  'cuid': CUID,
-                  'channel': 1,
-                  'speech': speech,
-                  'len': length
-                  }
-        post_data = json.dumps(params, sort_keys=False)
+    req = Request(ASR_URL, post_data.encode('utf-8'))
+    req.add_header('Content-Type', 'application/json')
+    try:
+        begin = timer()
+        f = urlopen(req)
+        result_str = f.read()
+        # print ("Request time cost %f" % (timer() - begin))
+    except URLError as err:
+        # print('asr http response http code : ' + str(err.code))
+        result_str = err.read()
 
-        req = Request(ASR_URL, post_data.encode('utf-8'))
-        req.add_header('Content-Type', 'application/json')
-        try:
-            begin = timer()
-            f = urlopen(req)
-            result_str = f.read()
-            # print ("Request time cost %f" % (timer() - begin))
-        except URLError as err:
-            # print('asr http response http code : ' + str(err.code))
-            result_str = err.read()
-
-        if IS_PY3:
-            # global cg
-            # cg = result_str['result'][0]
-            # cg = result_str.json['result']
-            result_str = str(result_str, 'utf-8')
+    if IS_PY3:
+        # global cg
+        # cg = result_str['result'][0]
+        # cg = result_str.json['result']
+        result_str = str(result_str, 'utf-8')
         # print(result_str)
-        with open("result.txt", "w") as of:
-            of.write(result_str)
+    with open("result.txt", "w") as of:
+        of.write(result_str)
 
     '''
     cg = result_str

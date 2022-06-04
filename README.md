@@ -42,7 +42,7 @@ RingRobotX默认（git仓库版本）内置图灵、百度ASR&TTS、snowboy唤�
 
 运行：
 ```shell
-wget -O install.sh https://gitee.com/lkteam/ring-robot-x/raw/develop/install.sh && bash install.sh
+wget -O install.sh https://gitee.com/lkteam/ring-robot-x/raw/develop/install.sh && sudo bash install.sh
 ```
 
 >**安装程序会安装到脚本执行目录/ringrobotx/ring-robot-x**

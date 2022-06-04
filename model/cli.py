@@ -17,7 +17,7 @@ def hook_com(runMode,hookName):
         return "runMode is missing"
 
 def func_com(string,tts="tts"):
-    return model.func.run(string,tts)
+    return model.hook.runhook_fast("RRCore.Model.FuncAction",string,tts)
 
 def tts_com(string):
     model.tts.tts(string)
@@ -29,15 +29,17 @@ def asr_com(string):
 
 def help_com(string="all"):
     if string=="all":
-        print("已加载命令：")
+        s=""
+        s+="已加载命令：\n"
         for key, value in commands.items():
-            print(key,end=" ")
-        print()
+            s+=key+" "
+        s+="\n"
         for key, value in commands.items():
             try:
-                print(key+" : "+helps[key])
+                s+=key+" : "+helps[key]+"\n"
             except:
-                print(key+" : 没有找到文档。")
+                s+=key+" : 没有找到文档。"+"\n"
+        return s
     elif string=="list":
         los=[]
         for key, value in commands.items():
@@ -121,7 +123,7 @@ def help_registry(command,string):
 class console(object):
     def commandRun(self,command,param):
         try:
-            logger.moduleLoggerMain.info("[CLI] 运行指令：" + command + " 参数"+str(*param))
+            logger.moduleLoggerMain.info("[CLI] 运行指令：" + command)
             ret=commands[command](*param)
             logger.moduleLoggerMain.info("[CLI] 指令返回：" + str(ret))
             return ret

@@ -7,7 +7,7 @@ import model.tts
 import model.logger
 import model.hook
 import model.check
-from func_packages import func_packages_class
+import func_packages
 
 
 def run_tts(string, ttsexec):
@@ -69,7 +69,7 @@ def run_funcpack(package, string, ttsexec, path, file,boolvalue):
         model.hook.runhook_fast("RRCore.Model.After.ContinueDisable",
                                 {"string": string, "ttsexec": ttsexec})
 
-    func_packages_class[file] = package  # 用完的class放回去，不然会玄学
+    func_packages.func_packages_class[file] = package  # 用完的class放回去，不然会玄学
     moduleLogger.info("技能运行完毕！")
     model.hook.runhook_fast("RRCore.Model.After.FuncRunning",
                             {"string": string, "ttsexec": ttsexec,"return":returncon['string']})
@@ -95,7 +95,7 @@ def run(string, ttsexec="tts"):
     path.setModelName("func")
     '''
     path1 = "func_packages"
-    model_class = func_packages_class
+    model_class = func_packages.func_packages_class
 
     if pathn.getConfig()["is_updown"]:  # 连续对话被定义
         file = pathn.getConfig()["updown_funcname"]  # 获取连续对话重定向函数名

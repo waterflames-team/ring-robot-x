@@ -23,10 +23,10 @@ def signal_handler(signal, frame):
     interrupted = True
 
 def run(i):
-    importlib.import_module("func_packages.Snowboy.snowboydecoder")
+    a=importlib.import_module("func_packages.Snowboy.snowboydecoder")
     modelaa = "assets/snowboy/model.umdl"#自己改唤醒模型路径
     signal.signal(signal.SIGINT, signal_handler)
-    detector = func_packages.Snowboy.snowboydecoder.HotwordDetector(modelaa, sensitivity=0.7)
+    detector = a.HotwordDetector(modelaa, sensitivity=0.7)
     detector.start(detected_callback=detectedCallback,
                    audio_recorder_callback=model.asr.audioRecorderCallback,
                    interrupt_check=interrupt_callback,

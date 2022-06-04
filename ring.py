@@ -38,6 +38,12 @@ def reload_com(string):
 model.cli.command_registry("reload",reload_com)
 model.cli.help_registry("reload","reload [model/func/all] | 重新加载模块")
 
+def exit_com():
+    exit(0)
+
+model.cli.command_registry("exit",exit_com)
+model.cli.help_registry("exit","exit | 停止运行RingRobotX")
+
 #============================ 重加载指令注册 ============================
 
 def worker_cli():

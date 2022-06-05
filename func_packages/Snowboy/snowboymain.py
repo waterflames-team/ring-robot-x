@@ -11,6 +11,8 @@ import model.player
 interrupted = False
 
 def detectedCallback():
+    if model.config.fastGetConfig("func")["dontshout"]:
+        return
     model.hook.runhook_fast("RRCore.FuncPack.Before.WakeUPRunning",0)
     model.player.playsound_from_file(os.path.split( os.path.realpath( sys.argv[0] ) )[0]+"/"+'assets/music/ding.wav',False)
 
@@ -21,6 +23,7 @@ def interrupt_callback():
 def signal_handler(signal, frame):
     global interrupted
     interrupted = True
+
 
 def run(i):
     a=importlib.import_module("func_packages.Snowboy.snowboydecoder")

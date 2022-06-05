@@ -40,14 +40,14 @@ function install_ringrobotx(){
 }
 
 function install_before_require(){
-  require=(python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio make alsa-utils sox)
+  require=(python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio make alsa-utils sox libsox-fmt-mp3)
   echo -e "\033[32;40m[INFO] Installing requires......\033[0m"
   for i in ${require[*]}
   do
     sudo apt install ${i} -y || error_dump "install_before_require - Cannot install package:${i}"
   done
   echo -e "\033[32;40m[INFO] apt install Success! \033[0m"
-  require=(pydub requests schedule playsound tornado asyncio bcrypt websockets)
+  require=(pydub requests schedule playsound tornado asyncio bcrypt websockets baidu-aip)
   for i in ${require[*]}
   do
     sudo pip3 install ${i} -i https://pypi.tuna.tsinghua.edu.cn/simple some-package || error_dump "install_before_require - Cannot install package:${i}"

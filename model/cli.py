@@ -50,7 +50,6 @@ def help_com(string="all"):
             return string + " : " + helps[string]
         except:
             return string + " : 没有找到文档。"
-    return "success"
 
 def hello_ringrobotx():
     print("Now playing: Rick Astley - Never Gonna Give You Up")
@@ -69,11 +68,11 @@ def update_robotx(yesorno='mita'):
         logger.moduleLoggerMain.info("[CLI] 更新前，程序会将config目录备份。更新后，除了config目录，您对于程序源代码所做出的改动会被覆盖！开发人员不为您数据的损失负责！确认继续请输入 update y")
         return "[CLI] 更新前，程序会将config目录备份。更新后，除了config目录，您对于程序源代码所做出的改动会被覆盖！开发人员不为您数据的损失负责！确认继续请输入 update y"
     else:
-        os.system('cp ./config/ ../config')# 摆烂型更新
+        os.system('cp -a -f ./config/ ../')# 摆烂型更新
         os.system('git fetch --all')
         os.system('git reset --hard origin/'+model.config.fastGetConfig("api-version")["branch"])
         os.system("git pull")
-        os.system("mv -f ../config/ ./config")
+        os.system("cp -a -f ../config/ ./")
         return "OK"
     # cp ./config/ ../config && git pull && mv ../config/ /config
 
@@ -95,7 +94,7 @@ helps={
     "asr":"tts [string] | 运行tts ===== asr [path] | 运行asr",
     "help":"help (command) 获取（某一指令的）帮助",
     "hello":"彩蛋。",
-    "check-update":"check-update | 检查更新",
+    "check-update":"check-update | 检查更新，OK为可更新，No为不可更新",
     "update":"update | 更新程序",
     "config":"config [list/get/set] 配置名 扩展名 解码 值(仅当set时可用) | 列出、获取、设置配置文件。\n 例如：config list（列出） \n config get Turing_RobotChat（获取） \n config set Turing_RobotChat json utf-8 {}（设置）"
 }

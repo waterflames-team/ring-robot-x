@@ -1,6 +1,7 @@
-from pydub import AudioSegment
-from pydub.playback import play
+import model.logger
 import os
+import threading
+import subprocess
 
 def dele(fpath):
     """
@@ -11,11 +12,22 @@ def dele(fpath):
     if os.path.exists(fpath):
         os.remove(fpath)
 
-def playsound_from_file(file):
+def doPlay(file,dell):
+    cmd = ["play", str(file)]
+    model.logger.moduleLoggerMain.info("Executing %s", " ".join(cmd))
+    proc = subprocess.Popen(
+        cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+    )
+    proc.wait()
+    if dell:
+        dele(file)
+    model.logger.moduleLoggerMain.info("play ok")
+
+def playsound_from_file(file,dell=True):
     """
     播放音频文件
     :param file: 文件路径
     :return: 无
     """
-    song = AudioSegment.from_wav(file)
-    play(song)
+    music_play_thread = threading.Thread(target=doPlay, args=(file,dell))
+    music_play_thread.run()  # 开始循环

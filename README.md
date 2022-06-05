@@ -54,8 +54,8 @@ wget -O install.sh https://gitee.com/lkteam/ring-robot-x/raw/develop/install.sh 
 ### 1.安装RingRobotX
 
 ```shell
-sudo apt install python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio make alsa-utils sox
-pip3 install pydub requests schedule playsound tornado asyncio bcrypt websockets
+sudo apt install python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio make alsa-utils sox libsox-fmt-mp3
+pip3 install pydub requests schedule playsound tornado asyncio bcrypt websockets baidu-aip
 mkdir ringrobotx && cd ringrobotx
 git clone https://gitee.com/lkteam/ring-robot-x
 ```
@@ -92,7 +92,8 @@ cd ../
 # 运行
 
 ```shell
-python3 ./ringrobotx/ring-robot-x/ring.py
+cd ringrobotx/ring-robot-x
+python3 ring.py
 ```
 
 内置的模型唤醒词是“灵空灵空”，不同设备上录音会有不同效果，建议在自己设备上训练效果更好
@@ -154,5 +155,5 @@ python3 ./ringrobotx/ring-robot-x/ring.py
 
 # 感谢
 
-* wzpan 本项目借鉴了 wukong-robot 项目的一部分基本框架设计 & snowboy训练网站（wukong-robot是个好项目！
+* wzpan 本项目借鉴了 wukong-robot 项目的一部分基本底层代码 & snowboy训练网站（wukong-robot是个好项目！
 * 本项目的前身 lingkong-robot

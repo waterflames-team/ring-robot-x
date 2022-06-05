@@ -22,8 +22,8 @@ def _async_raise(tid, exctype):
 def stop_thread(thread):
     _async_raise(thread.ident, SystemExit)
 
-from playsound import playsound # 导包
 import model.config
+import model.player
 
 class Main:
 
@@ -45,7 +45,7 @@ class Main:
 
     def play(self):
         while 1:
-            playsound(self.FUNC_Clock_playPath)
+            model.player.playsound_from_file(self.FUNC_Clock_playPath,False)
 
     def do_wizz(self):
         self.music_play_thread = threading.Thread(target=self.play, args=())

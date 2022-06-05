@@ -154,5 +154,5 @@ python3 ./ringrobotx/ring-robot-x/ring.py
 
 # 感谢
 
-* wzpan 本项目借鉴了 wukong-robot 项目的一部分基本框架设计 & snowboy训练网站（wukong-robot是个好项目！
+* wzpan 本项目借鉴了 wukong-robot 项目的一部分基本底层代码 & snowboy训练网站（wukong-robot是个好项目！
 * 本项目的前身 lingkong-robot

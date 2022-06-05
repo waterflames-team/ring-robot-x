@@ -1,4 +1,4 @@
-from playsound import playsound # 导包
+import model.logger
 import os
 
 def dele(fpath):
@@ -10,10 +10,20 @@ def dele(fpath):
     if os.path.exists(fpath):
         os.remove(fpath)
 
-def playsound_from_file(file):
+def doPlay(file,dell):
+    cmd = ["play", str(file)]
+    model.logger.moduleLoggerMain.info("Executing %s", " ".join(cmd))
+    self.proc = subprocess.Popen(
+        cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+    )
+    if dell:
+        dele(file)
+    model.logger.moduleLoggerMain.info("play ok")
+
+def playsound_from_file(file,dell=True):
     """
     播放音频文件
     :param file: 文件路径
     :return: 无
     """
-    playsound(file)
+    thread.start_new_thread(doPlay, (file,dell))

@@ -128,20 +128,19 @@ python3 ring.py
 
 欢迎有开发者向这个项目发起pr，这样不仅是对我的鼓励，也是对ringrobotx莫大的支持
 
-此项目并不是只针对树莓派linux开发板，任何架构都可运行
+此项目并不是只针对树莓派linux开发板，任何架构都（可能）可以运行
 
 如果你的开发板在此项目中报错，那么我将会尽最大努力帮你解决问题
 
 这个项目花费了我很多的精力和时间，如果这个项目帮助了你，请考虑向我们”赞赏“一下
 
-如果你喜欢这个点子，可以向本项目发起者 折腾调 整一袋白象
+如果你喜欢这个点子，可以向本项目发起者 折腾调 整一袋白象：
 
 [微信捐赠码](https://www.shushi.tech/assets/avatars/wx.png "微信捐赠码")
 
 [支付宝捐赠码](https://www.shushi.tech/assets/avatars/zfb.jpg "支付宝捐赠码")
 
-
-> 如果您觉得我们的开源软件对你有所帮助，可以向 LingKongTeam 的创始人 Epeiuss 和整个团队买一杯咖啡,戳这里 -> [http://afdian.net/@epeiuss](http://afdian.net/@epeiuss)
+如果您觉得我们的开源软件对你有所帮助，可以向 LingKongTeam 的创始人 Epeiuss 和整个团队多整几袋白象,戳这里 -> [http://afdian.net/@epeiuss](http://afdian.net/@epeiuss)
 
 # 二次开发
 

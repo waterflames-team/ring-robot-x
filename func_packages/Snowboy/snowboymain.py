@@ -2,7 +2,7 @@ import importlib
 import os
 import signal
 import sys
-
+import model.config
 import model.asr
 import model.hook
 import model.player

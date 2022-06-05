@@ -11,7 +11,7 @@ import model.config
 
 # asr model from LingkongRobot
 def main(fname):  # snowboy to asr
-    model.player.playsound_from_file(os.path.split( os.path.realpath( sys.argv[0] ) )[0]+"/"+'assets/music/dong.wav')
+    model.player.playsound_from_file(os.path.split( os.path.realpath( sys.argv[0] ) )[0]+"/"+'assets/music/dong.wav',False)
 
     # asr
     IS_PY3 = sys.version_info.major == 3

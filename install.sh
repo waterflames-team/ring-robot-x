@@ -40,7 +40,7 @@ function install_ringrobotx(){
 }
 
 function install_before_require(){
-  require=(python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio make alsa-utils sox)
+  require=(python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio make alsa-utils sox libsox-fmt-mp3)
   echo -e "\033[32;40m[INFO] Installing requires......\033[0m"
   for i in ${require[*]}
   do

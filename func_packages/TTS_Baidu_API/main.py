@@ -47,7 +47,7 @@ def main(tts_string):
         'spd': SPD,
         'vol': VOL,
         'per': PER,
-        'PIT':PIT
+        'pit':PIT
     })
 
     if not isinstance(result, dict):

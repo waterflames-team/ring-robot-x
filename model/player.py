@@ -1,6 +1,7 @@
 import model.logger
 import os
 import threading
+import subprocess
 
 def dele(fpath):
     """
@@ -14,9 +15,10 @@ def dele(fpath):
 def doPlay(file,dell):
     cmd = ["play", str(file)]
     model.logger.moduleLoggerMain.info("Executing %s", " ".join(cmd))
-    self.proc = subprocess.Popen(
+    proc = subprocess.Popen(
         cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
     )
+    proc.wait()
     if dell:
         dele(file)
     model.logger.moduleLoggerMain.info("play ok")

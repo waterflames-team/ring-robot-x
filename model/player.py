@@ -26,4 +26,5 @@ def playsound_from_file(file,dell=True):
     :param file: 文件路径
     :return: 无
     """
-    thread.start_new_thread(doPlay, (file,dell))
+    music_play_thread = threading.Thread(target=doPlay, args=(file,dell))
+    music_play_thread.run()  # 开始循环

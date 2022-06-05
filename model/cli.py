@@ -11,7 +11,7 @@ def hook_com(runMode,hookName):
         model.hook.register_hook_fast(hookName)
         return "success"
     elif runMode=="run":
-        model.hook.runhook_fast(hookName)
+        model.hook.runhook_fast(hookName,0)
         return "success"
     else:
         return "runMode is missing"
@@ -72,6 +72,7 @@ def update_robotx(yesorno='mita'):
         os.system('git fetch --all')
         os.system('git reset --hard origin/'+model.config.fastGetConfig("api-version")["branch"])
         os.system("git pull")
+        os.system('cp -f ./config/api-version.json ../config')  # 摆烂型更新
         os.system("cp -a -f ../config/ ./")
         return "OK"
     # cp ./config/ ../config && git pull && mv ../config/ /config

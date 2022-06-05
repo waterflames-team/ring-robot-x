@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 import argparse
 import importlib
+import os
+import sys
 import traceback
 
 parser = argparse.ArgumentParser(description='RingRobotX - By LingkongTeam')
@@ -29,8 +31,8 @@ def reload_com(string):
     elif string=="model":
         importlib.reload(model)
     elif string=="all":
-        model.func.reload()
-        importlib.reload(model)
+        python = sys.executable
+        os.execl(python, python, *sys.argv)
     else:
         return "string is missing"
     return "success"

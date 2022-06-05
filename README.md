@@ -98,7 +98,7 @@ python3 ring.py
 
 内置的模型唤醒词是“灵空灵空”，不同设备上录音会有不同效果，建议在自己设备上训练效果更好
 
-你可以替换掉，模型文件在assets/snowboy/model.umdl
+你可以替换掉，模型文件在config/snowboy/model.pmdl
 
 # web后台
 

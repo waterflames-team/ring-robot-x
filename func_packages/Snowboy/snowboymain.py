@@ -2,7 +2,6 @@ import importlib
 import os
 import signal
 import sys
-
 import model.asr
 import model.hook
 import model.player
@@ -22,9 +21,10 @@ def signal_handler(signal, frame):
     global interrupted
     interrupted = True
 
+
 def run(i):
     a=importlib.import_module("func_packages.Snowboy.snowboydecoder")
-    modelaa = "assets/snowboy/model.umdl"#自己改唤醒模型路径
+    modelaa = "config/snowboy/model.pmdl"#自己改唤醒模型路径
     signal.signal(signal.SIGINT, signal_handler)
     detector = a.HotwordDetector(modelaa, sensitivity=0.7)
     detector.start(detected_callback=detectedCallback,

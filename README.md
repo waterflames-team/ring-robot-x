@@ -92,7 +92,8 @@ cd ../
 # 运行
 
 ```shell
-python3 ./ringrobotx/ring-robot-x/ring.py
+cd ringrobotx/ring-robot-x
+python3 ring.py
 ```
 
 内置的模型唤醒词是“灵空灵空”，不同设备上录音会有不同效果，建议在自己设备上训练效果更好

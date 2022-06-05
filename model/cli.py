@@ -74,7 +74,6 @@ def update_robotx(yesorno='mita'):
         os.system('git reset --hard origin/'+model.config.fastGetConfig("api-version")["branch"])
         os.system("git pull")
         os.system("cp -r ../config/ ./")
-        reload_com("all")
         return "OK"
     # cp ./config/ ../config && git pull && mv ../config/ /config
 

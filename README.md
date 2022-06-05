@@ -140,10 +140,8 @@ python3 ring.py
 
 [支付宝捐赠码](https://www.shushi.tech/assets/avatars/zfb.jpg "支付宝捐赠码")
 
-当然，你也可以向 LingKongTeam 的创始人 Epeiuss 和整个团队买一杯咖啡
 
-> 如果您觉得我们的开源软件对你有所帮助，请进入爱发电赞赏我们，给予一些帮助与鼓励，谢谢！！！
-戳这里 -> http://afdian.net/@epeiuss
+> 如果您觉得我们的开源软件对你有所帮助，可以向 LingKongTeam 的创始人 Epeiuss 和整个团队买一杯咖啡,戳这里 -> [http://afdian.net/@epeiuss](http://afdian.net/@epeiuss)
 
 # 二次开发
 

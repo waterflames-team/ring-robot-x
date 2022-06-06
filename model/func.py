@@ -121,6 +121,7 @@ def run(string, ttsexec="tts"):
         moduleLogger.info("运行完毕")
         return
     files = os.listdir(path1)
+    files.sort()
 
     for file in files:  # 遍历所有技能包
         if os.path.isdir(os.path.join(path1, file)):

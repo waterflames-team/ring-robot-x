@@ -124,23 +124,15 @@ python3 ring.py
 
 # 支持
 
-由于折腾调是个还处于九年义务教育的学生党 ~~还是个鸽子~~ ，本项目可能活跃时间不长，也没有精力、时间、金钱支撑ringrobotx持续开发
+由于LKT的小伙伴们还是处于九年义务教育的学生党们 ~~还是群鸽子~~ ，所以本项目可能不会经常活跃
 
-欢迎有开发者向这个项目发起pr，这样不仅是对我的鼓励，也是对ringrobotx莫大的支持
+欢迎有开发者向这个项目发起pr，这样不仅是对LKT的鼓励，也是对ringrobotx莫大的支持
 
 此项目并不是只针对树莓派linux开发板，任何架构都（可能）可以运行
 
 如果你的开发板在此项目中报错，那么我将会尽最大努力帮你解决问题
 
-这个项目花费了我很多的精力和时间，如果这个项目帮助了你，请考虑向我们”赞赏“一下
-
-如果你喜欢这个点子，可以向本项目发起者 折腾调 整一袋白象：
-
-[微信捐赠码](https://www.shushi.tech/assets/avatars/wx.png "微信捐赠码")
-
-[支付宝捐赠码](https://www.shushi.tech/assets/avatars/zfb.jpg "支付宝捐赠码")
-
-如果您觉得我们的开源软件对你有所帮助，可以向 LingKongTeam 的创始人 Epeiuss 和整个团队多整几袋白象,戳这里 -> [http://afdian.net/@epeiuss](http://afdian.net/@epeiuss)
+这个项目花费了我们很多的精力和时间，如果您觉得我们的开源软件对你有所帮助，可以向 LingKongTeam 的创始人 Epeiuss 和整个团队多整几袋白象,戳这里 -> [http://afdian.net/@epeiuss](http://afdian.net/@epeiuss)
 
 # 二次开发
 
@@ -150,7 +142,7 @@ python3 ring.py
 
 另外，本项目不受 LingKongRobot 的 GPL 协议影响。
 
-# 感谢
+# 特别感谢
 
 * wzpan 本项目借鉴了 wukong-robot 项目的一部分基本底层代码 & snowboy训练网站（wukong-robot是个好项目！
 * 本项目的前身 lingkong-robot

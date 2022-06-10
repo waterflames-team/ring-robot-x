@@ -55,9 +55,9 @@ wget -O install.sh https://gitee.com/lkteam/ring-robot-x/raw/develop/install.sh 
 
 ```shell
 sudo apt install python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio make alsa-utils sox libsox-fmt-mp3
-pip3 install pydub requests schedule playsound tornado asyncio bcrypt websockets baidu-aip nest_asyncio
 mkdir ringrobotx && cd ringrobotx
 git clone https://gitee.com/lkteam/ring-robot-x
+pip3 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
 ```
 
 运行此命令后，ring将会下载到命令执行的目录

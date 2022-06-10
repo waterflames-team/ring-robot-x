@@ -7,6 +7,10 @@ def add_history(message):
     global history
     history.append({"que":message["string"],"ans":message["return"]})
 
+def clear_history():
+    global history
+    history=[]
+
 def get_history():
     global history
     return history

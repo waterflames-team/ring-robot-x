@@ -42,7 +42,12 @@ RingRobotX默认（git仓库版本）内置图灵、百度ASR&TTS、snowboy唤�
 
 自动安装脚本只支持使用apt的linux发行版（如debian，ubuntu等等），建议你使用清华软件源
 
-运行：
+若您要使用稳定版本，请运行：
+```shell
+wget -O install.sh https://gitee.com/lkteam/ring-robot-x/raw/master/install.sh && sudo bash install.sh
+```
+
+若您要使用测试版本，请运行：
 ```shell
 wget -O install.sh https://gitee.com/lkteam/ring-robot-x/raw/develop/install.sh && sudo bash install.sh
 ```
@@ -64,9 +69,9 @@ pip3 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple som
 
 运行此命令后，ring将会下载到命令执行的目录
 
-当然，如果你追求稳定，可以从我们的项目仓库下载发行版
+当然，如果你追求稳定，可以从我们的项目仓库下载发行版或直接下载master分支的内容
 
-如果你追求新功能，请下载develop版本
+如果你追求新功能，请下载develop分支的内容
 
 ### 2.安装语音唤醒功能
 

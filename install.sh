@@ -37,6 +37,8 @@ function install_ringrobotx(){
   cp snowboy/examples/Python3/snowboydetect.py ring-robot-x/func_packages/Snowboy || error_dump "install_ringrobotx - copy detect error"
   cp -a snowboy/resources/ ring-robot-x/func_packages/Snowboy/resources || error_dump "install_ringrobotx - copy res error"
   chmod 777 ../ringrobotx/ -R || error_dump "install_ringrobotx - chmod error"
+  cd ring-robot-x || error_dump "install_ringrobotx - cd error"
+  sudo pip3 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple some-package || error_dump "install_before_require - Cannot install package"
 }
 
 function install_before_require(){
@@ -47,11 +49,6 @@ function install_before_require(){
     sudo apt install ${i} -y || error_dump "install_before_require - Cannot install package:${i}"
   done
   echo -e "\033[32;40m[INFO] apt install Success! \033[0m"
-  require=(pydub requests schedule playsound tornado asyncio bcrypt websockets baidu-aip nest_asyncio)
-  for i in ${require[*]}
-  do
-    sudo pip3 install ${i} -i https://pypi.tuna.tsinghua.edu.cn/simple some-package || error_dump "install_before_require - Cannot install package:${i}"
-  done
   echo -e "\033[32;40m[INFO] Success! \033[0m"
 }
 

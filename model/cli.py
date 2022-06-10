@@ -75,6 +75,7 @@ def update_robotx(yesorno='mita'):
         os.system("git pull")
         os.system('cp -f ./config/api-version.json ../config')  # 摆烂型更新
         os.system("cp -a -f ../config/ ./")
+        os.system("pip3 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple some-package")
         return "OK"
     # cp ./config/ ../config && git pull && mv ../config/ /config
 

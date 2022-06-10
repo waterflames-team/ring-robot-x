@@ -64,6 +64,7 @@ wget -O install.sh https://gitee.com/lkteam/ring-robot-x/raw/develop/install.sh 
 sudo apt install python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio make alsa-utils sox libsox-fmt-mp3
 mkdir ringrobotx && cd ringrobotx
 git clone https://gitee.com/lkteam/ring-robot-x
+cd ring-robot-x
 pip3 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
 ```
 

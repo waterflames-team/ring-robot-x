@@ -1,4 +1,6 @@
-# RingRobotX 灵音 - 灵活可配的对话机器人
+![banner](docs/photo/banner.png)
+
+# 写在开头
 
 这是一个python语音对话机器人，根据Lingkong-Robot重构而来
 

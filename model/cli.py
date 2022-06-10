@@ -5,6 +5,7 @@ import requests
 import model.config
 import json
 import os
+import importlib
 
 def hook_com(runMode,hookName):
     if runMode=="reg":
@@ -88,6 +89,24 @@ def config_com(mode,key="all",fileType="json",encode='utf-8',value="000"):
         pathn.setConfig(value,fileType,encode)
         return "OK"
 
+
+def clear_com(str):
+    if str=="log":
+        f = open(model.logger.module_logfileMain, 'w')
+        f.truncate()
+        return "success"
+    elif str=="history":
+        try:
+            a = importlib.import_module("func_packages.RingRobotX_ChatHistory.main")
+            a.clear_history()
+            return "success"
+        except:
+            logger.moduleLoggerMain.info("[CLI] 报告！指令" + command + " 无法正确加载")
+            logger.moduleLoggerMain.info(traceback.format_exc())
+            return "您未安装 RingRobotX_ChatHistory ，或运行中出现异常，故无法使用。"
+    else:
+        return "选项未找到。"
+
 helps={
     "hook":"hook [runmode] [hookname] | runmode可输入reg或run，分别代表初始化hook列表和运行hook",
     "func":"func [string] | 输入你想对RingRobotX说的话。",
@@ -95,6 +114,7 @@ helps={
     "asr":"tts [string] | 运行tts ===== asr [path] | 运行asr",
     "help":"help (command) 获取（某一指令的）帮助",
     "hello":"彩蛋。",
+    "clear":"clear [log/history] | 清除记录（history需要插件RingRobotX_ChatHistory插件支持）",
     "check-update":"check-update | 检查更新，OK为可更新，No为不可更新",
     "update":"update | 更新程序",
     "config":"config [list/get/set] 配置名 扩展名 解码 值(仅当set时可用) | 列出、获取、设置配置文件。\n 例如：config list（列出） \n config get Turing_RobotChat（获取） \n config set Turing_RobotChat json utf-8 {}（设置）"
@@ -109,7 +129,8 @@ commands={
     "hello":hello_ringrobotx,
     "check-update":check_update,
     "update":update_robotx,
-    "config":config_com
+    "config":config_com,
+    "clear":clear_com
 }
 
 def command_registry(command,func):

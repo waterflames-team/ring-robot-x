@@ -63,11 +63,11 @@ def run_funcpack(package, string, ttsexec, path, file,boolvalue):
     if returncon["return"] == 1:
         set_updown(True, path, file)
         model.hook.runhook_fast("RRCore.Model.After.ContinueEnable",
-                                {"string": string, "ttsexec": ttsexec})
+                                {"string": string, "ttsexec": ttsexec,"return":returncon['string']})
     else:
         set_updown(False, path, file)
         model.hook.runhook_fast("RRCore.Model.After.ContinueDisable",
-                                {"string": string, "ttsexec": ttsexec})
+                                {"string": string, "ttsexec": ttsexec,"return":returncon['string']})
 
     func_packages.func_packages_class[file] = package  # 用完的class放回去，不然会玄学
     moduleLogger.info("技能运行完毕！")

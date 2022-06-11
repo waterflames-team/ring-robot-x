@@ -78,6 +78,6 @@ if __name__ == "__main__":
         worker1.start()  # 开始循环
     # 以下为服务运行区域
     time.sleep(2)
-    model.hook.runhook_fast("RRCore.Main.Before.Running", 0)
+    model.hook.runhook_fast("RRCore.Main.Before.Running")
 else:
     model.logger.moduleLoggerMain.info("[RingRobotX] 检测到模块形式导入，将不启动cli和beforeRunning Hook。请注意：这种启动方式会让其它脚本控制RingRobotX，请确认你启动的程序是你信任的程序。")

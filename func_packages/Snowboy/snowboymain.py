@@ -10,7 +10,7 @@ import model.player
 interrupted = False
 
 def detectedCallback():
-    model.hook.runhook_fast("RRCore.FuncPack.Before.WakeUPRunning",0)
+    model.hook.runhook_fast("RRCore.FuncPack.Before.WakeUPRunning")
     model.player.playsound_from_file(os.path.split( os.path.realpath( sys.argv[0] ) )[0]+"/"+'assets/music/ding.wav',False)
 
 def interrupt_callback():
@@ -22,7 +22,7 @@ def signal_handler(signal, frame):
     interrupted = True
 
 
-def run(i):
+def run():
     a=importlib.import_module("func_packages.Snowboy.snowboydecoder")
     modelaa = "config/snowboy/model.pmdl"#自己改唤醒模型路径
     signal.signal(signal.SIGINT, signal_handler)

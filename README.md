@@ -34,7 +34,7 @@ RingRobotX默认（git仓库版本）内置图灵、百度ASR&TTS、snowboy唤�
 
 # 入门 （第一次尝试RingRobotX）
 
-[戳我](https://gitee.com/lkteam/ring-robot-x/wikis/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8 "Wiki")
+[戳我](https://rrx.lkteam.cn/#/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8 "Wiki")
 
 # 安装
 
@@ -64,6 +64,7 @@ wget -O install.sh https://gitee.com/lkteam/ring-robot-x/raw/develop/install.sh 
 sudo apt install python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio make alsa-utils sox libsox-fmt-mp3
 mkdir ringrobotx && cd ringrobotx
 git clone https://gitee.com/lkteam/ring-robot-x
+cd ring-robot-x
 pip3 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
 ```
 
@@ -123,7 +124,7 @@ python3 ring.py
 
 # Wiki
 
-[戳我](https://gitee.com/lkteam/ring-robot-x/wikis "Wiki")
+[戳我](https://rrx.lkteam.cn/ "Wiki")
 
 # 遇到问题
 

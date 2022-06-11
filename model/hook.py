@@ -3,7 +3,6 @@ import model.logger as logger
 
 HookList = {
     "RRCore.Main.Before.Running":[],
-    "RRCore.Main.Before.Running.CLI":[],
     "RRCore.Model.Before.FuncRunning":[],
     "RRCore.Model.After.FuncRunning":[],
     "RRCore.Model.After.ContinueDisable":[],

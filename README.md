@@ -1,5 +1,10 @@
 <p align="center">
-    <img src="docs/photo/banner.png" alt="RingRobotX 灵音 | 灵活可配的中文语音对话机器人">
+    <a href="https://rrx.lkteam.cn/"><img src="docs/photo/banner.png" alt="RingRobotX 灵音 | 灵活可配的中文语音对话机器人"></a>
+    <br>
+    <a href='https://gitee.com/lkteam/ring-robot-x/stargazers'><img src='https://gitee.com/lkteam/ring-robot-x/badge/star.svg?theme=white' alt='star'></img></a>
+    <a href='https://gitee.com/lkteam/ring-robot-x/members'><img src='https://gitee.com/lkteam/ring-robot-x/badge/fork.svg?theme=white' alt='fork'></img></a>
+    <br>
+    <br>
 </p>
 
 # 写在开头

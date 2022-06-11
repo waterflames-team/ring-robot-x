@@ -166,5 +166,5 @@ python3 ring.py
 
 
 <p align="center">
-    <img src="docs/photo/afd.png" alt="爱发电二维码">
+    <img src="docs/photo/afd.png" alt="爱发电二维码" width="200" height="275.2">
 </p>

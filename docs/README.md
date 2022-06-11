@@ -162,9 +162,9 @@ python3 ring.py
 
 如果你的开发板在此项目中报错，那么我将会尽最大努力帮你解决问题
 
-这个项目花费了我们很多的精力和时间，如果您觉得我们的开源软件对你有所帮助，可以向 LingKongTeam 的创始人 Epeiuss 和整个团队多整几袋白象,戳这里 -> [http://afdian.net/@epeiuss](http://afdian.net/@epeiuss)
+这个项目花费了我们很多的精力和时间，如果您觉得我们的开源软件对你有所帮助，可以戳这里支持我们 -> [http://afdian.net/@epeiuss](http://afdian.net/@epeiuss)
 
 
 <p align="center">
-    <img src="photo/afd.png" alt="爱发电二维码">
+    <img src="photo/afd.png" alt="爱发电二维码" width="200" height="275.2">
 </p>

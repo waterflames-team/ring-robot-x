@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://rrx.lkteam.cn/"><img src="docs/photo/banner.png" alt="RingRobotX 灵音 | 灵活可配的中文语音对话机器人"></a>
+    <a href="https://www.lkteam.cn/"><img src="docs/photo/banner.png" alt="RingRobotX 灵音 | 灵活可配的中文语音对话机器人"></a>
     <br>
     <a href='https://gitee.com/lkteam/ring-robot-x/stargazers'><img src='https://gitee.com/lkteam/ring-robot-x/badge/star.svg?theme=white' alt='star'></img></a>
     <a href='https://gitee.com/lkteam/ring-robot-x/members'><img src='https://gitee.com/lkteam/ring-robot-x/badge/fork.svg?theme=white' alt='fork'></img></a>
@@ -40,7 +40,7 @@ RingRobotX默认（git仓库版本）内置图灵、百度ASR&TTS、snowboy唤�
 
 # 入门 （第一次尝试RingRobotX）
 
-[戳我查看文档](https://rrx.lkteam.cn/#/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8 "Wiki")
+[戳我查看文档](https://www.lkteam.cn/#/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8 "Wiki")
 
 # 安装
 
@@ -130,7 +130,7 @@ python3 ring.py
 
 # 文档
 
-[戳我进入](https://rrx.lkteam.cn/ "文档")
+[戳我进入](https://www.lkteam.cn/ "文档")
 
 # 联系
 

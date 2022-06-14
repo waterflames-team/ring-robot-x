@@ -30,5 +30,5 @@
 <br>
 
 
-* [RingRobotX 仓库](https://gitee.com/coco-central/waddle)
-* [RingRobotX 反馈](https://gitee.com/coco-central/waddle/issues)
+* [RingRobotX 仓库](https://gitee.com/lkteam/ring-robot-x/)
+* [RingRobotX 反馈](https://gitee.com/lkteam/ring-robot-x/issues)

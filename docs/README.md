@@ -149,8 +149,22 @@ python3 ring.py
 
 # 特别感谢
 
-* wzpan 本项目借鉴了 wukong-robot 项目的一部分基本底层代码 & snowboy训练网站（wukong-robot是个好项目！
-* 本项目的前身 lingkong-robot
+## 技术方面
+* wzpan （本项目借鉴了 wukong-robot 项目的一部分基本底层代码 & snowboy训练网站。wukong-robot真的是个超级无敌好项目！）
+* 本项目的前身 lingkong-robot 及其创作者Epeiuss
+
+## 捐赠方面
+感谢以下小伙伴为「LKT的服务器与域名的购买，以及之后项目的制作」捐赠！
+<details>
+<summary>感谢名单（点击展开）</summary>
+未按照顺序排列，感谢每一位小伙伴的支持:
+
+- HZSN
+- 过客是个铁憨憨
+- 柯灰
+- Leo韩
+
+</details>
 
 # 支持
 
@@ -160,11 +174,14 @@ python3 ring.py
 
 此项目并不是只针对树莓派linux开发板，任何架构都（可能）可以运行
 
-如果你的开发板在此项目中报错，那么我将会尽最大努力帮你解决问题
+如果你的开发板在此项目中报错，欢迎在Issues中提问，我们将会尽最大努力帮你解决问题
 
-这个项目花费了我们很多的精力和时间，如果您觉得我们的开源软件对你有所帮助，可以戳这里支持我们 -> [http://afdian.net/@epeiuss](http://afdian.net/@epeiuss)
+这个项目花费了我们很多的精力和时间，如果您觉得我们的开源软件对你有所帮助，可以向 LKT赞助,戳这里 -> [http://afdian.net/@epeiuss](http://afdian.net/@epeiuss)
 
 
 <p align="center">
     <img src="photo/afd.png" alt="爱发电二维码" width="200" height="275.2">
 </p>
+
+
+> 我们不营利，所有资金将花费到服务器与域名的购买，以及之后项目的制作中

@@ -155,6 +155,8 @@ python3 ring.py
 
 ## 捐赠方面
 感谢以下小伙伴为「LKT的服务器与域名的购买，以及之后项目的制作」捐赠！
+
+
 <details>
 <summary>感谢名单（点击展开）</summary>
 未按照顺序排列，感谢每一位小伙伴的支持:
@@ -165,6 +167,8 @@ python3 ring.py
 - Leo韩
 
 </details>
+<br>
+
 
 # 支持
 

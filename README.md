@@ -138,6 +138,7 @@ python3 ring.py
 
 - 你可以选择 [戳我](https://gitee.com/lkteam/ring-robot-x/issues "Issues") 来创建一个issue
 - 也可以通过邮箱联系我们：[hi@lkteam.cn](mailto:hi@lkteam.cn)
+- 还可以加入我们的用户群（QQ）：825288633
 
 # 二次开发
 

@@ -29,6 +29,6 @@
 
 <br>
 
-
-* [RingRobotX 仓库](https://gitee.com/coco-central/waddle)
-* [RingRobotX 反馈](https://gitee.com/coco-central/waddle/issues)
+* [收入支出明细](收入支出明细.md "收入支出明细 - RingRobotX 灵音")
+* [RingRobotX 仓库](https://gitee.com/lkteam/ring-robot-x/)
+* [RingRobotX 反馈](https://gitee.com/lkteam/ring-robot-x/issues)

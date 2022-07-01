@@ -8,6 +8,7 @@ import asyncio
 import json
 import func_packages.RingRobotX_ChatHistory.main
 import bcrypt
+import model.logger
 
 
 class BaseHandler(tornado.web.RequestHandler):
@@ -66,7 +67,7 @@ class GetLogHandler(BaseHandler):
         if not self.current_user:
             self.redirect("/login")
             return
-        with open("./log/" + time.strftime("%Y%m%d") + '.log', encoding="utf-8") as file_obj:
+        with open(model.logger.module_logfileMain, encoding="utf-8") as file_obj:
             contents = file_obj.readlines()
             self.render('log.html', log=contents)
 

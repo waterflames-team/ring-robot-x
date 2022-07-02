@@ -1,8 +1,8 @@
 <p align="center">
     <a href="https://www.lkteam.cn/"><img src="photo/banner.png" alt="RingRobotX 灵音 | 灵活可配的中文语音对话机器人"></a>
     <br>
-    <a href='https://gitee.com/lkteam/ring-robot-x/stargazers'><img src='https://gitee.com/lkteam/ring-robot-x/badge/star.svg?theme=white' alt='star'></img></a>
-    <a href='https://gitee.com/lkteam/ring-robot-x/members'><img src='https://gitee.com/lkteam/ring-robot-x/badge/fork.svg?theme=white' alt='fork'></img></a>
+    <a href='https://gitee.com/lkteam/ring-robot-x/stargazers'><img src='https://gitee.com/lkteam/ring-robot-x/badge/star.svg?theme=white' alt='star'/></a>
+    <a href='https://gitee.com/lkteam/ring-robot-x/members'><img src='https://gitee.com/lkteam/ring-robot-x/badge/fork.svg?theme=white' alt='fork'/></a>
     <br>
 </p>
 

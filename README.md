@@ -190,3 +190,8 @@ python3 ring.py
 
 
 > 我们不营利，所有资金将花费到服务器与域名的购买，以及之后项目的制作中
+
+# 加入我们
+
+我们是一个非盈利的开源团队，无论您是否会编程，我们都欢迎您加入我们，与我们一起打造惊人的产品：
+[https://xykong.feishu.cn/share/base/shrcnwMMP9rBl5aK6qJqaXc3Jph](https://xykong.feishu.cn/share/base/shrcnwMMP9rBl5aK6qJqaXc3Jph)

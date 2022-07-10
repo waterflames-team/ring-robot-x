@@ -2,6 +2,7 @@
 import argparse
 import importlib
 import os
+import signal
 import sys
 import traceback
 
@@ -49,7 +50,7 @@ def exit_com():
 
 model.cli.command_registry("exit", exit_com)
 model.cli.help_registry("exit", "exit | 停止运行RingRobotX")
-
+stop_threads=False
 
 # ============================ 重加载指令注册 ============================
 
@@ -57,13 +58,20 @@ def worker_cli():
     cli = model.cli.console()
     print("[RingRobotX] CLI模式启动。您现在可以输入")
     while True:
-        command = input("[RingRobotX] > ")
-        clist = command.split()
+        global stop_threads
+        if stop_threads:
+            break
         try:
+            command = input("[RingRobotX] > ")
+            clist = command.split()
             command = clist[0]
             clist.pop(0)
+        except EOFError:
+            model.logger.moduleLoggerMain.info("[CLI] 收到EOF，准备退出")
+            quit_fuc(0,0)
+            continue
         except:
-            model.logger.moduleLoggerMain.info("[CLI] 报告！您的命令无法解析。")
+            model.logger.moduleLoggerMain.info("[CLI] 报告！您的命令无法解析")
             model.logger.moduleLoggerMain.info(traceback.format_exc())
             continue
         cli.commandRun(command, tuple(clist))
@@ -72,12 +80,24 @@ def worker_cli():
 def worker_2():
     model.logger.moduleLoggerMain.info("[RingRobotX] Worker schedule running!")
     while True:
+        global stop_threads
+        if stop_threads:
+            break
         schedule.run_pending()
         time.sleep(1)
 
 
 worker = threading.Thread(target=worker_2, args=())
 worker.start()  # 开始循环
+
+def quit_fuc(signum,frame):
+    global stop_threads
+    stop_threads=True
+    model.logger.moduleLoggerMain.info("[RingRobotX] 退出。")
+    exit()
+
+signal.signal(signal.SIGINT, quit_fuc)
+signal.signal(signal.SIGTERM, quit_fuc)
 
 if __name__ == "__main__":
     if not args.cli:

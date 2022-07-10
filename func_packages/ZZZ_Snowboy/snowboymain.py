@@ -23,7 +23,7 @@ def signal_handler(signal, frame):
 
 
 def run():
-    a=importlib.import_module("func_packages.Snowboy.snowboydecoder")
+    a=importlib.import_module("func_packages.ZZZ_Snowboy.snowboydecoder")
     modelaa = "config/snowboy/model.pmdl"#自己改唤醒模型路径
     signal.signal(signal.SIGINT, signal_handler)
     detector = a.HotwordDetector(modelaa, sensitivity=0.7)

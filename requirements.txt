@@ -8,3 +8,4 @@ bcrypt
 websockets
 baidu-aip
 nest_asyncio
+cn2an

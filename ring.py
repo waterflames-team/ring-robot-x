@@ -5,7 +5,7 @@ import os
 import sys
 import traceback
 
-parser = argparse.ArgumentParser(description='RingRobotX - By LingkongTeam')
+parser = argparse.ArgumentParser(description='RingRobotX - A simple chat-robot framework.')
 parser.add_argument('--no-cli', dest='cli', help='不需要CLI模式 | No CLI', action="store_true", default=False)
 args = parser.parse_args()
 
@@ -19,7 +19,7 @@ import time
 
 model.logger.moduleLoggerMain.info(str('''
     RingRobotX
-    by LingkongTeam
+    by WaterFlames
     {} 加载完毕！
 ''').format(model.config.fastGetConfig("api-version")["RingRobotX"]))
 

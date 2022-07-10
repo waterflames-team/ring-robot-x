@@ -16,7 +16,11 @@ def import_func(path):
     return importlib.import_module(path)
 
 
-for i in os.listdir(r'' + path):
+
+mypath=os.listdir(r'' + path)
+mypath.sort()
+
+for i in mypath:
     if os.path.isdir(path + "/" + i) and i != "__pycache__":
         try:
             file_obj = open(path + "/" + i + "/config.json")

@@ -8,7 +8,7 @@
 
 # 写在开头
 
-这是一个 Python 语音对话机器人，根据 [Lingkong-Robot](https://gitee.com/lkteam/lingkong-robot) 重构而来
+这是一个 Python 语音对话机器人，根据 [Lingkong-Robot](https://gitee.com/waterflames-team/lingkong-robot) 重构而来
 
 可用于智能音箱，语言遥控，甚至智能客服、家庭管家、微信机器人等等
 
@@ -28,7 +28,7 @@
 
 # 须知
 
-RingRobotX 是 [Lingkong-Robot](https://gitee.com/lkteam/lingkong-robot) 的重构版本
+RingRobotX 是 [Lingkong-Robot](https://gitee.com/waterflames-team/lingkong-robot) 的重构版本
 
 RingRobotX默认（git仓库版本）内置图灵、百度ASR&TTS、snowboy唤醒插件
 
@@ -40,7 +40,7 @@ RingRobotX默认（git仓库版本）内置图灵、百度ASR&TTS、snowboy唤�
 
 # 入门 （第一次尝试RingRobotX）
 
-[戳我查看文档](https://www.lkteam.cn/#/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8 "Wiki")
+[戳我查看文档](https://www.waterflames.cn/#/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8 "Wiki")
 
 # 安装
 
@@ -50,12 +50,12 @@ RingRobotX默认（git仓库版本）内置图灵、百度ASR&TTS、snowboy唤�
 
 若您要使用稳定版本，请运行：
 ```shell
-wget -O install.sh https://gitee.com/lkteam/ring-robot-x/raw/master/install.sh && sudo bash install.sh
+wget -O install.sh https://gitee.com/waterflames-team/ring-robot-x/raw/master/install.sh && sudo bash install.sh
 ```
 
 若您要使用测试版本，请运行：
 ```shell
-wget -O install.sh https://gitee.com/lkteam/ring-robot-x/raw/develop/install.sh && sudo bash install.sh
+wget -O install.sh https://gitee.com/waterflames-team/ring-robot-x/raw/develop/install.sh && sudo bash install.sh
 ```
 
 >**安装程序会安装到脚本执行目录/ringrobotx/ring-robot-x**
@@ -69,7 +69,7 @@ wget -O install.sh https://gitee.com/lkteam/ring-robot-x/raw/develop/install.sh 
 ```shell
 sudo apt install python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio make alsa-utils sox libsox-fmt-mp3
 mkdir ringrobotx && cd ringrobotx
-git clone https://gitee.com/lkteam/ring-robot-x
+git clone https://gitee.com/waterflames-team/ring-robot-x
 cd ring-robot-x
 pip3 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
 ```
@@ -130,14 +130,14 @@ python3 ring.py
 
 # 文档
 
-[戳我进入](https://www.lkteam.cn/ "文档")
+[戳我进入](https://www.waterflames.cn/ "文档")
 
 # 联系
 
 如果遇到了问题，或者是有一个好建议，欢迎联系我们：
 
-- 你可以选择 [戳我](https://gitee.com/lkteam/ring-robot-x/issues "Issues") 来创建一个issue
-- 也可以通过邮箱联系我们：[hi@lkteam.cn](mailto:hi@lkteam.cn)
+- 你可以选择 [戳我](https://gitee.com/waterflames-team/ring-robot-x/issues "Issues") 来创建一个issue
+- 也可以通过邮箱联系我们：[hi@waterflames.cn](mailto:hi@waterflames.cn)
 - 还可以加入我们的用户群（QQ）：825288633
 
 # 二次开发
@@ -175,7 +175,7 @@ python3 ring.py
 
 由于LKT的小伙伴们还是处于九年义务教育的学生党们 ~~还是群鸽子~~ ，所以本项目可能不会经常活跃
 
-欢迎有开发者向这个项目发起pr，这样不仅是对LKT的鼓励，也是对ringrobotx莫大的支持
+欢迎有开发者向这个项目发起pr，这样不仅是对LKT的鼓励，也是对rrx莫大的支持
 
 此项目并不是只针对树莓派linux开发板，任何架构都（可能）可以运行
 

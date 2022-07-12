@@ -3,3 +3,6 @@ log/*.log
 venv/
 *__pycache__*
 error.txt
+*.DS_Store
+docs/.DS_Store
+docs/photo/.DS_Store

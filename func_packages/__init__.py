@@ -10,18 +10,24 @@ print("[本地] 正在加载技能包")
 path = os.path.dirname(__file__)
 name = os.path.basename(path)
 
+func_enabled_packages = []
 
 def import_func(path):
     return importlib.import_module(path)
 
 
-for i in os.listdir(r'' + path):
+
+mypath=os.listdir(r'' + path)
+mypath.sort()
+
+for i in mypath:
     if os.path.isdir(path + "/" + i) and i != "__pycache__":
         try:
             file_obj = open(path + "/" + i + "/config.json")
             jso = json.loads(file_obj.read())
             if jso["enable"]:
                 pack = import_func(name + '.' + i + ".main")
+                func_enabled_packages.append(i)
                 if jso["funcType"] == "Func":
                     clas[i] = getattr(pack, "Main")()
                 # print(i)

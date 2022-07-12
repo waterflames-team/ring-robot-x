@@ -108,6 +108,21 @@ def clear_com(str):
     else:
         return "选项未找到。"
 
+def set_enable(enable,funcname):
+    file_obj=open('./func_packages/' + funcname + '/config.json',"r", encoding="utf-8")
+    contents = json.loads(file_obj.read())
+    if enable == "enable":
+        contents["enable"]=True
+    else:
+        contents["enable"]=False
+    file_obj=open('./func_packages/' + funcname + '/config.json',"w+", encoding="utf-8")
+    file_obj.write(json.dumps(contents))
+    return "OK"
+
+def list_com():
+    a = importlib.import_module("func_packages")
+    return json.dumps(a.func_enabled_packages)
+
 helps={
     "hook":"hook [runmode] [hookname] | runmode可输入reg或run，分别代表初始化hook列表和运行hook",
     "func":"func [string] | 输入你想对RingRobotX说的话。",
@@ -118,6 +133,8 @@ helps={
     "clear":"clear [log/history] | 清除记录（history需要插件RingRobotX_ChatHistory插件支持）",
     "check-update":"check-update | 检查更新，OK为可更新，No为不可更新",
     "update":"update | 更新程序",
+    "list":"list | 列出已加载的技能列表",
+    "enable":"enable [enable|disable] [技能名] | 启用/禁用技能",
     "config":"config [list/get/set] 配置名 扩展名 解码 值(仅当set时可用) | 列出、获取、设置配置文件。\n 例如：config list（列出） \n config get Turing_RobotChat（获取） \n config set Turing_RobotChat json utf-8 {}（设置）"
 }
 
@@ -131,6 +148,8 @@ commands={
     "check-update":check_update,
     "update":update_robotx,
     "config":config_com,
+    "enable":set_enable,
+    "list":list_com,
     "clear":clear_com
 }
 

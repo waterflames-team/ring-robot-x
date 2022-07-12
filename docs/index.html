@@ -4,11 +4,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta charset="UTF-8">
-  <link rel="icon" href="./static/favicon.ico">
-  <link rel="stylesheet" href="https://unpkg.com/docsify@4.12.2/lib/themes/vue.css">
+  <link rel="shortcut icon" href="./photo/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
 </head>
 <body>
-  <div id="app">灵音文档加载中……</div>
+  <div id="app">灵音文档加载中……（若长时间停留在此处，请检查您的网络或将浏览器更新到最新版）</div>
   <script>
   window.$docsify = {
     loadSidebar: true,
@@ -19,6 +19,11 @@
     auto2top: true,
     name: 'RingRobotX 灵音'
   }
+  </script>
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
   </script>
   <!-- 基础js -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>

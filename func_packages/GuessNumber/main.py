@@ -1,4 +1,5 @@
 import random
+import cn2an
 
 
 class Main:
@@ -21,7 +22,7 @@ class Main:
 
         #print(self.FUNC_GuessNumber_Number)
 
-        string = int(string)
+        string = int(cn2an.cn2an(string,"smart"))
 
         if string == self.FUNC_GuessNumber_Number:
             return {"string": str(string) + '就是秘密数字！恭喜你猜对了！', "return": 0}

@@ -13,7 +13,7 @@ class Main:
         self.path.setModelName("Clock")
         self.path1 = self.path.getConfig()
         self.FUNC_Clock_playPath=self.path1["playPath"]
-        if not self.path1["set_time"] == "114514" and not self.path1["set_time"] == 0:
+        if not self.path1["set_time"] == "0":
             schedule.every().day.at(self.path1["set_time"]).do(self.do_wizz)
 
     def check(self, string):

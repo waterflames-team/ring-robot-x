@@ -53,6 +53,8 @@ def main(tts_string):
     if not isinstance(result, dict):
         with open('audio.mp3', 'wb') as f:
             f.write(result)
+    else:
+        raise Exception("音频文件下载失败，请检查网络 "+str(result))
 
     model.player.playsound_from_file('audio.mp3')
 

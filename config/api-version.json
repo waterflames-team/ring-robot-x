@@ -1,10 +1,10 @@
 {
-  "ASR": "Beta.3",
-  "TTS": "Beta.3",
-  "WakeUP": "Beta.3",
-  "Func": "Beta.3",
-  "AnotherFunc": "Beta.3",
-  "RingRobotX": "2.604",
+  "ASR": "2",
+  "TTS": "2",
+  "WakeUP": "2",
+  "Func": "2",
+  "AnotherFunc": "2",
+  "RingRobotX": "2.62",
   "ForPythonVersion": "3",
   "branch": "develop"
 }

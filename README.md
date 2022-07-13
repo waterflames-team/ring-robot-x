@@ -82,7 +82,7 @@ pip3 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple som
 
 ### 2.安装语音唤醒功能
 
->**PS：若您不准备使用snowboy功能，那么可以跳过此步，并将下载的项目目录/func_packages/Snowboy/config.json中“"enable": ”后面的true改为false**
+>**PS：若您不准备使用snowboy功能，那么可以跳过此步，并将下载的项目目录/func_packages/ZZZ_Snowboy/config.json中“"enable": ”后面的true改为false**
 
 唤醒功能依赖[snowboy](https://github.com/Kitt-AI/snowboy.git)
 

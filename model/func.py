@@ -102,9 +102,9 @@ def run(string, ttsexec="tts"):
         package = model_class[file]
         try:
             moduleLogger.info("检测到连续对话：" + file)
-            run_funcpack(package, string, ttsexec, pathn, file,True)  # 运行
+            return run_funcpack(package, string, ttsexec, pathn, file,True)  # 运行
         except:
-            moduleLogger.error('连续对话被开启，但是因为某些原因无法完成。可能是因为连续对话开启时技能被移除。请尝试编辑config/func.json，将is_updown值改为false')
+            moduleLogger.error('连续对话被开启，但是因为某些原因无法完成。可能是因为连续对话开启时技能被移除。当前的连续对话状态已被重置。')
             run_tts("哎呀，连续对话失败了呢。", ttsexec)
 
             # TODO 这里的todo是为了引起你的注意。
@@ -133,8 +133,7 @@ def run(string, ttsexec="tts"):
 
             package = model_class[file]  # 获取技能包class
             if package.check(string):  # 技能包觉得我可以
-                run_funcpack(package, string, ttsexec, pathn, file,False)
-                return
+                return run_funcpack(package, string, ttsexec, pathn, file,False)
 
 if pathn.getConfig()["funcEnable"]:
     model.hook.add_hook_fast("RRCore.Model.FuncAction", run)

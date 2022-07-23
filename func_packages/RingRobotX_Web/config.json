@@ -1,8 +1,9 @@
 {
   "enable": true,
   "funcType": "Other",
-  "version": "1",
+  "version": 1,
   "apiVersion": "Beta.3",
+  "RingRobotX-Ver": 2.6,
   "Author": "WaterFlames",
   "description": "A web for RingRobotX."
 }

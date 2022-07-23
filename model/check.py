@@ -3,7 +3,7 @@ import json
 import os
 import time
 import model.logger
-
+import traceback
 import model.config
 
 api_version_CHECK = model.config.fastGetConfig("api-version")

@@ -105,14 +105,13 @@ def run(string, ttsexec="tts"):
             return run_funcpack(package, string, ttsexec, pathn, file,True)  # 运行
         except:
             moduleLogger.error('连续对话被开启，但是因为某些原因无法完成。可能是因为连续对话开启时技能被移除。当前的连续对话状态已被重置。')
-            return run_tts("哎呀，连续对话失败了呢。", ttsexec)
-
             # TODO 这里的todo是为了引起你的注意。
             # 如果你在调试连续对话时，可以将下面的注释掉
 
             traceback.print_exc()
 
             set_updown(False, path, file)  # 更改连续对话状态
+            return run_tts("哎呀，连续对话失败了呢。", ttsexec)
 
         return
 

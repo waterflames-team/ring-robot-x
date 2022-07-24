@@ -1,9 +1,10 @@
 {
+  "name": "guessnumber",
   "enable": true,
-  "funcType": "Other",
+  "funcType": "Func",
   "version": 1,
   "apiVersion": "Beta.3",
   "RingRobotX-Ver": 2.6,
   "Author": "WaterFlames",
-  "description": "History manager for chat."
+  "description": "A guess number game!!!"
 }

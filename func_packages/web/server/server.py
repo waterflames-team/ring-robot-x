@@ -1,12 +1,12 @@
 import time
-import func_packages.RingRobotX_Web.server.Websocket
+import func_packages.web.server.Websocket
 import tornado.ioloop
 import tornado.web
 import model.config
 import threading
 import asyncio
 import json
-import func_packages.RingRobotX_ChatHistory.main
+import func_packages.chathistory.main
 import bcrypt
 import model.logger
 

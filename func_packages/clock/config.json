@@ -1,9 +1,10 @@
 {
+  "name": "clock",
   "enable": true,
   "funcType": "Func",
   "version": 1,
   "apiVersion": "Beta.3",
   "RingRobotX-Ver": 2.6,
   "Author": "WaterFlames",
-  "description": "A guess number game!!!"
+  "description": "Clock."
 }

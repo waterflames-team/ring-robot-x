@@ -130,7 +130,7 @@ helps={
     "asr":"tts [string] | 运行tts ===== asr [path] | 运行asr",
     "help":"help (command) 获取（某一指令的）帮助",
     "hello":"彩蛋。",
-    "clear":"clear [log/history] | 清除记录（history需要插件RingRobotX_ChatHistory插件支持）",
+    "clear":"clear [log/history] | 清除记录（history需要插件chathistory插件支持）",
     "check-update":"check-update | 检查更新，OK为有更新，No为无更新",
     "update":"update | 更新程序",
     "list":"list | 列出已加载的技能列表",

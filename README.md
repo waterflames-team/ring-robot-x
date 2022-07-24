@@ -105,6 +105,8 @@ cd ../
 
 # 运行
 
+**安装后第一次运行会自动初始化技能，请稍等一小会**
+
 ```shell
 cd ringrobotx/ring-robot-x
 python3 ring.py

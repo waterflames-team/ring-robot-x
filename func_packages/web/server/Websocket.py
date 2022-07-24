@@ -9,7 +9,7 @@ import websockets
 import model.cli
 import model.hook
 from types import FunctionType
-import func_packages.RingRobotX_Web.main
+import func_packages.web.main
 import nest_asyncio
 
 nest_asyncio.apply() #修复asyncio在listen_hook时的特性

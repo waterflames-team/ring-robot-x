@@ -1,4 +1,5 @@
 {
+  "name": "snowboy",
   "enable": true,
   "funcType": "WakeUP",
   "version": 1,

@@ -1,6 +1,6 @@
 import random
 import json
-import func_packages.RingRobotX_Web.server.server
+import func_packages.web.server.server
 import model.config
 import model.logger
 

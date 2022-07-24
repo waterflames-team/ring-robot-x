@@ -1,9 +1,10 @@
 {
+  "name": "baiduasr",
   "enable": true,
-  "funcType": "TTS",
+  "funcType": "ASR",
   "version": 1,
   "apiVersion": "Beta.3",
   "RingRobotX-Ver": 2.6,
   "Author": "WaterFlames",
-  "description": "A TTS engine of BaiduVoice"
+  "description": "A ASR engine of BaiduVoice"
 }

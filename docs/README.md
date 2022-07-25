@@ -4,6 +4,8 @@
     <a href='https://gitee.com/waterflames-team/ring-robot-x/stargazers'><img src='https://gitee.com/lkteam/ring-robot-x/badge/star.svg?theme=white' alt='star'/></a>
     <a href='https://gitee.com/waterflames-team/ring-robot-x/members'><img src='https://gitee.com/lkteam/ring-robot-x/badge/fork.svg?theme=white' alt='fork'/></a>
     <br>
+    <a href="https://www.waterflames.cn/">文档</a> | <a href="https://gitee.com/waterflames-team/ring-robot-x">仓库</a>
+    <br>
 </p>
 
 # 写在开头
@@ -128,10 +130,6 @@ python3 ring.py
 
 如果你需要禁用某一插件，那么到func_packages/插件名/config.json的enable改为false即可
 
-# 文档
-
-[戳我进入](https://www.waterflames.cn/ "文档")
-
 # 联系
 
 如果遇到了问题，或者是有一个好建议，欢迎联系我们：
@@ -147,6 +145,12 @@ python3 ring.py
 其余或有冲突之处以 Apache License 2.0 开源协议为准
 
 另外，本项目不受 LingKongRobot 的 GPL 协议影响。
+
+# 代码贡献
+
+我们欢迎每一位创作者加入本项目的开源贡献中。欢迎每一位贡献者创建pr，并按照 [提交信息规范](https://xykong.feishu.cn/wiki/wikcnhQ6Eti6VZQI2avsLTSofve) 来为项目进行贡献！
+
+感谢每一位贡献者！
 
 # 特别感谢
 

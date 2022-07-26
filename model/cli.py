@@ -58,7 +58,7 @@ def hello_ringrobotx():
 
 def check_update():
     now=model.config.fastGetConfig("api-version")
-    response = requests.get('https://gitee.com/lkteam/ring-robot-x/raw/'+now["branch"]+'/config/api-version.json')
+    response = requests.get('https://gitee.com/waterflames-team/ring-robot-x/raw/'+now["branch"]+'/config/api-version.json')
     if float(json.loads(response.text)["RingRobotX"]) > float(now["RingRobotX"]):
         return "OK"
     else:

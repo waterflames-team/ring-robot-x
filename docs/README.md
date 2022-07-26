@@ -136,8 +136,8 @@ python3 ring.py
 
 - 你可以选择 [戳我](https://gitee.com/waterflames-team/ring-robot-x/issues "Issues") 来创建一个issue
 - 也可以通过邮箱联系我们：[hi@waterflames.cn](mailto:hi@waterflames.cn)
-- 如果你是**开发者**，可以加入在兔小巢里和我们面对面交流 [https://support.qq.com/product/420726](https://support.qq.com/product/420726)。灵活易开发是我们的追求，我们倾听你的建议
-- 如果你是一名**用户**，可以加入我们的用户群（QQ）：825288633。我们注重用户体验，聆听你的反馈
+- 如果你是一名**开发者**，可以加入在兔小巢里和我们面对面交流 [https://support.qq.com/product/420726](https://support.qq.com/product/420726)。
+- 如果你是一名**用户**，可以加入我们的用户群（QQ）：825288633。
 
 # 二次开发
 
@@ -181,7 +181,7 @@ python3 ring.py
 
 由于WaterFlames的小伙伴们还是处于九年义务教育的学生党们 ~~还是群鸽子~~ ，所以本项目可能不会经常活跃
 
-欢迎有开发者向这个项目发起pr，这样不仅是对LKT的鼓励，也是对rrx莫大的支持
+欢迎有开发者向这个项目发起pr，这样不仅是对水焰的鼓励，也是对rrx莫大的支持
 
 此项目并不是只针对树莓派linux开发板，任何架构都（可能）可以运行
 

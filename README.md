@@ -138,7 +138,8 @@ python3 ring.py
 
 - 你可以选择 [戳我](https://gitee.com/waterflames-team/ring-robot-x/issues "Issues") 来创建一个issue
 - 也可以通过邮箱联系我们：[hi@waterflames.cn](mailto:hi@waterflames.cn)
-- 还可以加入在兔小巢里和我们面对面交流 [https://support.qq.com/product/420726](https://support.qq.com/product/420726)
+- 如果你是**开发者**，可以加入在兔小巢里和我们面对面交流 [https://support.qq.com/product/420726](https://support.qq.com/product/420726)。灵活易开发是我们的追求，我们倾听你的建议
+- 如果你是一名**用户**，可以加入我们的用户群（QQ）：825288633。我们注重用户体验，聆听你的反馈
 
 # 二次开发
 

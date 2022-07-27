@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://www.waterflames.cn/"><img src="docs/photo/banner.png" alt="RingRobotX 灵音 | 灵活可配的中文语音对话机器人"></a>
+    <a href="https://www.waterflames.cn/"><img src="./photo/banner.png" alt="RingRobotX 灵音 | 灵活可配的中文语音对话机器人"></a>
     <br>
     <a href='https://gitee.com/waterflames-team/ring-robot-x/stargazers'><img src='https://gitee.com/lkteam/ring-robot-x/badge/star.svg?theme=white' alt='star'/></a>
     <a href='https://gitee.com/waterflames-team/ring-robot-x/members'><img src='https://gitee.com/lkteam/ring-robot-x/badge/fork.svg?theme=white' alt='fork'/></a>
@@ -193,7 +193,7 @@ python3 ring.py
 
 
 <p align="center">
-    <img src="docs/photo/afd.png" alt="爱发电二维码" width="200" height="275.2">
+    <img src="./photo/afd.png" alt="爱发电二维码" width="200" height="275.2">
 </p>
 
 

@@ -45,6 +45,7 @@ RingRobotX默认（git仓库版本）内置图灵、百度ASR&TTS、snowboy唤�
 [戳我查看文档](https://www.waterflames.cn/#/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8 "Wiki")
 
 # 安装
+目前本项目暂且支持 linux 环境下运行
 
 ## 方案1：自动安装脚本
 

@@ -10,11 +10,11 @@
 
 # 写在开头
 
-这是一个 Python 语音对话机器人，根据 [Lingkong-Robot](https://gitee.com/waterflames-team/lingkong-robot) 重构而来
+这是一个采用单轮对话设计的中文模块化语音机器人框架，由 WaterFlames团队 使用 Python 制作，根据本团队项目 [Lingkong-Robot](https://gitee.com/waterflames-team/lingkong-robot) 重构而来。
 
-可用于智能音箱，语言遥控，甚至智能客服、家庭管家、微信机器人等等
+可用于智能音箱，语言遥控，甚至智能客服、家庭管家、微信机器人等等。
 
-目的是让中国的 Maker 们也能够「一小时」入门，无需过多以及不必要的配置
+目的是让中国的 Maker 们也能够「一小时」入门，无需过多以及不必要的配置。
 
 特色功能：
 

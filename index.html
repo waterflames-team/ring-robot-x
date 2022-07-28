@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -7,19 +8,22 @@
   <link rel="shortcut icon" href="./photo/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
 </head>
+
 <body>
-  <div id="app">灵音文档加载中……（若长时间停留在此处，请检查您的网络或将浏览器更新到最新版）</div>
+  <div id="app">灵音文档加载中……（若长时间停留在此处，请检查您的网络或将浏览器更新到最新版）
+    <!--[if IE]><br> 你用的浏览器太老啦！使用chrome浏览器吧！<![endif]-->
+  </div>
   <script>
-  window.$docsify = {
-    loadSidebar: true,
-    homepage: 'README.md',
-    subMaxLevel: 2,
-    themeColor: '#1F67E4',
-    notFoundPage: true,
-    notFoundPage: 'docs/404.md',
-    auto2top: true,
-    name: 'RingRobotX 灵音'
-  }
+    window.$docsify = {
+      loadSidebar: true,
+      homepage: 'README.md',
+      subMaxLevel: 2,
+      themeColor: '#1F67E4',
+      notFoundPage: true,
+      notFoundPage: 'docs/404.md',
+      auto2top: true,
+      name: 'RingRobotX 灵音'
+    }
   </script>
   <script>
     if (typeof navigator.serviceWorker !== 'undefined') {
@@ -32,4 +36,5 @@
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
 </body>
+
 </html>

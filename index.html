@@ -10,7 +10,9 @@
 </head>
 
 <body>
-  <div id="app">灵音文档加载中……（若长时间停留在此处，请检查您的网络或将浏览器更新到最新版）</div>
+  <div id="app">灵音文档加载中……（若长时间停留在此处，请检查您的网络或将浏览器更新到最新版）
+    <!--[if IE]><br> 你用的浏览器太老啦！使用chrome浏览器吧！<![endif]-->
+  </div>
   <script>
     window.$docsify = {
       loadSidebar: true,
@@ -29,7 +31,7 @@
     }
   </script>
   <!-- 基础js -->
-  <!--script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script-->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <!-- 代码高亮 -->
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>

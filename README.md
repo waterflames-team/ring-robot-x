@@ -1,18 +1,20 @@
 <p align="center">
-    <a href="https://www.waterflames.cn/"><img src="photo/banner.png" alt="RingRobotX 灵音 | 灵活可配的中文语音对话机器人"></a>
+    <a href="https://www.waterflames.cn/"><img src="./docs/photo/banner.png" alt="RingRobotX 灵音 | 灵活可配的中文语音对话机器人"></a>
     <br>
     <a href='https://gitee.com/waterflames-team/ring-robot-x/stargazers'><img src='https://gitee.com/lkteam/ring-robot-x/badge/star.svg?theme=white' alt='star'/></a>
     <a href='https://gitee.com/waterflames-team/ring-robot-x/members'><img src='https://gitee.com/lkteam/ring-robot-x/badge/fork.svg?theme=white' alt='fork'/></a>
+    <br>
+    <a href="https://www.waterflames.cn/">文档</a> | <a href="https://gitee.com/waterflames-team/ring-robot-x">仓库</a>
     <br>
 </p>
 
 # 写在开头
 
-这是一个 Python 语音对话机器人，根据 [Lingkong-Robot](https://gitee.com/waterflames-team/lingkong-robot) 重构而来
+这是一个采用单轮对话设计的中文模块化语音机器人框架，由 WaterFlames团队 使用 Python 制作，根据本团队项目 [Lingkong-Robot](https://gitee.com/waterflames-team/lingkong-robot) 重构而来。
 
-可用于智能音箱，语言遥控，甚至智能客服、家庭管家、微信机器人等等
+可用于智能音箱，语言遥控，甚至智能客服、家庭管家、微信机器人等等。
 
-目的是让中国的 Maker 们也能够「一小时」入门，无需过多以及不必要的配置
+目的是让中国的 Maker 们也能够「一小时」入门，无需过多以及不必要的配置。
 
 特色功能：
 
@@ -38,12 +40,10 @@ RingRobotX默认（git仓库版本）内置图灵、百度ASR&TTS、snowboy唤�
 
 感谢wzpan老师的网站）
 
-# 入门 （第一次尝试RingRobotX）
-
-[详细说明请点击进入文档](https://www.waterflames.cn/#/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8 "Wiki")
-# 基础使用指南
+# 入门
 
 ## 安装
+目前本项目暂且支持 linux 环境下运行
 
 ### 方案1：自动安装脚本
 
@@ -83,7 +83,7 @@ pip3 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple som
 
 #### 2.安装语音唤醒功能
 
->**PS：若您不准备使用snowboy功能，那么可以跳过此步，并将下载的项目目录/func_packages/Snowboy/config.json中“"enable": ”后面的true改为false**
+>**PS：若您不准备使用snowboy功能，那么可以跳过此步，并将下载的项目目录/func_packages/ZZZ_Snowboy/config.json中“"enable": ”后面的true改为false**
 
 唤醒功能依赖[snowboy](https://github.com/Kitt-AI/snowboy.git)
 
@@ -98,13 +98,15 @@ git clone https://github.com/Kitt-AI/snowboy.git
 cd snowboy/swig/Python3
 make
 cd ../../../
-cp snowboy/swig/Python3/_snowboydetect.so ring-robot-x/func_packages/Snowboy
-cp snowboy/examples/Python3/snowboydetect.py ring-robot-x/func_packages/Snowboy
-cp -a snowboy/resources/ ring-robot-x/func_packages/Snowboy/resources
+cp snowboy/swig/Python3/_snowboydetect.so ring-robot-x/func_packages/ZZZ_Snowboy
+cp snowboy/examples/Python3/snowboydetect.py ring-robot-x/func_packages/ZZZ_Snowboy
+cp -a snowboy/resources/ ring-robot-x/func_packages/ZZZ_Snowboy/resources
 cd ../
 ```
 
 ## 运行
+
+**安装后第一次运行会自动初始化技能，请稍等一小会**
 
 ```shell
 cd ringrobotx/ring-robot-x
@@ -129,9 +131,7 @@ python3 ring.py
 
 如果你需要禁用某一插件，那么到func_packages/插件名/config.json的enable改为false即可
 
-# 文档
-
-[戳我进入](https://www.waterflames.cn/ "文档")
+更多有关入门的内容[戳我查看文档](https://www.waterflames.cn/#/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8 "Wiki")
 
 # 联系
 
@@ -139,15 +139,22 @@ python3 ring.py
 
 - 你可以选择 [戳我](https://gitee.com/waterflames-team/ring-robot-x/issues "Issues") 来创建一个issue
 - 也可以通过邮箱联系我们：[hi@waterflames.cn](mailto:hi@waterflames.cn)
-- 还可以加入我们的用户群（QQ）：825288633
+- 如果你是一名**开发者**，可以加入在兔小巢里和我们面对面交流 [https://support.qq.com/product/420726](https://support.qq.com/product/420726)。
+- 如果你是一名**用户**，可以加入我们的用户群（QQ）：825288633。
 
 # 二次开发
 
-如果你准备将其闭源并商业使用，那么请确认你知晓 LingKongTeam 不为任何使用了二次分发软件的 安全性，可用性，完整性 以及其可能带来的 其它风险及损失 承担责任。
+如果你准备将其闭源并商业使用，那么请确认你知晓 WaterFlames水焰 不为任何使用了二次分发软件的 安全性，可用性，完整性 以及其可能带来的 其它风险及损失 承担责任。
 
 其余或有冲突之处以 Apache License 2.0 开源协议为准
 
 另外，本项目不受 LingKongRobot 的 GPL 协议影响。
+
+# 代码贡献
+
+我们欢迎每一位创作者加入本项目的开源贡献中。欢迎每一位贡献者创建pr，并按照 [提交信息规范](https://xykong.feishu.cn/wiki/wikcnhQ6Eti6VZQI2avsLTSofve) 来为项目进行贡献！
+
+感谢每一位贡献者！
 
 # 特别感谢
 
@@ -177,7 +184,7 @@ python3 ring.py
 
 由于WaterFlames的小伙伴们还是处于九年义务教育的学生党们 ~~还是群鸽子~~ ，所以本项目可能不会经常活跃
 
-欢迎有开发者向这个项目发起pr，这样不仅是对LKT的鼓励，也是对rrx莫大的支持
+欢迎有开发者向这个项目发起pr，这样不仅是对水焰的鼓励，也是对rrx莫大的支持
 
 此项目并不是只针对树莓派linux开发板，任何架构都（可能）可以运行
 
@@ -187,7 +194,7 @@ python3 ring.py
 
 
 <p align="center">
-    <img src="photo/afd.png" alt="爱发电二维码" width="200" height="275.2">
+    <img src="./docs/photo/afd.png" alt="爱发电二维码" width="200" height="275.2">
 </p>
 
 

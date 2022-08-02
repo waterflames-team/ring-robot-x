@@ -25,4 +25,4 @@ if model.config.fastGetConfig("RingRobotX_Web")["first-load"]:
     con.setConfig(json.dumps(s))
     model.logger.moduleLoggerMain.info("[RingRobotX_Web] 密码已设置！密码："+s["password"])
 
-func_packages.RingRobotX_Web.server.server.run()
+func_packages.web.server.server.run()

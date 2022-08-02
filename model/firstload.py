@@ -11,12 +11,12 @@ def import_func(path):
     return importlib.import_module(path)
 
 now=model.config.fastGetConfig("api-version")
-if now["first_load"]:
+
+def firstload():
     path = os.getcwd() + "/func_packages/"
     name = os.path.basename(path)
 
     func_enabled_packages = []
-
 
     mypath = os.listdir(r'' + path)
     mypath.sort()
@@ -32,9 +32,12 @@ if now["first_load"]:
                 pass
         else:
             continue
-    now["first_load"]=False
+    now["first_load"] = False
     pathn = model.config.APPConfig()
     pathn.setModelName("api-version")
     pathn.setConfig(json.dumps(now))
+
+if now["first_load"]:
+    firstload()
     model.logger.moduleLoggerMain.info("[RingRobotX] 初始化完成！正在重载程序......")
     os.execl(sys.executable, sys.executable, *sys.argv)

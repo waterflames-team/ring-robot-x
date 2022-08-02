@@ -40,14 +40,12 @@ RingRobotX默认（git仓库版本）内置图灵、百度ASR&TTS、snowboy唤�
 
 感谢wzpan老师的网站）
 
-# 入门 （第一次尝试RingRobotX）
+# 入门
 
-[戳我查看文档](https://www.waterflames.cn/#/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8 "Wiki")
-
-# 安装
+## 安装
 目前本项目暂且支持 linux 环境下运行
 
-## 方案1：自动安装脚本
+### 方案1：自动安装脚本
 
 自动安装脚本只支持使用apt的linux发行版（如debian，ubuntu等等），建议你使用清华软件源
 
@@ -65,9 +63,9 @@ wget -O install.sh https://gitee.com/waterflames-team/ring-robot-x/raw/develop/i
 
 当然，如果你是其他发行版（或者一键安装脚本有错误），可以试着第二种方案：手动安装。
 
-## 方案2：手动安装
+### 方案2：手动安装
 
-### 1.安装RingRobotX
+#### 1.安装RingRobotX
 
 ```shell
 sudo apt install python3 python3-pip git python3-pyaudio swig libatlas-base-dev pulseaudio make alsa-utils sox libsox-fmt-mp3
@@ -83,7 +81,7 @@ pip3 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple som
 
 如果你追求新功能，请下载develop分支的内容
 
-### 2.安装语音唤醒功能
+#### 2.安装语音唤醒功能
 
 >**PS：若您不准备使用snowboy功能，那么可以跳过此步，并将下载的项目目录/func_packages/ZZZ_Snowboy/config.json中“"enable": ”后面的true改为false**
 
@@ -106,7 +104,7 @@ cp -a snowboy/resources/ ring-robot-x/func_packages/ZZZ_Snowboy/resources
 cd ../
 ```
 
-# 运行
+## 运行
 
 **安装后第一次运行会自动初始化技能，请稍等一小会**
 
@@ -119,7 +117,7 @@ python3 ring.py
 
 你可以替换掉，模型文件在config/snowboy/model.pmdl
 
-# web后台
+## web后台
 
 运行后，程序默认会在本地的8901端口开启一个后台
 
@@ -127,11 +125,13 @@ python3 ring.py
 
 你可以修改密码、端口号在/config/RingRobotX_Web.json中
 
-# 设置
+## 设置
 
 详见config目录下的各种json文件
 
 如果你需要禁用某一插件，那么到func_packages/插件名/config.json的enable改为false即可
+
+更多有关入门的内容[戳我查看文档](https://www.waterflames.cn/#/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8 "Wiki")
 
 # 联系
 

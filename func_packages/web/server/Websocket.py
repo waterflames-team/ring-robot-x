@@ -55,9 +55,9 @@ async def hello(websocket, path):
                 await websocket.send("W0NMSS1TZXJ2ZXJdIOS4u+WKqOmYsuaKpOagoemqjOaLpuaIqu+8muacquaJvuWIsGhvb2vlkI3miJZob29r5ZCN5LiN5ZCI5rOV")
                 continue
 
-            web_key=func_packages.RingRobotX_Web.main.getRandom(5)
+            web_key=func_packages.web.main.getRandom(5)
             hook_client[web_key]=websocket
-            func_name='CLIServer_Websocket_listen_hook_'+func_packages.RingRobotX_Web.main.getRandom(5)
+            func_name='CLIServer_Websocket_listen_hook_'+func_packages.web.main.getRandom(5)
             print('def '+func_name+'(*param): asyncio.run(pat_hook("'+web_key+'","'+clist[0]+'",param))')
             foo_code = compile('def '+func_name+'(*param): pat_hook("'+web_key+'","'+clist[0]+'",param)', "<string>", "exec")
             foo_func = FunctionType(foo_code.co_consts[0], globals(), func_name)

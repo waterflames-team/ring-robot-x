@@ -39,6 +39,7 @@ function install_ringrobotx(){
   chmod 777 ../ringrobotx/ -R || error_dump "install_ringrobotx - chmod error"
   cd ring-robot-x || error_dump "install_ringrobotx - cd error"
   sudo pip3 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple some-package || error_dump "install_before_require - Cannot install package"
+  python3 ring.py --firstload || error_dump "install_ringrobotx - firstload error"
 }
 
 function install_before_require(){

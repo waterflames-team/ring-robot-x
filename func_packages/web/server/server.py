@@ -49,7 +49,7 @@ class DhHandler(BaseHandler):
         if not self.current_user:
             self.redirect("/login")
             return
-        self.render('dh.html', history=func_packages.RingRobotX_ChatHistory.main.get_history())
+        self.render('dh.html', history=func_packages.chathistory.main.get_history())
 
 
 class HistoryHandler(BaseHandler):
@@ -57,7 +57,7 @@ class HistoryHandler(BaseHandler):
         if not self.current_user:
             res = {'code': 1, 'message': 'illegal visit'}
         else:
-            res = {'code': 0, 'message': 'ok', 'history': json.dumps(func_packages.RingRobotX_ChatHistory.main.get_history())}
+            res = {'code': 0, 'message': 'ok', 'history': json.dumps(func_packages.chathistory.main.get_history())}
         self.write(json.dumps(res))
         self.finish()
 
@@ -144,7 +144,7 @@ def start_server():
 
 def run():
     threading.Thread(target=start_server).start()
-    func_packages.RingRobotX_Web.server.Websocket.run()
+    func_packages.web.server.Websocket.run()
     model.logger.moduleLoggerMain.info("[Server] 后台启动，地址：localhost:" + str(model.config.fastGetConfig("RingRobotX_Web")["listen_port"])+"\n 密码："+model.config.fastGetConfig("RingRobotX_Web")["password"])
 
 def hread(readlog_r):

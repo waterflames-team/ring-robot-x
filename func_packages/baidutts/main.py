@@ -16,7 +16,7 @@ def main(tts_string):
     from urllib.parse import quote_plus
 
     path = model.config.APPConfig()
-    path.setModelName("TTS_BAIDU_API")
+    path.setModelName("TTSBaidu")
     path1 = path.getConfig()
 
     API_KEY = path1["API_KEY"]

@@ -34,7 +34,7 @@ def main(fname):  # snowboy to asr
             timer = time.time
 
     path = model.config.APPConfig()
-    path.setModelName("ASR_BAIDU_API")
+    path.setModelName("ASRBaidu")
     path1 = path.getConfig()
     API_KEY = path1["API_KEY"]
     SECRET_KEY = path1["SECRET_KEY"]

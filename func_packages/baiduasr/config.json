@@ -6,5 +6,6 @@
   "apiVersion": "Beta.3",
   "RingRobotX-Ver": 2.6,
   "Author": "WaterFlames",
+  "need_first_load": true,
   "description": "A ASR engine of BaiduVoice"
 }

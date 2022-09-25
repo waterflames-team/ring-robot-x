@@ -163,7 +163,7 @@ python3 ring.py
 * 本项目的前身 lingkong-robot 及其创作者Epeiuss
 
 ## 捐赠方面
-感谢以下小伙伴为「WaterFlames的服务器与域名的购买，以及之后项目的制作」捐赠！
+感谢以下小伙伴为我们捐赠！
 <details>
 <summary>感谢名单（点击展开）</summary>
 按照累计打赏数目排列，感谢每一位小伙伴的支持:
@@ -197,10 +197,7 @@ python3 ring.py
     <img src="./docs/photo/afd.png" alt="爱发电二维码" width="200" height="275.2">
 </p>
 
-
-> 我们不营利，所有资金将花费到服务器与域名的购买，以及之后项目的制作中
-
 # 加入我们
 
-我们是一个非盈利的开源团队，无论您是否会编程，我们都欢迎您加入我们，与我们一起打造惊人的产品：
+我们是一个开源团队，无论您是否会编程，我们都欢迎您加入我们，与我们一起打造惊人的产品：
 [https://xykong.feishu.cn/share/base/shrcnwMMP9rBl5aK6qJqaXc3Jph](https://xykong.feishu.cn/share/base/shrcnwMMP9rBl5aK6qJqaXc3Jph)

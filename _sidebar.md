@@ -29,7 +29,6 @@
 
 <br>
 
-* [收入支出明细](docs/收入支出明细.md "收入支出明细 - RingRobotX 灵音")
 * [RingRobotX 仓库](https://gitee.com/waterflames-team/ring-robot-x/)
 * [RingRobotX 反馈](https://gitee.com/waterflames-team/ring-robot-x/issues)
 * [RingRobotX 兔小巢](https://support.qq.com/product/420726)

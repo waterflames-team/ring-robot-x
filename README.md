@@ -104,6 +104,16 @@ cp -a snowboy/resources/ ring-robot-x/func_packages/ZZZ_Snowboy/resources
 cd ../
 ```
 
+#### 安装技能包管理器
+
+```shell
+pip3 install mariner-rrx #以下命令需要在RingRobotX安装的目录运行
+marx install web #安装管理后台
+marx install chathistory #管理后台的依赖
+```
+
+Mariner-RRX 是我们为 RingRobotX 所准备的一个技能管理器，命令为 marx。详细请见 [marx](https://gitee.com/waterflames-team/mariner)
+
 ## 运行
 
 **安装后第一次运行会自动初始化技能，请稍等一小会**

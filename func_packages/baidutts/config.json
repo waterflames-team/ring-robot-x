@@ -1,11 +1,11 @@
 {
-  "name": "snowboy",
+  "name": "baidutts",
   "enable": true,
-  "funcType": "WakeUP",
+  "funcType": "TTS",
   "version": 1,
   "apiVersion": "Beta.3",
   "RingRobotX-Ver": 2.6,
   "Author": "WaterFlames",
   "need_first_load": true,
-  "description": "A WakeUP engine of Snowboy"
+  "description": "A TTS engine of BaiduVoice"
 }

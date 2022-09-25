@@ -1,10 +1,1 @@
-{
-  "ASR": "2",
-  "TTS": "2",
-  "WakeUP": "2",
-  "Func": "2",
-  "AnotherFunc": "2",
-  "RingRobotX": "2.63",
-  "ForPythonVersion": "3",
-  "branch": "master"
-}
+{"RingRobotX": "3.01", "ForPythonVersion": "3", "branch": "develop"}

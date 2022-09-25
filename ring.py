@@ -8,6 +8,7 @@ import traceback
 
 parser = argparse.ArgumentParser(description='RingRobotX - A simple chat-robot framework.')
 parser.add_argument('--no-cli', dest='cli', help='不需要CLI模式 | No CLI', action="store_true", default=False)
+parser.add_argument('--firstload', dest='firstload', help='初始化 | first load', action="store_true", default=False)
 args = parser.parse_args()
 
 # 这里import model有作用，因为它会使init.py运行，进而初始化所有库文件
@@ -103,6 +104,10 @@ if __name__ == "__main__":
     if not args.cli:
         worker1 = threading.Thread(target=worker_cli, args=())
         worker1.start()  # 开始循环
+    if args.firstload:
+        import model.firstload
+        model.firstload.firstload()
+        exit()
     # 以下为服务运行区域
     time.sleep(2)
     model.hook.runhook_fast("RRCore.Main.Before.Running")

@@ -46,7 +46,7 @@ def set_updown(status, path, file):
     path.setConfig(json.dumps(origin_con))
 
 
-def run_funcpack(package, string, ttsexec, path, file,boolvalue):
+def run_funcpack(package, string, ttsexec, path, file, boolvalue):
     """
     运行技能。
     :param package: 欲运行的技能包class
@@ -63,21 +63,26 @@ def run_funcpack(package, string, ttsexec, path, file,boolvalue):
     if returncon["return"] == 1:
         set_updown(True, path, file)
         model.hook.runhook_fast("RRCore.Model.After.ContinueEnable",
-                                {"string": string, "ttsexec": ttsexec,"return":returncon['string']})
+                                {"string": string, "ttsexec": ttsexec, "return": returncon['string']})
     else:
         set_updown(False, path, file)
         model.hook.runhook_fast("RRCore.Model.After.ContinueDisable",
-                                {"string": string, "ttsexec": ttsexec,"return":returncon['string']})
+                                {"string": string, "ttsexec": ttsexec, "return": returncon['string']})
 
     func_packages.func_packages_class[file] = package  # 用完的class放回去，不然会玄学
-    moduleLogger.info("技能运行完毕！")
-    model.hook.runhook_fast("RRCore.Model.After.FuncRunning",
-                            {"string": string, "ttsexec": ttsexec,"return":returncon['string']})
-    return run_tts(returncon['string'], ttsexec)
+    if returncon["return"] != 2:
+        moduleLogger.info("技能运行完毕！")
+        model.hook.runhook_fast("RRCore.Model.After.FuncRunning",
+                                {"string": string, "ttsexec": ttsexec, "return": returncon['string']})
+    else:
+        moduleLogger.info("技能返回值为2，跳过。")
+    return returncon
+
 
 def reload():
     importlib.reload(func_packages)
     return
+
 
 def run(string, ttsexec="tts"):
     """
@@ -102,17 +107,16 @@ def run(string, ttsexec="tts"):
         package = model_class[file]
         try:
             moduleLogger.info("检测到连续对话：" + file)
-            return run_funcpack(package, string, ttsexec, pathn, file,True)  # 运行
+            return run_funcpack(package, string, ttsexec, pathn, file, True)  # 运行
         except:
             moduleLogger.error('连续对话被开启，但是因为某些原因无法完成。可能是因为连续对话开启时技能被移除。当前的连续对话状态已被重置。')
-            run_tts("哎呀，连续对话失败了呢。", ttsexec)
-
             # TODO 这里的todo是为了引起你的注意。
             # 如果你在调试连续对话时，可以将下面的注释掉
 
             traceback.print_exc()
 
             set_updown(False, path, file)  # 更改连续对话状态
+            return run_tts("哎呀，连续对话失败了呢。", ttsexec)
 
         return
 
@@ -133,7 +137,11 @@ def run(string, ttsexec="tts"):
 
             package = model_class[file]  # 获取技能包class
             if package.check(string):  # 技能包觉得我可以
-                return run_funcpack(package, string, ttsexec, pathn, file,False)
+                ret = run_funcpack(package, string, ttsexec, pathn, file, False)
+                if ret["return"] == 2:  # 返回码为2时跳过
+                    continue
+                return run_tts(ret['string'], ttsexec)
+
 
 if pathn.getConfig()["funcEnable"]:
     model.hook.add_hook_fast("RRCore.Model.FuncAction", run)

@@ -2,10 +2,3 @@ pydub
 requests
 schedule
 playsound
-tornado
-asyncio
-bcrypt
-websockets
-baidu-aip
-nest_asyncio
-cn2an

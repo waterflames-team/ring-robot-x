@@ -1,8 +1,8 @@
 <p align="center">
     <a href="https://www.waterflames.cn/"><img src="./docs/photo/banner.png" alt="RingRobotX 灵音 | 灵活可配的中文语音对话机器人"></a>
     <br>
-    <a href='https://gitee.com/waterflames-team/ring-robot-x/stargazers'><img src='https://gitee.com/lkteam/ring-robot-x/badge/star.svg?theme=white' alt='star'/></a>
-    <a href='https://gitee.com/waterflames-team/ring-robot-x/members'><img src='https://gitee.com/lkteam/ring-robot-x/badge/fork.svg?theme=white' alt='fork'/></a>
+    <a href='https://gitee.com/waterflames-team/ring-robot-x/stargazers'><img src='https://gitee.com/waterflames-team/ring-robot-x/badge/star.svg?theme=gvp' alt='star'></img></a>
+    <a href='https://gitee.com/waterflames-team/ring-robot-x/members'><img src='https://gitee.com/waterflames-team/ring-robot-x/badge/fork.svg?theme=gvp' alt='fork'></img></a>
     <br>
     <a href="https://www.waterflames.cn/">文档</a> | <a href="https://gitee.com/waterflames-team/ring-robot-x">仓库</a>
     <br>
@@ -168,31 +168,12 @@ python3 ring.py
 
 # 特别感谢
 
-## 技术方面
 * wzpan （本项目借鉴了 wukong-robot 项目的一部分基本底层代码 & snowboy训练网站。wukong-robot真的是个超级无敌好项目！）
 * 本项目的前身 lingkong-robot 及其创作者Epeiuss
 
-## 捐赠方面
-感谢以下小伙伴为我们捐赠！
-<details>
-<summary>感谢名单（点击展开）</summary>
-按照累计打赏数目排列，感谢每一位小伙伴的支持:
-
-- 刘lyxAndy
-- 0_fds
-- Wu MX
-- Leo韩
-- 海藻酸钠
-- 柯灰
-- 过客是个铁憨憨
-
-</details>
-<br>
-
-
 # 支持
 
-由于WaterFlames的小伙伴们还是处于九年义务教育的学生党们 ~~还是群鸽子~~ ，所以本项目可能不会经常活跃
+由于WaterFlames的小伙伴们还是学生党们 ~~还是群鸽子~~ ，所以本项目可能不会经常活跃
 
 欢迎有开发者向这个项目发起pr，这样不仅是对水焰的鼓励，也是对rrx莫大的支持
 
@@ -200,12 +181,7 @@ python3 ring.py
 
 如果你的开发板在此项目中报错，欢迎在Issues中提问，我们将会尽最大努力帮你解决问题
 
-这个项目花费了我们很多的精力和时间，如果您觉得我们的开源软件对你有所帮助，可以向 WaterFlames赞助,戳这里 -> [http://afdian.net/@epeiuss](http://afdian.net/@epeiuss)
-
-
-<p align="center">
-    <img src="./docs/photo/afd.png" alt="爱发电二维码" width="200" height="275.2">
-</p>
+这个项目花费了我们很多的精力和时间，如果您觉得我们的开源软件对你有所帮助，可以向 WaterFlames 提供支持,戳这里 -> [http://afdian.net/@epeiuss](http://afdian.net/@epeiuss)
 
 # 加入我们
 

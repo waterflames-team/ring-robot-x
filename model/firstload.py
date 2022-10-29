@@ -11,6 +11,9 @@ def import_func(path):
     return importlib.import_module(path)
 
 def firstload():
+    pathn = model.config.APPConfig()
+    pathn.setModelName("api-version")
+    now=pathn.getConfig()
     model.logger.moduleLoggerMain.info("[RingRobotX] 正在初始化（一般情况下，你可以通过 ctrl+c 的方式终止此进程，但是下次使用时仍会开始初始化）")
     path = os.getcwd() + "/func_packages/"
     name = os.path.basename(path)
@@ -37,8 +40,6 @@ def firstload():
         else:
             continue
     now["first_load"] = False
-    pathn = model.config.APPConfig()
-    pathn.setModelName("api-version")
     pathn.setConfig(json.dumps(now))
     return status
 

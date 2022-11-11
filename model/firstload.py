@@ -32,6 +32,9 @@ def firstload():
                 if jso["enable"] and jso["need_first_load"]:
                     pack = import_func("func_packages." + i + ".setup")
                     pack.setup()
+                    with open(path + "/" + i + "/config.json", "w", encoding="utf-8") as file:
+                        jso["need_first_load"]=False
+                        file.write(json.dumps(jso))
                     status=True
             except:
                 print("[本地] 初始化技能失败，忽略：" + i)

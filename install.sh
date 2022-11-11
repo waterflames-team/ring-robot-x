@@ -62,6 +62,7 @@ function main(){
   check_apt "apt"
   before_install
   install_before_require
+  install_snowboy
   install_ringrobotx
   echo -e "\033[32;40m[INFO] RingRobotX Ready! \033[0m"
   exit

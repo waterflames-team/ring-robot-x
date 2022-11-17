@@ -1,3 +1,5 @@
+# Config保持插件设置
+
 它可以保存插件生成的设置到config目录。
 
 ```python

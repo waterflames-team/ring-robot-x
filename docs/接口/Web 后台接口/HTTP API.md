@@ -1,4 +1,6 @@
-# history 对话历史（需要ChatHistory插件）
+# HTTP API
+
+## history 对话历史（需要ChatHistory插件）
 
 参数：无
 
@@ -18,7 +20,7 @@ que：用户提问
 
 ans：机器人回答
 
-# Chat 对话
+## Chat 对话
 
 路径：/chat
 

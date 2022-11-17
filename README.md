@@ -141,7 +141,7 @@ python3 ring.py
 
 如果你需要禁用某一插件，那么到func_packages/插件名/config.json的enable改为false即可
 
-更多有关入门的内容[戳我查看文档](https://www.waterflames.cn/#/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8 "Wiki")
+更多有关入门的内容[戳我查看文档](https://www.waterflames.cn/ "Wiki")
 
 # 联系
 

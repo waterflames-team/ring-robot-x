@@ -141,7 +141,7 @@ python3 ring.py
 
 如果你需要禁用某一插件，那么到func_packages/插件名/config.json的enable改为false即可
 
-更多有关入门的内容[戳我查看文档](https://www.waterflames.cn/#/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8 "Wiki")
+更多有关入门的内容[戳我查看文档](https://www.waterflames.cn/ "Wiki")
 
 # 联系
 
@@ -170,8 +170,3 @@ python3 ring.py
 
 * wzpan （本项目借鉴了 wukong-robot 项目的一部分基本底层代码 & snowboy训练网站。wukong-robot真的是个超级无敌好项目！）
 * 本项目的前身 lingkong-robot 及其创作者Epeiuss
-
-# 加入我们
-
-我们是一个开源团队，无论您是否会编程，我们都欢迎您加入我们，与我们一起打造惊人的产品：
-[https://xykong.feishu.cn/share/base/shrcnwMMP9rBl5aK6qJqaXc3Jph](https://xykong.feishu.cn/share/base/shrcnwMMP9rBl5aK6qJqaXc3Jph)

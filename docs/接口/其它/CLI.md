@@ -1,4 +1,6 @@
-# Console
+# CLI
+
+## Console
 
 ```python
 import model.cli
@@ -10,7 +12,7 @@ print(a.commandRun(a,"help","tts"))
 
 会输出“help tts”命令的运行结果
 
-# 命令
+## 命令
 
 ```python
 "hook":"hook [runmode] [hookname] | runmode可输入reg或run，分别代表初始化hook列表和运行hook",

@@ -174,3 +174,5 @@ Thanks to every contributor!
 
 
 > The English version is translated using DeepL, any errors are welcome to be pointed out.
+
+> This project only supports Chinese language use

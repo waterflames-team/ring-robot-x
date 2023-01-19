@@ -170,3 +170,7 @@ Thanks to every contributor!
 
 * wzpan (This project borrows part of the basic underlying code from the wukong-robot project & snowboy training site. wukong-robot is really a superb project!)
 * The predecessor of this project, lingkong-robot, and its creator, Epeiuss
+
+
+
+> The English version is translated using DeepL, any errors are welcome to be pointed out.

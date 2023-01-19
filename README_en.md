@@ -10,7 +10,7 @@
 
 # Write at the beginning
 
-This is a Chinese modular voice bot framework designed with a single round of dialogue, made in Python by the WaterFlames team and refactored from our project [Lingkong-Robot](https://gitee.com/waterflames-team/lingkong-robot).
+This is a Chinese modular voice bot framework designed with a single round of dialogue, made in Python by the WaterFlames team and refactored from our project [Lingkong-Robot](https://github.com/waterflames-team/lingkong-robot).
 
 It can be used for smart speakers, language remote control, and even smart customer service, family butler, WeChat robot, etc.
 
@@ -30,7 +30,7 @@ Okay, ready to experience RingRobotX? Start now!
 
 # Must know
 
-RingRobotX is a refactored version of [Lingkong-Robot](https://gitee.com/waterflames-team/lingkong-robot)
+RingRobotX is a refactored version of [Lingkong-Robot](https://github.com/waterflames-team/lingkong-robot)
 
 RingRobotX by default (git repository version) has built-in Turing, Baidu ASR&TTS, and snowboy wakeup plugins
 
@@ -175,4 +175,4 @@ Thanks to every contributor!
 
 > The English version is translated using DeepL, any errors are welcome to be pointed out.
 
-> This project only supports Chinese language use
+> This project only supports Chinese language use.

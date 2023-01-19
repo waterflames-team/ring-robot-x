@@ -24,7 +24,7 @@
   * 其他
     * [Player](docs/interface/other/player.md "Player - RingRobotX 灵音")
     * [Func](docs/interface/other/func.md "Func - RingRobotX 灵音")
-    * [ASR、TTS](docs/interface/other/asr&rrs.md "ASR、TTS - RingRobotX 灵音")
+    * [ASR、TTS](docs/interface/other/asr&tts.md "ASR、TTS - RingRobotX 灵音")
     * [CLI](docs/interface/other/cli.md "CLI - RingRobotX 灵音")
 
 

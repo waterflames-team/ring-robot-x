@@ -24,6 +24,8 @@ RingRobotX使用json作为配置语言。
 
 > ASR TTS引擎
 
+> 本部分的API需要您自行前往百度AI申请
+
 API_KEY 百度语音的API_KEY
 
 SECRET_KEY 百度语言的SECRET_KEY
@@ -34,6 +36,8 @@ CUID 随便填
 
 ### Turing_RobotChat
 > 图灵机器人（本项目所使用的闲聊功能api）
+
+> 本部分的API需要您自行前往图灵机器人申请
 
 apikey 图灵机器人apikey
 

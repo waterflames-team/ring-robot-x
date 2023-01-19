@@ -4,7 +4,7 @@
     <a href='https://gitee.com/waterflames-team/ring-robot-x/stargazers'><img src='https://gitee.com/waterflames-team/ring-robot-x/badge/star.svg?theme=gvp' alt='star'></img></a>
     <a href='https://gitee.com/waterflames-team/ring-robot-x/members'><img src='https://gitee.com/waterflames-team/ring-robot-x/badge/fork.svg?theme=gvp' alt='fork'></img></a>
     <br>
-    <a href="https://www.waterflames.cn/">文档</a> | <a href="https://gitee.com/waterflames-team/ring-robot-x">仓库</a>
+    <a href="/README_en.md">English</a> | <a href="https://www.waterflames.cn/">文档</a> | <a href="https://gitee.com/waterflames-team/ring-robot-x">Gitee 仓库</a> | <a href="https://github.com/waterflames-team/ring-robot-x">Github仓库</a>
     <br>
 </p>
 
@@ -21,7 +21,7 @@
 1. 技能包具有较强的灵活性，可随意支配技能
 2. 命令窗口直接对话
 3. 配置简单化，配置可以在 config 目录修改，避免直接修改源代码
-4. 实现了连续对话 - 终于可以和机器人玩成语接龙了
+4. 实现了连续对话，终于可以和机器人玩成语接龙了
 5. 开放，简洁的接口，接入简单
 6. 高度可自定义
 7. 开放的 HTTP 接口，让你的应用程序快速接入 RingRobotX 框架！

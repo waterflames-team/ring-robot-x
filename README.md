@@ -10,6 +10,8 @@
 
 # 写在开头
 
+[![Join the chat at https://gitter.im/ring-robot-x/community](https://badges.gitter.im/ring-robot-x/community.svg)](https://gitter.im/ring-robot-x/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 这是一个采用单轮对话设计的中文模块化语音机器人框架，由 WaterFlames团队 使用 Python 制作，根据本团队项目 [Lingkong-Robot](https://gitee.com/waterflames-team/lingkong-robot) 重构而来。
 
 可用于智能音箱，语言遥控，甚至智能客服、家庭管家、微信机器人等等。

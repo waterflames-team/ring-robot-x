@@ -149,8 +149,7 @@ If you encounter a problem, or have a good suggestion, feel free to contact us a
 
 - You can choose [poke me](https://gitee.com/waterflames-team/ring-robot-x/issues "Issues") to create an issue
 - You can also contact us via email: [hi@waterflames.cn](mailto:hi@waterflames.cn)
-- If you are a **developer**, you can join us face-to-face in the Rabbit's Nest [https://support.qq.com/product/420726](https://support.qq.com/product/420726).
-- If you are a **user**, you can join our user group (QQ): 825288633.
+- Or join the user group via [the following method](https://www.yuque.com/epeiuss/xykong/contact?singleDoc#)
 
 # Secondary Development
 
@@ -162,7 +161,7 @@ In addition, this project is not subject to LingKongRobot's GPL license.
 
 # Code Contribution
 
-We welcome every creator to contribute to the open source project. Each contributor is welcome to create a pr and contribute to the project according to the [Submission Information Specification](https://xykong.feishu.cn/wiki/wikcnhQ6Eti6VZQI2avsLTSofve)!
+We welcome every creator to contribute to the open source project. Each contributor is welcome to create a pr and contribute to the project according to the [Submission Information Specification](https://www.yuque.com/epeiuss/xykong/rule?singleDoc#)!
 
 Thanks to every contributor!
 

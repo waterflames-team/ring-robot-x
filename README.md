@@ -149,8 +149,7 @@ python3 ring.py
 
 - 你可以选择 [戳我](https://gitee.com/waterflames-team/ring-robot-x/issues "Issues") 来创建一个issue
 - 也可以通过邮箱联系我们：[hi@waterflames.cn](mailto:hi@waterflames.cn)
-- 如果你是一名**开发者**，可以加入在兔小巢里和我们面对面交流 [https://support.qq.com/product/420726](https://support.qq.com/product/420726)。
-- 如果你是一名**用户**，可以加入我们的用户群（QQ）：825288633。
+- 或是通过[以下方式](https://www.yuque.com/epeiuss/xykong/contact?singleDoc#)加入用户群
 
 # 二次开发
 
@@ -162,7 +161,7 @@ python3 ring.py
 
 # 代码贡献
 
-我们欢迎每一位创作者加入本项目的开源贡献中。欢迎每一位贡献者创建pr，并按照 [提交信息规范](https://xykong.feishu.cn/wiki/wikcnhQ6Eti6VZQI2avsLTSofve) 来为项目进行贡献！
+我们欢迎每一位创作者加入本项目的开源贡献中。欢迎每一位贡献者创建pr，并按照 [提交信息规范](https://www.yuque.com/epeiuss/xykong/rule?singleDoc#) 来为项目进行贡献！
 
 感谢每一位贡献者！
 

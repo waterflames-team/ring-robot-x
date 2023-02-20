@@ -1,5 +1,5 @@
 > 请在提交PR前自行确认您的提交信息是否符合提交信息规范：
-> [https://xykong.feishu.cn/wiki/wikcnhQ6Eti6VZQI2avsLTSofve](https://xykong.feishu.cn/wiki/wikcnhQ6Eti6VZQI2avsLTSofve)
+> [https://www.yuque.com/epeiuss/xykong/rule?singleDoc#](https://www.yuque.com/epeiuss/xykong/rule?singleDoc#)
 
 # 请简要描述你变更了什么内容？
 

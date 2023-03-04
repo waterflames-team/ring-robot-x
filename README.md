@@ -159,11 +159,16 @@ python3 ring.py
 
 另外，本项目不受 LingKongRobot 的 GPL 协议影响。
 
+
 # 代码贡献
 
 我们欢迎每一位创作者加入本项目的开源贡献中。欢迎每一位贡献者创建pr，并按照 [提交信息规范](https://www.yuque.com/epeiuss/xykong/rule?singleDoc#) 来为项目进行贡献！
 
 感谢每一位贡献者！
+
+# 支持
+
+如果您觉得我们的开源软件对你有所帮助，可以向 WaterFlames 提供支持,戳这里 -> [https://afdian.net/a/waterflames](https://afdian.net/a/waterflames)
 
 # 特别感谢
 

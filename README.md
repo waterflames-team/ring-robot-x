@@ -1,10 +1,10 @@
 <p align="center">
-    <a href="https://www.waterflames.cn/"><img src="./docs/photo/banner.png" alt="RingRobotX 灵音 | 灵活可配的中文语音对话机器人"></a>
+    <a href="https://docs.waterflames.cn/"><img src="./docs/photo/banner.png" alt="RingRobotX 灵音 | 灵活可配的中文语音对话机器人"></a>
     <br>
     <a href='https://gitee.com/waterflames-team/ring-robot-x/stargazers'><img src='https://gitee.com/waterflames-team/ring-robot-x/badge/star.svg?theme=gvp' alt='star'></img></a>
     <a href='https://gitee.com/waterflames-team/ring-robot-x/members'><img src='https://gitee.com/waterflames-team/ring-robot-x/badge/fork.svg?theme=gvp' alt='fork'></img></a>
     <br>
-    <a href="/README_en.md">English</a> | <a href="https://www.waterflames.cn/">文档</a> | <a href="https://gitee.com/waterflames-team/ring-robot-x">Gitee 仓库</a> | <a href="https://github.com/waterflames-team/ring-robot-x">Github仓库</a> | <a href="https://github.com/waterflames-team/ring-robot-x/discussions">Discussions</a>
+    <a href="/README_en.md">English</a> | <a href="https://docs.waterflames.cn/">文档</a> | <a href="https://gitee.com/waterflames-team/ring-robot-x">Gitee 仓库</a> | <a href="https://github.com/waterflames-team/ring-robot-x">Github仓库</a> | <a href="https://github.com/waterflames-team/ring-robot-x/discussions">Discussions</a>
     <br>
 </p>
 
@@ -141,7 +141,7 @@ python3 ring.py
 
 如果你需要禁用某一插件，那么到func_packages/插件名/config.json的enable改为false即可
 
-更多有关入门的内容[戳我查看文档](https://www.waterflames.cn/ "Wiki")
+更多有关入门的内容[戳我查看文档](https://docs.waterflames.cn/)
 
 # 联系
 

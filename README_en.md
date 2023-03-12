@@ -1,10 +1,10 @@
 <p align="center">
-    <a href="https://www.waterflames.cn/"><img src="./docs/photo/banner.png" alt="RingRobotX | A Chinese Modular Speech Robot Framework Using Single-Wheel Dialogue Design"></a>
+    <a href="https://docs.waterflames.cn/"><img src="./docs/photo/banner.png" alt="RingRobotX | A Chinese Modular Speech Robot Framework Using Single-Wheel Dialogue Design"></a>
     <br>
     <a href='https://gitee.com/waterflames-team/ring-robot-x/stargazers'><img src='https://gitee.com/waterflames-team/ring-robot-x/badge/star.svg?theme=gvp' alt='star'></img></a>
     <a href='https://gitee.com/waterflames-team/ring-robot-x/members'><img src='https://gitee.com/waterflames-team/ring-robot-x/badge/fork.svg?theme=gvp' alt='fork'></img></a>
     <br>
-    <a href="/README.md">中文</a> | <a href="https://www.waterflames.cn/">Documentation</a> | <a href="https://gitee.com/waterflames-team/ring-robot-x">Gitee</a> | <a href="https://github.com/waterflames-team/ring-robot-x">Github</a> | <a href="https://github.com/waterflames-team/ring-robot-x/discussions">Discussions</a>
+    <a href="/README.md">中文</a> | <a href="https://docs.waterflames.cn/">Documentation</a> | <a href="https://gitee.com/waterflames-team/ring-robot-x">Gitee</a> | <a href="https://github.com/waterflames-team/ring-robot-x">Github</a> | <a href="https://github.com/waterflames-team/ring-robot-x/discussions">Discussions</a>
     <br>
 </p>
 
@@ -141,7 +141,7 @@ See the various json files in the config directory for details
 
 If you need to disable a plugin, then go to func_packages/plugin_name/config.json and change enable to false
 
-For more on getting started [poke me for the documentation](https://www.waterflames.cn/ "Wiki")
+For more on getting started [poke me for the documentation](https://docs.waterflames.cn/ "Wiki")
 
 # Contact
 

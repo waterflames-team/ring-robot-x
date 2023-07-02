@@ -11,6 +11,7 @@
     * [TTS](docs/skill_pack/writing_guidelines/tts.md "首页 - RingRobotX 灵音")
     * [ASR](docs/skill_pack/writing_guidelines/asr.md "ASR - RingRobotX 灵音")
     * [唤醒](docs/skill_pack/writing_guidelines/awakening.md "唤醒 - RingRobotX 灵音")
+  * [上传](docs/skill_pack/upload.md "上传 - RingRobotX 灵音")
 * 接口
   * [Hook 钩子接口](docs/interface/hook/ "Hook 钩子接口 - RingRobotX 灵音")
     * [HookClient 钩子客户端](docs/interface/hook/hook_client.md "HookClient 钩子客户端 - RingRobotX 灵音")
@@ -34,4 +35,3 @@
 * [RingRobotX Github仓库](https://github.com/waterflames-team/ring-robot-x/)
 * [RingRobotX Gitee反馈](https://gitee.com/waterflames-team/ring-robot-x/issues)
 * [RingRobotX Github反馈](https://github.com/waterflames-team/ring-robot-x/issues)
-* [RingRobotX 兔小巢](https://support.qq.com/product/420726)

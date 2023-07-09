@@ -3,6 +3,7 @@
     <br>
     <a href='https://gitee.com/waterflames-team/ring-robot-x/stargazers'><img src='https://gitee.com/waterflames-team/ring-robot-x/badge/star.svg?theme=gvp' alt='star'></img></a>
     <a href='https://gitee.com/waterflames-team/ring-robot-x/members'><img src='https://gitee.com/waterflames-team/ring-robot-x/badge/fork.svg?theme=gvp' alt='fork'></img></a>
+    <a href='https://compass.gitee.com/analyze/sixc8y5p'><img src="https://compass.gitee.com/badge/sixc8y5p.svg" alt="OSS Compass Analyze" /></a>
     <br>
     <a href="/README_en.md">English</a> | <a href="https://docs.waterflames.cn/">文档</a> | <a href="https://gitee.com/waterflames-team/ring-robot-x">Gitee 仓库</a> | <a href="https://github.com/waterflames-team/ring-robot-x">Github仓库</a> | <a href="https://github.com/waterflames-team/ring-robot-x/discussions">Discussions</a>
     <br>

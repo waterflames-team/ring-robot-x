@@ -35,3 +35,9 @@
 * [RingRobotX Github仓库](https://github.com/waterflames-team/ring-robot-x/)
 * [RingRobotX Gitee反馈](https://gitee.com/waterflames-team/ring-robot-x/issues)
 * [RingRobotX Github反馈](https://github.com/waterflames-team/ring-robot-x/issues)
+
+<br>
+
+* © 2019-2024 waterflames.cn. All Rights Reserved.
+* [闽ICP备2024035715号-1](https://beian.miit.gov.cn/)
+* [中国互联网违法和不良信息举报中心](https://www.12377.cn)

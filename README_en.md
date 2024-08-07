@@ -166,6 +166,10 @@ We welcome every creator to contribute to the open source project. Each contribu
 
 Thanks to every contributor!
 
+# Support
+
+If you find our open source software helpful, you can provide support to WaterFlames by clicking here -> [https://afdian.com/a/epeiuss](https://afdian.com/a/epeiuss)
+
 # Special thanks to
 
 * wzpan (This project borrows part of the basic underlying code from the wukong-robot project & snowboy training site. wukong-robot is really a superb project!)

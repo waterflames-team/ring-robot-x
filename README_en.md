@@ -145,38 +145,25 @@ If you need to disable a plugin, then go to func_packages/plugin_name/config.jso
 For more on getting started [poke me for the documentation](https://docs.waterflames.cn/ "Wiki")
 
 # Contact
-
-If you encounter a problem, or have a good suggestion, feel free to contact us at
-
-- You can choose [poke me](https://gitee.com/waterflames-team/ring-robot-x/issues "Issues") to create an issue
-- You can also contact us via email: [hi@waterflames.cn](mailto:hi@waterflames.cn)
-- Or join the user group via [the following method](https://www.yuque.com/epeiuss/xykong/contact?singleDoc#)
+If you encounter any problems or have good suggestions, you're welcome to contact us:
+- You can choose to [click me](https://gitee.com/waterflames-team/ring-robot-x/issues "Issues") to create an issue.
+- You can also contact us via email: [hi@waterflames.cn](mailto:hi@waterflames.cn).
+- Or join the user group through [the following method](https://www.yuque.com/yulimfish/xykong/contact?singleDoc#).
 
 # Secondary Development
+If you plan to close the source and use it commercially, please confirm that you're aware that WaterFlames will not be responsible for the security, usability, integrity of any software that has been redistributed, as well as other potential risks and losses it may bring.
 
-If you are prepared to close the source and use it commercially, then please make sure you know that WaterFlames is not responsible for the security, availability, integrity, and other risks and losses that may result from any use of the secondary distribution software.
+In case of any other conflicts, the Apache License 2.0 open - source agreement shall prevail.
 
-The Apache License 2.0 Open Source Agreement governs any remaining or conflicting terms.
-
-In addition, this project is not subject to LingKongRobot's GPL license.
+In addition, this project is not affected by the GPL agreement of LingKongRobot.
 
 # Code Contribution
+We welcome every creator to participate in the open - source contribution of this project. Every contributor is welcome to create a PR and contribute to the project in accordance with the [Submission Information Specification](https://www.yuque.com/yulimfish/xykong/rule?singleDoc#)!
 
-We welcome every creator to contribute to the open source project. Each contributor is welcome to create a pr and contribute to the project according to the [Submission Information Specification](https://www.yuque.com/epeiuss/xykong/rule?singleDoc#)!
-
-Thanks to every contributor!
+Thank you to every contributor!
 
 # Support
+If you think our open - source software has been helpful to you, you can provide support to WaterFlames. Click here -> [https://afdian.com/a/yulimfish](https://afdian.com/a/yulimfish)
 
-If you find our open source software helpful, you can provide support to WaterFlames by clicking here -> [https://afdian.com/a/epeiuss](https://afdian.com/a/epeiuss)
-
-# Special thanks to
-
-* wzpan (This project borrows part of the basic underlying code from the wukong-robot project & snowboy training site. wukong-robot is really a superb project!)
-* The predecessor of this project, lingkong-robot, and its creator, Epeiuss
-
-
-
-> The English version is translated using DeepL, any errors are welcome to be pointed out.
-
-> This project only supports Chinese language use.
+> This English version is translated by AI. Any problems are welcome to be pointed out.
+> Currently, this project is only adapted for Chinese. English support may be considered in the future.

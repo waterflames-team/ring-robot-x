@@ -150,7 +150,7 @@ python3 ring.py
 
 - 你可以选择 [戳我](https://gitee.com/waterflames-team/ring-robot-x/issues "Issues") 来创建一个issue
 - 也可以通过邮箱联系我们：[hi@waterflames.cn](mailto:hi@waterflames.cn)
-- 或是通过[以下方式](https://www.yuque.com/epeiuss/xykong/contact?singleDoc#)加入用户群
+- 或是通过[以下方式](https://www.yuque.com/yulimfish/xykong/contact?singleDoc#)加入用户群
 
 # 二次开发
 
@@ -163,15 +163,10 @@ python3 ring.py
 
 # 代码贡献
 
-我们欢迎每一位创作者加入本项目的开源贡献中。欢迎每一位贡献者创建pr，并按照 [提交信息规范](https://www.yuque.com/epeiuss/xykong/rule?singleDoc#) 来为项目进行贡献！
+我们欢迎每一位创作者加入本项目的开源贡献中。欢迎每一位贡献者创建pr，并按照 [提交信息规范](https://www.yuque.com/yulimfish/xykong/rule?singleDoc#) 来为项目进行贡献！
 
 感谢每一位贡献者！
 
 # 支持
 
-如果您觉得我们的开源软件对你有所帮助，可以向 WaterFlames 提供支持,戳这里 -> [https://afdian.com/a/epeiuss](https://afdian.com/a/epeiuss)
-
-# 特别感谢
-
-* wzpan （本项目借鉴了 wukong-robot 项目的一部分基本底层代码 & snowboy训练网站。wukong-robot真的是个超级无敌好项目！）
-* 本项目的前身 lingkong-robot 及其创作者Epeiuss
+如果您觉得我们的开源软件对你有所帮助，可以向 WaterFlames 提供支持,戳这里 -> [https://afdian.com/a/yulimfish](https://afdian.com/a/yulimfish)
